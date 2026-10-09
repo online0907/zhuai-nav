@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>猪猪侠 AI 工具导航 - zhuai.online</title>
+<meta name="description" content="搞钱人常用的 AI 工具，一页找齐。猪猪侠精选。">
+<style>
+  :root{
+    --bg:#0b0e17; --card:#141926; --card-hover:#1a2233;
+    --text:#e8ecf4; --muted:#8b93a7; --accent:#6c7bff; --accent2:#9d6bff;
+    --border:#232c42; --green:#3ddc84; --orange:#ffab40;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;min-height:100vh}
+  .hero{background:linear-gradient(135deg,#1a1440 0%,#0b0e17 60%);padding:56px 20px 40px;text-align:center;border-bottom:1px solid var(--border)}
+  .hero h1{font-size:2.2rem;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}
+  .hero p{color:var(--muted);font-size:1rem;margin-bottom:20px}
+  .hero .x-link{display:inline-block;color:var(--accent);text-decoration:none;font-size:.9rem;border:1px solid var(--border);padding:8px 18px;border-radius:999px;background:rgba(108,123,255,.08)}
+  .hero .x-link:hover{background:rgba(108,123,255,.18)}
+  .toolbar{max-width:1100px;margin:0 auto;padding:24px 20px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center}
+  .search{flex:1;min-width:220px;max-width:420px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 16px;color:var(--text);font-size:.95rem;outline:none}
+  .search:focus{border-color:var(--accent)}
+  .cats{max-width:1100px;margin:0 auto;padding:16px 20px 0;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+  .cat{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:8px 16px;border-radius:999px;font-size:.85rem;cursor:pointer;transition:.2s}
+  .cat:hover{color:var(--text);border-color:var(--accent)}
+  .cat.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border-color:transparent}
+  .grid{max-width:1100px;margin:0 auto;padding:24px 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;text-decoration:none;color:var(--text);transition:.2s;display:flex;flex-direction:column;gap:8px}
+  .card:hover{background:var(--card-hover);border-color:var(--accent);transform:translateY(-3px)}
+  .card-top{display:flex;align-items:center;justify-content:space-between}
+  .card-name{font-size:1.05rem;font-weight:700}
+  .tag{font-size:.72rem;padding:3px 10px;border-radius:999px;white-space:nowrap}
+  .tag.free{background:rgba(61,220,132,.12);color:var(--green)}
+  .tag.freemium{background:rgba(255,171,64,.12);color:var(--orange)}
+  .tag.paid{background:rgba(255,107,107,.12);color:#ff6b6b}
+  .card-desc{color:var(--muted);font-size:.85rem;line-height:1.55;flex:1}
+  .card-cat{font-size:.75rem;color:var(--accent)}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+  footer{text-align:center;padding:28px;color:var(--muted);font-size:.8rem;border-top:1px solid var(--border)}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="hero">
+    <h1>🐷 猪猪侠 AI 工具导航</h1>
+    <p>搞钱人常用的 AI 工具，一页找齐 · 持续更新</p>
+    <a class="x-link" href="https://x.com/zhu950907" target="_blank" rel="noopener">𝕏 @zhu950907 · 每天分享 AI 搞钱干货</a>
+  </div>
+
+  <div class="toolbar">
+    <input class="search" id="search" type="text" placeholder="🔍 搜索工具，比如：视频、绘画、编程…">
+  </div>
+  <div class="cats" id="cats"></div>
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    © 2026 猪猪侠 · zhuai.online · 工具链接均为官方地址，放心点
+  </footer>
+
+<script>
+const TOOLS = [
+  // AI 对话
+  {n:"ChatGPT",u:"https://chatgpt.com",d:"最出名的 AI 对话助手，写文案、做方案、查资料都行",c:"AI 对话",t:"freemium",tl:"免费/付费"},
+  {n:"Claude",u:"https://claude.ai",d:"写代码和长文本特别强，程序员和写作者都爱用",c:"AI 对话",t:"freemium",tl:"免费/付费"},
+  {n:"Gemini",u:"https://gemini.google.com",d:"谷歌出品，联网搜索和多模态能力强",c:"AI 对话",t:"free",tl:"免费"},
+  {n:"DeepSeek",u:"https://chat.deepseek.com",d:"国产之光，推理能力强，API 价格屠夫",c:"AI 对话",t:"free",tl:"免费"},
+  {n:"Kimi",u:"https://kimi.moonshot.cn",d:"长文本阅读理解强，能一口气读几十万字文档",c:"AI 对话",t:"free",tl:"免费"},
+  {n:"Grok",u:"https://grok.com",d:"马斯克的 AI，和 X 深度整合，玩梗有一手",c:"AI 对话",t:"freemium",tl:"免费/付费"},
+  {n:"通义千问",u:"https://tongyi.aliyun.com",d:"阿里出品，中文理解好，办公场景强",c:"AI 对话",t:"free",tl:"免费"},
+  {n:"文心一言",u:"https://yiyan.baidu.com",d:"百度出品，中文创作结合搜索",c:"AI 对话",t:"free",tl:"免费"},
+  // AI 绘画
+  {n:"Midjourney",u:"https://www.midjourney.com",d:"公认审美天花板，设计师和自媒体都在用",c:"AI 绘画",t:"paid",tl:"付费"},
+  {n:"即梦AI",u:"https://www.jimeng.com",d:"字节出品，中文提示词友好，图片视频都能做",c:"AI 绘画",t:"freemium",tl:"免费/付费"},
+  {n:"Recraft",u:"https://www.recraft.ai",d:"海报和矢量风设计神器，文字渲染准",c:"AI 绘画",t:"freemium",tl:"免费/付费"},
+  {n:"Ideogram",u:"https://ideogram.ai",d:"海报字体渲染最准的 AI 绘画之一",c:"AI 绘画",t:"freemium",tl:"免费/付费"},
+  // AI 视频
+  {n:"可灵AI",u:"https://klingai.com",d:"快手出品，视频质感和物理真实感强",c:"AI 视频",t:"freemium",tl:"免费/付费"},
+  {n:"Vidu",u:"https://www.vidu.cn",d:"国产视频生成，人物一致性好，性价比高",c:"AI 视频",t:"freemium",tl:"免费/付费"},
+  {n:"Runway",u:"https://runwayml.com",d:"老牌 AI 视频工具，特效剪辑一把梭",c:"AI 视频",t:"paid",tl:"付费"},
+  {n:"Pika",u:"https://pika.art",d:"短视频风格化神器，玩法多、出片快",c:"AI 视频",t:"freemium",tl:"免费/付费"},
+  // AI 音频
+  {n:"Suno",u:"https://suno.com",d:"一句话生成完整歌曲，编曲演唱全包",c:"AI 音频",t:"freemium",tl:"免费/付费"},
+  {n:"ElevenLabs",u:"https://elevenlabs.io",d:"最自然的 AI 配音，支持中文多角色",c:"AI 音频",t:"freemium",tl:"免费/付费"},
+  // AI 编程
+  {n:"Cursor",u:"https://cursor.com",d:"AI 原生编辑器，程序员现在人手一个",c:"AI 编程",t:"freemium",tl:"免费/付费"},
+  {n:"Trae",u:"https://www.trae.ai",d:"字节出品的 AI IDE，中文环境优化好",c:"AI 编程",t:"free",tl:"免费"},
+  {n:"GitHub Copilot",u:"https://github.com/features/copilot",d:"老牌代码补全，以 IDE 插件形态存在",c:"AI 编程",t:"paid",tl:"付费"},
+  {n:"v0",u:"https://v0.dev",d:"一句话生成网站界面，前端仔的效率神器",c:"AI 编程",t:"freemium",tl:"免费/付费"},
+  {n:"Bolt",u:"https://bolt.new",d:"在线一句话建站，快速做出可上线的 demo",c:"AI 编程",t:"freemium",tl:"免费/付费"},
+  // AI 搜索
+  {n:"Perplexity",u:"https://www.perplexity.ai",d:"AI 搜索引擎，每个回答都带引用来源",c:"AI 搜索",t:"freemium",tl:"免费/付费"},
+  {n:"秘塔AI搜索",u:"https://metaso.cn",d:"国内好用的 AI 搜索，干净无广告",c:"AI 搜索",t:"free",tl:"免费"},
+  // AI 办公
+  {n:"Gamma",u:"https://gamma.app",d:"一句话生成精美 PPT 和文档",c:"AI 办公",t:"freemium",tl:"免费/付费"},
+  {n:"Notion",u:"https://www.notion.so",d:"笔记 + AI 写作 + 知识库全家桶",c:"AI 办公",t:"freemium",tl:"免费/付费"},
+];
+
+const CATS = ["全部","AI 对话","AI 绘画","AI 视频","AI 音频","AI 编程","AI 搜索","AI 办公"];
+let activeCat = "全部";
+
+const catsEl = document.getElementById("cats");
+const gridEl = document.getElementById("grid");
+const searchEl = document.getElementById("search");
+
+CATS.forEach(c=>{
+  const b = document.createElement("button");
+  b.className = "cat" + (c==="全部" ? " active" : "");
+  b.textContent = c;
+  b.onclick = ()=>{ activeCat = c;
+    document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active"); render();
+  };
+  catsEl.appendChild(b);
+});
+
+function render(){
+  const q = searchEl.value.trim().toLowerCase();
+  const list = TOOLS.filter(t =>
+    (activeCat==="全部" || t.c===activeCat) &&
+    (!q || t.n.toLowerCase().includes(q) || t.d.includes(q) || t.c.includes(q))
+  );
+  if(!list.length){ gridEl.innerHTML = '<div class="empty">没找到，换个关键词试试～</div>'; return; }
+  gridEl.innerHTML = list.map(t=>`
+    <a class="card" href="${t.u}" target="_blank" rel="noopener">
+      <div class="card-top">
+        <span class="card-name">${t.n}</span>
+        <span class="tag ${t.t}">${t.tl}</span>
+      </div>
+      <div class="card-desc">${t.d}</div>
+      <div class="card-cat">${t.c} →</div>
+    </a>`).join("");
+}
+searchEl.addEventListener("input", render);
+render();
+</script>
+</body>
+</html>
