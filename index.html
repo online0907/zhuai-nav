@@ -71,6 +71,20 @@ section{padding:72px 0}
 .feat{list-style:none;margin:20px 0 28px;display:grid;gap:10px}
 .feat li{font-size:14px;color:var(--txt);display:flex;gap:10px;align-items:flex-start}
 .feat li::before{content:"✓";color:var(--cy);font-weight:800}
+/* sell */
+.price-row{display:flex;align-items:baseline;gap:12px;margin:18px 0 6px}
+.price{font-size:42px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price-note{font-size:13px;color:var(--mut)}
+.buy-steps{display:grid;gap:8px;margin:16px 0 26px}
+.buy-steps div{font-size:14px;color:var(--mut);display:flex;gap:10px}
+.buy-steps b{color:var(--cy)}
+.pain{font-size:16px !important;color:var(--txt) !important;border-left:3px solid var(--vio);padding-left:14px;margin-bottom:18px !important}
+.freebie{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.freebie-box{max-width:640px;margin:0 auto;text-align:center;background:var(--card);border:1px solid rgba(139,92,246,.4);border-radius:22px;padding:48px 36px}
+.freebie-box h2{font-size:clamp(24px,4vw,32px);margin-bottom:14px}
+.freebie-box h2 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.freebie-box p{color:var(--mut);margin-bottom:26px}
+.freebie-box .tiny{font-size:12px;margin:16px 0 0}
 /* contact */
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
 .c-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:border-color .18s,transform .18s}
@@ -105,8 +119,8 @@ footer a{color:var(--cy)}
     <h1>把<span class="grad">英文区 AI 干货</span>，<br>变成中文搞钱内容</h1>
     <p class="sub">AI 早报、搞钱案例拆解、AI 实测教程 —— 不聊概念，只聊变现。所有案例均注明出处，数字真实可查，欢迎打假。</p>
     <div class="cta">
-      <a class="btn btn-p" href="https://x.com/zhu950907" target="_blank" rel="noopener">关注 X @zhu950907</a>
-      <a class="btn btn-g" href="#cases">浏览搞钱案例库</a>
+      <a class="btn btn-p" href="#freebie">免费领 5 个锁脸模板样章</a>
+      <a class="btn btn-g" href="https://x.com/zhu950907" target="_blank" rel="noopener">关注 X @zhu950907</a>
     </div>
   </div>
 </header>
@@ -155,17 +169,34 @@ footer a{color:var(--cy)}
     </div>
     <div class="prod-copy">
       <h2>AI 写真<span class="grad">全场景提示词模板库</span></h2>
-      <p>上传一张照片，生成一组高质感生活写真。锁脸技术保证每张都是你本人。</p>
+      <p class="pain">想拥有多场景高质感写真，又不想花几千块约摄影师？上传一张照片，30 个场景随便换 —— 而且每一张都是你本人。</p>
       <ul class="feat">
-        <li>30 个全场景模板：街拍 / 餐饮 / 旅行 / 职场 / 运动 / 生活</li>
-        <li>通用锁脸指令，一次写好，套用所有场景</li>
-        <li>真机 + iPhone 15 Pro Max 双机位参数，即填即用</li>
-        <li>PDF 文档，手机电脑都能看</li>
+        <li>30 个即插即用模板：街拍 / 咖啡馆 / 旅行 / 职场 / 运动 / 生活 6 大系列</li>
+        <li>通用锁脸指令：最大程度保持本人长相不变，拒绝"换头翻车"</li>
+        <li>真机 + iPhone 15 Pro Max 双机位参数，开箱即用</li>
+        <li>PDF 文档永久保存，手机电脑都能看</li>
       </ul>
-      <div class="cta" style="justify-content:flex-start">
-        <a class="btn btn-p" href="https://t.me/gpt168168" target="_blank" rel="noopener">Telegram 咨询购买</a>
-        <a class="btn btn-g" href="#contact">闲鱼搜索「猪猪侠玩AI」</a>
+      <div class="price-row"><span class="price">¥19.9</span><span class="price-note">一次购买 · 永久使用 · PDF 即时发货</span></div>
+      <div class="buy-steps">
+        <div><b>①</b> 加 Telegram @gpt168168，或闲鱼搜索「猪猪侠玩AI」</div>
+        <div><b>②</b> 付款 19.9 元</div>
+        <div><b>③</b> 收 PDF，照着模板开拍</div>
       </div>
+      <div class="cta" style="justify-content:flex-start">
+        <a class="btn btn-p" href="https://t.me/gpt168168" target="_blank" rel="noopener">Telegram 下单</a>
+        <a class="btn btn-g" href="#freebie">先免费领样章试试</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="freebie" class="freebie">
+  <div class="wrap">
+    <div class="freebie-box">
+      <h2>免费领：5 个锁脸模板<span class="grad">样章</span></h2>
+      <p>先试后买。样章包含完整使用说明 + 通用锁脸指令 + 5 个精选场景模板，亲手试一张就知道效果。</p>
+      <a class="btn btn-p" href="https://t.me/gpt168168" target="_blank" rel="noopener">加 TG 免费领取</a>
+      <p class="tiny">加好友后发送「样章」两个字，手动发送，请稍等回复</p>
     </div>
   </div>
 </section>
