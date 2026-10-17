@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenAI Dots：AI Agent 从"接任务"走向"接责任" · 猪猪侠玩AI</title>
+<meta name="description" content="OpenAI Dots 中文解读：proactive research、workflow ownership，Agent 竞争从单次做得好转向长期靠得住。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.content h2{font-size:21px;font-weight:800;margin:38px 0 14px;letter-spacing:.3px}
+.content h3{font-size:17px;font-weight:700;margin:28px 0 10px}
+.content p{margin:0 0 16px;color:#33343f;font-size:16px}
+.content ul,.content ol{margin:0 0 18px 22px;color:#33343f;font-size:16px}
+.content li{margin-bottom:9px}
+.content strong{color:var(--txt)}
+.content blockquote{border-left:4px solid var(--brand);background:var(--brand-soft);padding:14px 18px;margin:22px 0;border-radius:0 10px 10px 0;color:#33343f;font-size:15.5px}
+.content table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:14.5px}
+.content th,.content td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.content th{background:var(--bg2);font-weight:700}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="index.html#hot">← 返回 AI 热点</a>
+<span class="tag">新品首测</span>
+<h1>OpenAI Dots：AI Agent 从"接任务"走向"接责任"</h1>
+<div class="meta">2026-10-11 · 猪猪侠玩AI · 中文首测</div>
+<div class="content">
+<p>9 月底 OpenAI 开发者大会（DevDay 2026）上，除了模型更新，还有个容易被忽略的东西：Dots。看懂它，就看懂了 AI Agent 的下一个形态。</p>
+<h3>一、差在哪：一个例子</h3>
+<p>以前的 Agent：</p>
+<blockquote>你："帮我整理这周的客户反馈。"</blockquote>
+<blockquote>Agent：整理完发你。任务结束。</blockquote>
+<p>Dots：</p>
+<blockquote>你："以后持续负责客户反馈。"</blockquote>
+<blockquote>Dot：之后不用你再下指令。它自己发现"这个问题这周又出现了 5 次"，分析原因，小的改动自己改完测完，大的决定带回来找你拍板。</blockquote>
+<p>差别不在"能干多少"，而在"没指令时会不会主动看"。OpenAI 把这种能力叫 proactive research（主动研究）。</p>
+<h3>二、产品形态</h3>
+<p>每个 Dot 由 GPT-6 Astra 驱动，拥有自己的云端电脑和浏览器，能通过 OpenAI 的插件生态连接 4000+ 应用。你可以给它命名、定目标、定偏好和标准，再连上它干活需要的应用。</p>
+<p>OpenAI 给它配了三种视图：进行中、排程、已完成。你可以调周期性工作的执行时间、通知方式，随时暂停。<strong>交出去不等于失控</strong>，这是它和"全自动"最大的区别。</p>
+<h3>三、和前辈们的对比</h3>
+<ul>
+<li><strong>Rabbit / 早期硬件 Agent</strong>：噱头大于可用，停在演示层。</li>
+<li><strong>Manus / 通用 Agent</strong>：强在单次任务的完成度，但做完就结束。</li>
+<li><strong>Claude 的托管 Agent</strong>：Anthropic 刚加了动态工作流，单次可并行 1000 个子代理，强在"规模"，但同样是被动响应。</li>
+<li><strong>Dots</strong>：强在"持续"。VentureBeat 把这种模式称为 workflow ownership（工作流责任制）——人定目标和标准，AI 持续盯着底层变化、跟着更新。</li>
+</ul>
+<h3>四、Space：进团队的那一步</h3>
+<p>同步发布的 ChatGPT Space，把这套模式从个人带进团队：团队成员、ChatGPT 和 Dot 共用项目知识，页面和已连接的工具保持同步。比如项目页自动从 Slack、邮件、日历抓待办，Dot 随状况更新负责人和期限。</p>
+<p>AI 的工作第一次从"某人的聊天记录"变成了"团队共同维护、持续变动的成果"。这一步的意义不亚于 Dots 本身。</p>
+<h3>五、限制和冷静</h3>
+<ul>
+<li>目前一个人只能建一个 Dot，之后开放多个和专用版</li>
+<li>长时间运行 + 记忆 + 持续工作 = 持续的 token 账单。Anthropic 官方都提示多代理工作流"消耗大量 token，先小规模测试"</li>
+<li>权限是核心风险：能操作你电脑、连你应用的 Agent，权限控制做不好就是灾难。OpenAI 这次把权限控制做成了产品的一部分，值得肯定，但实战中仍需谨慎</li>
+</ul>
+<h3>六、对打工人的影响</h3>
+<p>可以开始盘一盘了：你的工作里，哪些是"一次性任务"，哪些是"需要长期盯的事"？后者——客户反馈、竞品监控、数据日报、内容更新——正是 Dots 这类产品要吃掉的部分。先被影响的不是"写"，而是"盯"。</p>
+<p><strong>一句话总结</strong>：Agent 的竞争正在从"单次做得好"转向"长期靠得住"。接任务是功能，接责任才是产品。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。加 TG 发送「样章」两个字，手动发送。</p>
+<a class="btn" href="https://t.me/gpt168168" target="_blank" rel="noopener">加 TG 免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
