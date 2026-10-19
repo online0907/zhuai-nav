@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-19：8 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-19 AI 干货教程：n8n 内容复用引擎、5 个纯本地 AI Agent 工作流、n8n+Ollama 入门、手写 Claude Skill、自动化 vs Agent 实测、harness2、Personal Agent 横评、Lovart 2.0 实测。每篇附 3 步上手和变现角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#f4effe;color:#6d28d9}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回 干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-19</h1>
+<div class="meta">2026-10-19 · 猪猪侠玩AI · 今天更新 8 篇</div>
+<div class="item">
+<h2><span class="n">1.</span>n8n 内容复用引擎：1 篇帖子变成 5 个平台的原生稿</h2>
+<p>DEV 社区 @haopengai（2026-10-17）的 n8n 工作流拆解：把一篇跑出数据的帖子喂进去，一次产出 5 个平台各自的原生版本。关键设计是"蒸馏节点"抽核心观点、每个平台写"语气契约"、可移植性检查、7 天错峰发布日历。</p>
+<p class="src">来源：<a href="https://dev.to/haopengai/the-content-repurposing-engine-a-teardown-of-the-n8n-workflow-that-multiplies-one-post-into-five-mh3" target="_blank" rel="noopener">DEV（2026-10-17）</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① 新建 n8n 工作流，先搭"蒸馏"节点：长 prompt + 一好一坏两个例子，逼模型抽出原文唯一核心观点；</li><li>② 为每个平台写"语气契约"节点（小红书口语化、X 短句风），强制每篇脱离原文也能独立成立；</li><li>③ 保留人工决策：只复用已跑出数据的帖子、每篇首行钩子自己改、发布时间自己定。</li></ol></div>
+<p class="take"><b>变现角度：</b>给自媒体/商家做"一稿五发"代运营。作者自述一次全套跑完约 0.05–0.10 美元（GPT-4o-mini 口径），10 分钟产出一周的内容量，成本低到可以按月收服务费；模板本身也可以打包卖。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>5 个纯本地 AI Agent 的 n8n 工作流：无云端、无月费</h2>
+<p>作者把 5 个本地优先的 AI Agent 做成可直接导入的 n8n 工作流 JSON，Community Edition 免费自托管：导入→填 CONFIG→激活，首个 Agent 约 15 分钟跑起来（DEV @mohsinakram91，2026-10-17）。</p>
+<p class="src">来源：<a href="https://dev.to/mohsinakram91/i-built-5-local-first-ai-agents-as-n8n-workflows-no-cloud-no-monthly-fees-2bbi" target="_blank" rel="noopener">DEV（2026-10-17）</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① Docker 一条命令自托管装 n8n Community Edition；</li><li>② 从作者 GitHub 仓库导入 5 个 workflow JSON；</li><li>③ 填好 CONFIG 里的凭证→点 Active→逐个手动触发验证。作者在 n8n 2.43.7 上实测通过（作者自述）。</li></ol></div>
+<p class="take"><b>变现角度：</b>"数据不出内网"是卖点：很多小公司不敢把客户数据接云端 API，帮他们本地部署这套 Agent，收一次性部署费 + 按年维护费。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>第一个本地 AI 自动化：n8n + Ollama 入门流水线</h2>
+<p>最精简的本地 AI 流水线教学（Medium @arshathhaq97，2026-10-09）：手动触发→Qwen2.5（Ollama 本地跑）→转成文本文件→写盘，4 个节点讲透 n8n 编排 LLM 的逻辑，零 API 费用。</p>
+<p class="src">来源：<a href="https://medium.com/@arshathhaq97/building-my-first-local-ai-automation-with-n8n-and-ollama-9048387c653f" target="_blank" rel="noopener">Medium（2026-10-09）</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① 装好 n8n 和 Ollama，执行 ollama pull 拉取 Qwen2.5；</li><li>② 拖 4 个节点连起来：Manual Trigger → LLM 节点（指向本地 Ollama）→ Convert to File → Write to Disk；</li><li>③ 写个实用 prompt（比如"列 3 条 Python 自动化的安全用法"）→运行→打开输出文件检查。</li></ol></div>
+<p class="take"><b>变现角度：</b>"本地免费 LLM 改造"的敲门砖：帮小团队把原来烧 API 钱的内部小工具（周报生成、文档摘要）换成本地版，每月省下的 API 账单就是你的收费依据，按项目收迁移费。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>几分钟手写一个 Claude Skill：把重复工作流变成 Agent 的"App"</h2>
+<p>Skill 就是一个文件夹加一个 SKILL.md，Agent 按 description 自动决定何时加载。Sharbel 的文章给了三种做法（手写/口述让 Claude 代写/录屏让它看），附完整可复制的 YouTube 选题挖掘 Skill 实例（约 2026-10-14 更新）。</p>
+<p class="src">来源：<a href="https://sharbel.com/articles/how-to-build-a-claude-skill" target="_blank" rel="noopener">Sharbel 个人博客</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① 在 Claude 里点 + → Skills → Browse skills → Add → Create a skill；</li><li>② 填 name 和 description，description 写触发关键词（比如"当我说 youtube-pockets 时用"）而不是泛泛描述；</li><li>③ 把手工流程写成步骤——直接套用文章里 7 步选题挖掘模板（vidIQ 搜→近 4 周→outlier 2x→5 万播放→分组找标题格式→取前 5），改成自己的业务流程。作者实测一次搜索筛出 22 条达标视频、产出 4 个选题池（作者自述）。</li></ol></div>
+<p class="take"><b>变现角度：</b>把客户/团队每周重复解释 10 分钟的流程打包成 Skill，卖"AI 效率改造"服务。安全提醒：装别人的 Skill 前先让 Agent 通读代码，检查网络调用和凭证读取。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>AI 自动化 vs AI Agent：同一个客服任务，3 种解法实测对比</h2>
+<p>把"客服消息分类"这个任务在 n8n 里搭 3 遍实测：纯规则 4 条错 2 条、单 AI 步骤 4/4 全对约 3 秒跑完、有边界的 Agent 查政策+查订单+人工确认，22 秒 3 次模型调用；最后给出 3 问选型法则（YouTube，约 2026-10-16 发布）。</p>
+<p class="src">来源：<a href="https://www.youtube.com/watch?v=SP-FwK7_RhU" target="_blank" rel="noopener">YouTube（约 2026-10-16）</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① 先搭 Level 1 纯规则版：If 节点按关键词分流，跑 4 条真实消息看误判率；</li><li>② 升级到 Level 2：加一个 AI 分类节点，对比准确率和耗时（视频里 4/4 全对、约 3 秒）；</li><li>③ 只有需要查政策、查订单、人工确认的场景才上 Level 3 的 Agent，并设人工审批、每日限额、预算上限。注意：以上数字均为视频作者自建演示数据（样本店铺、样本订单），非真实客户数据。</li></ol></div>
+<p class="take"><b>变现角度：</b>"选型框架"本身就是接单话术：帮客户选最便宜够用的方案而不是最贵的，用实测数据证明"不是所有活都需要 Agent"，靠实在拿长期单。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>google-research/harness2：让 Agent 自己改写提示词、工具和记忆</h2>
+<p>Google Research 的递归 Agent 框架（2026-10-19 登 GitHub 日涨星榜第 2）：任务级自动提议改写并实测验证，证据驱动的经验跨任务复用；自带 OpenCode/Codex 执行器和 JobBench 评测集。</p>
+<p class="src">项目地址：<a href="https://github.com/google-research/harness2" target="_blank" rel="noopener">https://github.com/google-research/harness2</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① git clone 仓库并按 README 装 Python 依赖；</li><li>② 选执行器：OpenCode 或 Codex 二选一；</li><li>③ 在自带 JobBench 上跑一轮任务，观察 harness 如何基于行为对比自我改进。涨星数 +6,080 为第三方榜单 ghtrends.dev 2026-10-19 日数据（转述），功能描述来自仓库说明。</li></ol></div>
+<p class="take"><b>变现角度：</b>偏开发者向："自我改进 Agent"是前沿方法论，懂的人少，适合做高阶 AI 工程咨询或内训；先用它给自己的 Agent 提效，案例就是获客材料。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>四大 Personal Agent 横评：花两千踩坑换来的 3 个提效提示语</h2>
+<p>@aiwarts（10-18 X 长文）把 Google Muse、Grok Bot、OpenAI Dots、Manus Cue 四个 Personal Agent 全部实测一遍：花两周时间逐项试完，用 3 个提示语把 33% 的成功率救了回来——真金白银踩坑换来的横评（博主自述）。</p>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2111812368972022217" target="_blank" rel="noopener">X @aiwarts（2026-10-18）</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① 按他文中的清单逐项试 4 个 Agent，先跑他测过的任务类型做基准；</li><li>② 直接套用他公开的 3 个提示语优化自己的 Agent 任务；</li><li>③ 做自己的成功率对比表——选"在你业务场景下最稳"的，而不是功能最多的。</li></ol></div>
+<p class="take"><b>变现角度：</b>帮老板/团队选 Agent 工具的"选型咨询"：别人要花两周两千块踩的坑，你拿着这份横评一次讲清，收一次咨询费。选型做得好，后续的 Agent 落地实施单子自然跟上。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>Lovart 2.0 实测：个人设计 Agent 会记住你的审美</h2>
+<p>@aiwarts（10-19 X 长文）实测 Lovart 2.0：新上线的个人设计 Agent"Arti"能读出用户之前做各种项目积累下来的审美记忆，越用越懂你——AI 设计终于开始打破千篇一律的模板化。</p>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2112182138393219301" target="_blank" rel="noopener">X @aiwarts（2026-10-19）</a></p>
+<div class="steps"><b>上手 3 步：</b><ol><li>① 在 Lovart 里先做 3–5 个不同风格的项目，喂给 Arti 足够的审美样本；</li><li>② 新项目直接让 Arti 按你的历史偏好出初稿，再人工微调；</li><li>③ 把"AI 出稿 + 人工精修"做成固定流程，记录每单耗时用来报价。</li></ol></div>
+<p class="take"><b>变现角度：</b>AI 设计接单的选型参考：Arti 这种"记住审美"的 Agent 适合做长期客户的品牌视觉维护——一次调教、长期复用，边际成本递减，接包月设计单正合适。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
