@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-22：18 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-22 AI 干货教程：DeepInfer 本地部署、rakazo 自选模型 agent、零代码 AI Agent 接单、Agency Agents 专家团队、n8n 新 Agents 实测、founder-skill 点子体检＋ X 只读挖到的 6 条干货——共 18 篇，每篇附上手步骤与变现角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#eef2ff;color:#4338ca}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .data{font-size:14px;color:#b45309;background:#fffbeb;border-radius:10px;padding:10px 16px;margin:12px 0 0}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-22</h1>
+<div class="meta">2026-10-22 · 猪猪侠玩AI · 18 篇，每篇附上手步骤与变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>DeepSeek 开源推理框架 DeepInfer：把官方同款推理引擎搬回家</h2>
+<p>DeepSeek 在 10 月 20 日把内部 serving 框架 DeepInfer 开源（Apache 2.0），含调度器、内核和 token 管线，开源当天即登 GitHub Trending（口径：GitHub 数据，截至 10-22 约 1.9 万星）。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>克隆仓库 <code>github.com/deepseek-ai/DeepInfer</code>，按 README 用 Docker 或源码构建 DeepInfer 服务；</li><li>加载你手里的 DeepSeek 开源权重（如 V3.2/R1），用 <code>deepinfer serve</code> 起一个 OpenAI 兼容接口；</li><li>把本地应用、n8n、Coding Agent 的 base_url 指向该服务，实测吞吐与延迟。</li></ol></div>
+<p class="src">来源：<a href="https://github.com/deepseek-ai/DeepInfer" target="_blank" rel="noopener">GitHub / Tech-Insider 解读</a></p>
+<p class="take"><b>变现角度：</b>自建推理服务把 API 按量付费变成一次性硬件成本；会部署的人可以给中小团队做“私有推理网关”搭建服务，收实施费。</p>
+</div><div class="item">
+<h2><span class="n">2.</span>rakazo：开源的 Grok Bot 平替，自己选模型＋沙箱</h2>
+<p>一个桌面/移动端 AI coding agent 开源实现（TypeScript），允许自选任意模型和隔离沙箱，不被单一厂商订阅绑死（口径：GitHub 数据，截至 10-22 约 5187 星，10-21 仍在 Trending 日增约 180 星）。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>从仓库 Releases 下载桌面端（或 <code>git clone</code> 源码跑）；</li><li>在设置里接入自己的模型（Claude/GPT/Grok/OpenRouter 任选）和 API key；</li><li>创建沙箱工作区，把常用项目丢进去，让 agent 在隔离环境里改代码、跑命令。</li></ol></div>
+<p class="src">来源：<a href="https://github.com/elie222/rakazo" target="_blank" rel="noopener">GitHub</a></p>
+<p class="take"><b>变现角度：</b>帮怕把代码传云端的小公司搭“本地 agent 工作站”，按项目收费；或做成教程/咨询内容。</p>
+</div><div class="item">
+<h2><span class="n">3.</span>不会写代码也能做 AI Agent 卖钱：免费工具第一周行动清单</h2>
+<p>dev.to 10 月 22 日新帖，给出“零代码接单做 AI Agent”的完整路径：选一条小企业每周都在手工做的活 → 用现成工具搭丑版 → 真人验证 → 按结果收费。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>选一条具体业务（如“线索来了自动写跟进回复”），别贪多；</li><li>在 n8n（胶水场景）或 Base44/Bolt（小应用场景）里搭出能跑的丑版本，用真实数据测；</li><li>拿着跑通的结果去找有这份工作的人，问“愿不愿意付费省掉这件事”，按结果定价。</li></ol></div>
+<p class="src">来源：<a href="https://dev.to/markfulton/build-an-ai-agent-without-coding-free-tools-that-work-today-8m6" target="_blank" rel="noopener">DEV Community</a></p>
+<p class="take"><b>变现角度：</b>本质是“AI 实施顾问”副业路线：帮本地小企业（健身房、装修队、律所）把重复客服/跟进工作 agent 化，收月费或项目费。</p>
+</div><div class="item">
+<h2><span class="n">4.</span>Agency Agents：把 Claude Code 变成一支专家团队</h2>
+<p>Medium 10 月 21 日新手指南：一个开源仓库提供 18 套预置“团队阵容”（如 startup-mvp），每个 agent 是纯 Markdown，可装进 Claude Code、Codex、Cursor。</p>
+<div class="steps"><b>3 步上手：</b><ol><li><code>git clone</code> 仓库后运行 <code>./scripts/install.sh --list teams</code> 看 18 套阵容；</li><li><code>./scripts/install.sh --tool claude-code --division &lt;选中的团队&gt;</code> 装到 <code>~/.claude/agents/</code>；</li><li>重启 Claude Code，用 <code>@专家名</code> 直接点名调用（如让“架构师”先出方案再让“工程师”写）。</li></ol></div>
+<p class="src">来源：<a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener">Medium / GitHub</a></p>
+<p class="take"><b>变现角度：</b>把“AI 团队工作流”打包成标准化交付：接外包/咨询单时一人即团队，交付速度翻倍；也可做成付费模板包。</p>
+</div><div class="item">
+<h2><span class="n">5.</span>本周 AI 工程师在装的 12 个 GitHub 热门仓库（含安装命令）</h2>
+<p>Medium 10 月 22 日盘点：本周 GitHub Trending 上专为 AI Agent 打造的 12 个工具——反编译 MCP 服务器、模块化工程 skill 包、SwiftUI 规则书、给助手加 3D 建模能力的 CAD 引擎等，每个都附试用命令。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>按清单挑 2-3 个和自己工作相关的（如 OpenBot 自建 AI 员工沙箱模板）；</li><li>照文章里的命令装上并跑通最小示例；</li><li>评估哪个能塞进你的日常 agent 回路（作者提醒：先搭好 agent loop 再装，且注意部分仓库要浏览器登录/系统权限）。</li></ol></div>
+<p class="src">来源：<a href="https://medium.com/@JustSnehal/the-12-trending-github-repos-ai-engineers-are-installing-right-now-981bc3185892" target="_blank" rel="noopener">Medium</a></p>
+<p class="take"><b>变现角度：</b>信息差+工具差——先人一步把这些 agent 工具用进自己的接单流程（代码审计、自动化测试），报价时就有“AI 提效”溢价。</p>
+</div><div class="item">
+<h2><span class="n">6.</span>LaunchDarkly Agent Skills 官方上手：3 步搭一个“副业点子启动器”</h2>
+<p>LaunchDarkly 官方教程（10 月 21 日更新）：用 skills.sh 一键把 Agent Skills 装进 Claude Code/Cursor/Windsurf，然后让助手自动生成一个帮你验证点子、写落地页、选技术栈的 Side Project Launcher。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>在终端运行 skills.sh 的一键安装命令把 LaunchDarkly skills 装好；</li><li>重启编辑器，在 Claude Code 输入 <code>/configs</code> 验证 skills 已加载；</li><li>按教程话术让助手创建项目并生成 agent 配置（含变量如 idea 等），拿到 SDK key 后调用即个性化输出。</li></ol></div>
+<p class="src">来源：<a href="https://launchdarkly.com/docs/tutorials/agent-skills-quickstart" target="_blank" rel="noopener">LaunchDarkly 官方文档</a></p>
+<p class="take"><b>变现角度：</b>把“点子验证→落地页→技术选型”做成标准化服务，帮想做副业的人快速起盘收咨询费；熟练后可复用到自己的多个产品。</p>
+</div><div class="item">
+<h2><span class="n">7.</span>n8n AI Agent 教程：新 Agents 功能 vs 经典 AI Agent 节点，免费自建实测</h2>
+<p>dev.to 作者在 10 月 20 日用 n8n 2.43.8 社区版（免费自建）＋免费本地模型，把“同一个聊天 agent”用两种方式各搭一遍：经典 AI Agent 节点 vs 新的 Agents 预览功能，并记录了真实踩坑。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>自建 n8n 社区版（Docker 一条命令），确认版本 ≥2.43；</li><li>先用经典 AI Agent 节点搭一个带工具的聊天 agent 跑通；</li><li>再用 Agent Builder（新 Agents 功能）搭同一功能，对比两者在“可控性/搭建速度/调试体验”上的差异，选适合你场景的。</li></ol></div>
+<p class="src">来源：<a href="http://dev.to/crypteasensei/n8n-ai-agent-tutorial-2026-the-new-agents-feature-vs-the-ai-agent-node-on-free-self-hosted-n8n-22ce" target="_blank" rel="noopener">DEV Community</a></p>
+<p class="take"><b>变现角度：</b>n8n 教程本身就是获客内容；掌握新版 Agents 功能后，可以给企业做“内部 AI 助手”实施，避开已过时的旧教程方案。</p>
+</div><div class="item">
+<h2><span class="n">8.</span>founder-skill：上线前先让 AI 董事会审一遍你的点子</h2>
+<p>开源项目提供 11 个免费 Claude Skill：Hormozi/Thiel/Jobs 训练的专家董事会、CFO、营销总监，外加 100 个 AI 买家组成的消费者评审团，全部离线 Python 工具、MIT 协议（口径：GitHub 数据，截至 10-22 约 1368 星）；explainx.ai 10 月 22 日出了深度实测解析。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>最简安装：把仓库地址粘进 Claude 说“install skill”，或 <code>/plugin marketplace add Jakeschincariol/founder-skill</code>；</li><li>对半成品想法跑 <code>/founder-consumer --quick</code> 快速判断要不要继续；</li><li>依次跑完董事会、CFO（unit_economics.py 算盈亏平衡）、定价（van_westendorp.py）等 11 个 skill，拿到可审计的 verdict。</li></ol></div>
+<p class="src">来源：<a href="https://github.com/Jakeschincariol/founder-skill" target="_blank" rel="noopener">explainx.ai 实测解析 / GitHub</a></p>
+<p class="take"><b>变现角度：</b>把这套流程变成“创业点子体检”服务，帮人省掉拍脑袋投入的试错成本；内容创作者可做成系列测评视频。</p>
+</div><div class="item">
+<h2><span class="n">9.</span>Awesome Claude Skills：241 个 Skill 的一站式装机目录</h2>
+<p>一个持续更新的目录站，合并了 Anthropic 官方 skills 和两个最大社区清单，去重并补上每个 skill 的真实安装命令，可按星数排序、按 15 个分类浏览（页面标注 Updated October 21, 2026，241 skills）。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>在站内搜索你的场景（如 design、seo、video）或按星数排序；</li><li>按页面给出的三选一装法安装（plugin marketplace / <code>npx skills add</code> / 手动复制 SKILL.md 到 <code>~/.claude/skills/</code>）；</li><li>重启 Claude Code 或运行 <code>/reload-skills</code>，用 <code>/skill名</code> 调用；装社区 skill 前先读一遍 SKILL.md 和 scripts/（会执行 shell 命令）。</li></ol></div>
+<p class="src">来源：<a href="https://awesomeclaude.ai/awesome-claude-skills" target="_blank" rel="noopener">awesomeclaude.ai</a></p>
+<p class="take"><b>变现角度：</b>快速武装自己的 agent 工作流，把省下的时间变成接单产能；熟悉后可整理“某行业的 10 个必装 skill”做付费清单/咨询。</p>
+</div><div class="item">
+<h2><span class="n">10.</span>12 步自建 AI 编程助手（Qwen Code/OpenCode + Ollama，2026 版）</h2>
+<p>shattered.io 10 月 21 日指南：从零搭一套“代码不出内网”的 AI 编程助手——Qwen Code CLI ＋ Ollama 本地模型 ＋ Open WebUI 浏览器界面，并附安全工作流（git 检查点、只读起步、密钥隔离）。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>装 Node.js 20+ 和 <code>@qwen-code/qwen-code</code>（10 月 19 日已到 0.25.3），自检环境；</li><li>用 Ollama 拉一个本地模型（如 qwen3-coder），或配 OpenAI 兼容接口做混合方案（简单任务本地、难题上云）；</li><li>按安全清单开工：每次 AI 改代码前 <code>git commit</code> 留检查点，先让 agent 只读解释再放开写权限。</li></ol></div>
+<p class="src">来源：<a href="https://shattered.io/self-hosted-ai-coding-assistant-qwen-code-2026/" target="_blank" rel="noopener">shattered.io</a></p>
+<p class="take"><b>变现角度：</b>给有合规要求的公司搭“私有编程助手”是一门实施生意；个人则省掉每月订阅费，长期看等于加薪。</p>
+</div><div class="item">
+<h2><span class="n">11.</span>给 Claude Code 装上永久记忆：自建 mem0 MCP 服务器</h2>
+<p>dev.to 10 月 22 日教程：用 mem0-mcp-selfhosted 项目，配合自建 Qdrant ＋ Neo4j ＋ Ollama（bge-m3 做 embedding），给 Claude Code 接上 11 个记忆管理 MCP 工具，支持纯本地方案。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>起好 Qdrant（向量记忆）和 Ollama（<code>ollama pull bge-m3</code> 做 embedding），Neo4j 可选（知识图谱）；</li><li>克隆 mem0-mcp-selfhosted，按 Quick Start 配置（默认用 Claude 会话 token 做事实抽取，零 API key；要纯本地就设 <code>MEM0_PROVIDER=ollama</code>）；</li><li>在 Claude Code 的 MCP 配置里接入该 server，跨会话测试“记住项目偏好”是否生效。</li></ol></div>
+<p class="src">来源：<a href="https://pengen.diewe.workers.dev/n3rdh4ck3r/how-to-give-claude-code-persistent-memory-with-a-self-hosted-mem0-mcp-server-h68" target="_blank" rel="noopener">DEV Community</a></p>
+<p class="take"><b>变现角度：</b>长期记忆是 AI 客服/个人助理类产品的核心壁垒；会搭这套的人可以接“企业知识库 agent”定制单，按项目收费。</p>
+</div><div class="item">
+<h2><span class="n">12.</span>自建 Honcho：给家里 AI Agent 配长期记忆（Docker 一键栈）</h2>
+<p>heretik.io 10 月 22 日实测：在家用机上用 Docker Compose 起 Honcho（FastAPI ＋ 后台 deriver ＋ Postgres pgvector ＋ Redis），接 27B Qwen 本地模型（llama.cpp），闲置仅占约 610MB 内存（口径：来源原文实测），事实抽取 1 分钟内可用。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>准备 Docker Compose，按文章的 4 服务编排文件 <code>docker compose up</code>；</li><li>准备一个支持可靠 tool calling 的 OpenAI 兼容模型端点（作者用 27B Qwen 跑 llama.cpp，tool calling 自测 24/24）和 embedding 端点（Ollama <code>qwen3-embedding:4b</code>）；</li><li>在 Hermes Agent 里装 Honcho memory provider 插件，建 workspace 开始沉淀“人-AI”的长期观察（deriver 后台自动抽取，dream 定期 consolidation）。</li></ol></div>
+<p class="src">来源：<a href="https://heretik.io/honcho-self-hosted-local-agent-memory/" target="_blank" rel="noopener">heretik.io</a></p>
+<p class="take"><b>变现角度：</b>和上一篇互补的另一条记忆路线；适合想做“越用越懂你”的个人助理/陪伴类产品的独立开发者，记忆层自建＝数据不出门＝可收隐私溢价。</p>
+</div><div class="item">
+<h2><span class="n">13.</span>@xaiwind：超简单 PI Agent，从入门到精通（个人智能体的王者）</h2>
+<p>10 月 22 日上午发布的 X 长文教程：PI Coding Agent 从入门到精通的完整上手路径，被博主称为“个人智能体的王者”——面向想自己搭个人 agent 的新手。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>打开原帖长文，通读 PI Agent 的定位与能力边界，判断是否适合你的场景；</li><li>按教程指引完成安装与首跑配置，先让它接管一件你每天都在做的重复小事；</li><li>把常用 prompt 和技能沉淀为个人配置，逐步扩展到写作、搜索、文件处理等场景。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/xaiwind/status/2113084544375304503" target="_blank" rel="noopener">X @xaiwind</a></p>
+<p class="take"><b>变现角度：</b>把自己用顺的 agent 流程整理成教程/付费专栏；企业内训“人人配一个个人 agent”是正在起来的需求。</p>
+</div><div class="item">
+<h2><span class="n">14.</span>@HaileyAILabs：同一个提示词，GPT-6 Astra vs Gemini 4 Argon 3D 生成正面 PK</h2>
+<p>10 月 22 日上午发布的实测对比帖：用同一个提示词对比两家新模型 GPT-6 Astra 与 Gemini 4 Argon 的 3D 生成能力，并给出成本性价比结论——选型前先看这篇。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>看完对比帖，锁定你场景下更优的那个模型（质量 vs 成本两个维度）；</li><li>用帖中同类提示词在你自己的业务素材上复测一遍，别只看博主的单一样本；</li><li>按复测结论定型你的生成管线，把“贵但好”和“便宜够用”分场景搭配。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2113086905386746202" target="_blank" rel="noopener">X @HaileyAILabs</a></p>
+<p class="take"><b>变现角度：</b>做 3D/产品渲染外包的团队，选型差价直接就是利润差；这类对比测评本身也是高传播的内容选题。</p>
+</div><div class="item">
+<h2><span class="n">15.</span>@aiwarts：用 Opus 做动画的六类玩法＋AI 视频丝滑转场技巧</h2>
+<p>10 月 22 日凌晨发布的整理帖：把用 Opus（Anthropic 新模型）做动画的六类玩法一次性讲透，外加 AI 视频丝滑转场的实操技巧——做短视频/动画内容的人可以直接抄作业。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>通读六类玩法，挑 1-2 类和你内容形式最贴的先试；</li><li>用转场技巧处理你现有视频的衔接段，对比前后观感差异；</li><li>把跑通的玩法固定成模板，批量复制到后续内容生产。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2112953469703446828" target="_blank" rel="noopener">X @aiwarts</a></p>
+<p class="take"><b>变现角度：</b>动画/短视频代运营的核心竞争力就是“会玩新工具”；这类玩法整理成课程或代做服务都好卖。</p>
+</div><div class="item">
+<h2><span class="n">16.</span>@liangzhu_AI：冷邮件销售——YC 合伙人总结的 8 条销售底线</h2>
+<p>10 月 22 日晚发布的转述帖：一位靠创始人直销成交几百万美元的 YC 合伙人，总结了 8 条冷邮件/销售底线——做 AI 出海、卖 SaaS/服务的人，这 8 条是获客基本功。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>读完 8 条底线，对照你现在的获客动作逐条打分；</li><li>挑得分最低的 2 条，本周就改一版你的冷邮件/私信话术；</li><li>跑两周看回复率变化，固化成你自己的获客 SOP。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/liangzhu_AI/status/2113248252711834075" target="_blank" rel="noopener">X @liangzhu_AI</a></p>
+<p class="take"><b>变现角度：</b>AI 工具再强也替代不了“把东西卖出去”；获客能力是所有 AI 副业的天花板，先补这一课。</p>
+</div><div class="item">
+<h2><span class="n">17.</span>@liangzhu_AI 转述：Computer Use 经 MCP 嫁接任意 Agent（开源 lcu 拆解）</h2>
+<p>@liangzhu_AI 10 月 22 日晚转述 @dotey 对开源项目 lcu 的拆解：Computer Use 能力经 MCP 嫁接任意 Agent，本地重复操作一键接管——把“电脑替你点鼠标”变成可复用的 agent 能力。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>读完拆解帖，理解 lcu 的架构：Computer Use ＋ MCP 是怎么接起来的；</li><li>在本地找一个你每周重复的 GUI 操作（如填表、导数据），按思路搭最小可用版本；</li><li>跑通后评估：哪些客户/团队有同类重复操作，打包成自动化服务。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/liangzhu_AI/status/2113232649552892028" target="_blank" rel="noopener">X @liangzhu_AI</a></p>
+<p class="take"><b>变现角度：</b>RPA 式 agent 自动化是中小企业的刚需：按流程收费，一单吃一年。</p>
+</div><div class="item">
+<h2><span class="n">18.</span>@HYhongyu8：赚钱很简单——外卖服＋TikTok 搞钱剧本</h2>
+<p>10 月 22 日傍晚发布的搞钱帖：剧本很具体——买一套外卖服，每天真实送两单并拍视频，用 AI 出英文文案发 TikTok，收老外的打赏/流量收益。门槛极低，重在执行。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>买套外卖服，先真实体验并记录外卖员的一天（真实感是内容核心）；</li><li>用 AI 生成英文文案/字幕，把视频发到 TikTok，测试哪类选题有流量；</li><li>有流量后接打赏、带货或引流到私域，把“围观”变成收入。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/HYhongyu8/status/2113203205509112132" target="_blank" rel="noopener">X @HYhongyu8</a></p>
+<p class="take"><b>变现角度：</b>这套剧本的本质是“职业体验＋AI 出海内容”：可复制到其他职业（快递、夜市摊主），一人就是一个内容工作室。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
