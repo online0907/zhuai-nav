@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-23：12 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-23 AI 干货教程：5 分钟做出你的第一个 Claude Skill：把重复提示词变成一键命令、5 个 Claude Skills 真机实测排名：grill-me 第一，PPT Skill 真能用、一条帖子变五个平台内容：n8n 内容复用引擎完整拆解、用 Meta Muse 卖出第一份 $100 竞品调研报告：完整接单教程、给 AI 编程助手省 token：Context Mode 安装实战（开源，支持 17 种工具）、Claude 中文新手指南：跟 ChatGPT 差在哪、方案怎么选、装好先干什么、ChatGPT 插件分发红利：对话流推荐的 5 步截流打法、长任务 Agent 成本黑洞：把「执行」和「验证」拆开，Token 账单砍数倍、用完 12 个 Personal Agent 后的系统实测：五维评估法 + 9 个可抄的工作流、Personal Agent 入门：按可接入 APP 数量的 13 选 1 选型指南、视频号是最被低估的流量平台：每天 10 分钟，3 个月万粉的实战记录、小红书情感测评虚拟产品：AI 生成 + 走量，卖出上万份的模板。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#eef2ff;color:#4338ca}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .data{font-size:14px;color:#b45309;background:#fffbeb;border-radius:10px;padding:10px 16px;margin:12px 0 0}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-23</h1>
+<div class="meta">2026-10-23 · 猪猪侠玩AI · 12 篇 AI 干货，附上手步骤和变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>5 分钟做出你的第一个 Claude Skill：把重复提示词变成一键命令</h2>
+<p>Zero Cost AI 的手把手教程，以「视频简介生成器」为例，带你从零写 SKILL.md、配输出模板、测试自动触发，让重复工作一次教会、次次自动执行。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>在项目 .claude/skills/ 下新建文件夹（如 youtube-description），创建 SKILL.md，先写好 name 和 description——description 是触发关键词，要写用户实际会说的词。</li><li>在 SKILL.md 正文写清步骤和规则，再配一个 template.md 固定输出版式；长细节放附属文件，SKILL.md 保持短而聚焦。</li><li>新开一个 Claude Code 会话直接提需求验证（Claude 会自动加载匹配的 Skill），或用 /youtube-description notes.md 直接调用；效果不对就改文字再测，迭代几次即定型。</li></ol></div>
+<p class="src">来源：<a href="https://medium.com/@zero-cost-ai/claude-code-skills-explained-by-example-build-your-first-skill-in-5-minutes-b38a23bde1ed" target="_blank" rel="noopener">Medium / Zero Cost AI</a></p>
+<p class="take"><b>变现角度：</b>把你反复做的交付流程（周报、产品文案、代码审查、会议纪要）做成 Skill，可打包成团队效率工具或做「Skill 定制」服务收费；对个人则是把每次重写长提示词的时间成本一次性清零。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>5 个 Claude Skills 真机实测排名：grill-me 第一，PPT Skill 真能用</h2>
+<p>RanThis 在 2026 年 10 月用 Claude Code 2.1.x 实测了 grill-me、pptx、skill-creator、xlsx、frontend-design 五个热门 Skill，按「改变结果的程度」排名，附每条安装命令。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>先装改变最大的两个：grill-me（mattpocock-skills 插件，先提问再开工）和 Anthropic 官方 document-skills（含 pptx、xlsx），各一条 plugin install 命令。</li><li>用 skill-creator 把你自己的重复流程变成 Skill：用自然语言描述需求，它约 1 分钟生成 SKILL.md（作者实测 106 行、约 1 分 15 秒），但生成后务必人工检查一遍。</li><li>记住 Skill 不一定自动触发——重要的在提示词里点名；只安装信任来源的 Skill，因为它们可以在你的机器上跑代码。</li></ol></div>
+<p class="src">来源：<a href="https://ranthis.com/guides/best-claude-skills" target="_blank" rel="noopener">RanThis</a></p>
+<p class="take"><b>变现角度：</b>pptx/xlsx Skill 可直接接「代做 PPT/数据报表」单（作者实测 9 行 CSV 生成 6 页原生图表 PPT 约 2 分 10 秒，数字可编辑）；grill-me 类需求澄清流程能提高交付一次通过率，少返工就是省钱。以上数字为作者实测、非基准测试（口径：博主自述）。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>一条帖子变五个平台内容：n8n 内容复用引擎完整拆解</h2>
+<p>开发者 haopengai 公开自己在售 n8n 模板的工作流拆解：提炼节点抽核心观点 → 五个平台按「声音契约」改写 → 可移植性检查 → 7 天错峰发布，附三个真实踩坑。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>搭提炼节点：从源帖抽出核心观点、论据、结论——作者提醒这是最重要也最便宜的一环，提炼错了后面五个全错，值得用更长的 prompt 加正反示例。</li><li>给 X/LinkedIn/Newsletter/短视频脚本/社群帖各写「声音契约」硬约束（如 X 每条≤280 字符、前 12 词放钩子），再加一个可移植性检查节点，把「如上表所示」「回复这条推文」这类跨平台失效引用打回重写。</li><li>输出 7 天错峰日历而不是一次全发；只复用已经跑出数据的好帖子（复用会放大平庸），每篇的钩子第一句和发布时间留给人工。</li></ol></div>
+<p class="src">来源：<a href="https://dev.to/haopengai/the-content-repurposing-engine-a-teardown-of-the-n8n-workflow-that-multiplies-one-post-into-five-mh3" target="_blank" rel="noopener">DEV Community / haopengai</a></p>
+<p class="take"><b>变现角度：</b>一套跑下来约 $0.05–$0.10（GPT-4o-mini，作者自述），每月约 $5 token 费换一周的原生内容；可做成内容代运营服务按月收费，或像作者一样把调通的模板打包出售（其完整模板售价 $29）。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>用 Meta Muse 卖出第一份 $100 竞品调研报告：完整接单教程</h2>
+<p>Agent Income Lab 的分步指南：把「3 家竞品快照报告」做成 $100 的标准化产品，用 Meta Muse 做调研、整理、生成 PDF，全程附可直接复制的提示词。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>定产品：3-Competitor Business Snapshot，$100/份，3 个工作日交付，先锁定一个细分客群（如本地 IT 服务商），窄客群让方法可重复。</li><li>按教程的三段提示词让 Muse 执行：找 3 家真竞品 → 分析定位差异 → 生成 7 页报告结构；每条重要结论都要人工核验来源 URL，不确定的标「未公开可查」，绝不编造。</li><li>先做一份样例报告，再找 5 家目标客户推销；成交后复盘真实耗时，决定提价、转包还是复制到下一个行业。</li></ol></div>
+<p class="src">来源：<a href="https://agentincomelab.com/make-money-with-ai-agents/how-to-make-your-first-100-with-meta-muse-in-2026-step-by-step-guide/" target="_blank" rel="noopener">Agent Income Lab</a></p>
+<p class="take"><b>变现角度：</b>报告卖 $100/份，成本主要是你的核验时间；跑通后可复制到营销公司、会计事务所、清洁公司等其他本地服务业。注意：Meta Muse 2026 年 9 月发布、初期仅美加可用（文章说明），动手前先确认你所在地区可用，别先搭流程后发现登不上。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>给 AI 编程助手省 token：Context Mode 安装实战（开源，支持 17 种工具）</h2>
+<p>开源项目 mksglu/context-mode 的上手教程：用沙盒执行 + MCP + SQLite 全文检索，把大体积工具输出挡在上下文之外，并用 BM25 按需取回，Claude Code 两条命令装好。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>Claude Code 里执行 /plugin marketplace add mksglu/context-mode，再 /plugin install context-mode@context-mode，重启后用 /context-mode:ctx-doctor 验证各项检查通过。</li><li>其他平台用 npm install -g context-mode，再按 README 配对应平台（Cursor、Copilot CLI、Gemini CLI、OpenCode 等各有一行配置），需要 Node.js 22.5+。</li><li>跑一次长任务后用 /context-mode:ctx-stats 看省了多少 token；养成「用代码思考」习惯：让 Agent 写脚本算出结果再输出，而不是把大文件逐行读进上下文。</li></ol></div>
+<p class="src">来源：<a href="http://dev.to/terminalchai/context-mode-cut-ai-coding-agent-context-bloat-by-98-with-sandboxed-mcp-sqlite-fts5-50j" target="_blank" rel="noopener">DEV Community / terminalchai</a></p>
+<p class="take"><b>变现角度：</b>省 token 就是省 API 费用，重度编程用户效果最明显；吃透这套上下文优化方法论，可做「AI 编程工作流咨询/提效服务」。数字口径：98% 来自项目方自己的 BENCHMARK.md（315KB→5.4KB），第三方评测提醒该数字包含「不适合摘要的文档场景」，理性看待，别神化。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>Claude 中文新手指南：跟 ChatGPT 差在哪、方案怎么选、装好先干什么</h2>
+<p>MadebyPan 的繁体中文入门长文（2026-10-22 更新）：Claude vs ChatGPT/Gemini 对比、四档订阅怎么选、Claude Code 安装与每天要用的操作、CLAUDE.md/Skill/排程让 AI 越用越懂你的心法。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>先从 Pro（$20/月）开始：免费版没有 Claude Code 和 Opus 5.5；额度分 5 小时和每周两道上限，打 /usage 随时查看，频繁撞上限再考虑 MAX 档。</li><li>按系统装 Claude Code（Mac 终端一行命令 / VS Code 装扩展 / 桌面版点 &lt;/&gt; 图标），第一次直接问它「用这个文件夹示范你能做什么」，用对话代替学命令。</li><li>建 CLAUDE.md 写偏好和项目说明、把试出来的好流程固化成 Skill、固定任务用排程（如每天早上整理新闻）；开多个对话协作时加一条「每轮更新交接文件」的规则。</li></ol></div>
+<p class="src">来源：<a href="https://madebypan.com/claude-guide/" target="_blank" rel="noopener">MadebyPan</a></p>
+<p class="take"><b>变现角度：</b>学会 Claude Code 等于多一个能操作电脑的助理：可接「AI 效率咨询/工作流代搭」单，或把省下的外包与人力时间折算成成本节约。价格与功能口径：作者整理自官方页面（2026-10-22 查阅），Claude Duet 等新功能当时仍在候补名单，以官方最新公告为准。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>ChatGPT 插件分发红利：对话流推荐的 5 步截流打法</h2>
+<p>良竹指出 ChatGPT 插件体系正向 12 亿周活用户开放「对话流推荐」，独立开发者可按 5 步打法截流：挖手工痛点、提炼极简插件、用真实搜索词命名、铺 3–5 个测试探针看自然调用。（来源：@liangzhu_AI，X 帖文后半段截断，步 ⑤ 未完整显示；互动 330 浏览）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>选一个真实的手工痛点（如 PDF 转格式、账单自动拆解、竞品周报汇总），别做泛功能；</li><li>把插件做到极简：单一功能、秒级交付结果，降低调用门槛；</li><li>用用户在聊天框里会输入的真实搜索词命名/描述，先铺 3–5 个探针，看哪个跑出自然调用再加码。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/liangzhu_AI/status/2113611395686088793" target="_blank" rel="noopener">@liangzhu_AI（X）</a></p>
+<p class="take"><b>变现角度：</b>12 亿周活的对话内推荐 = 免费流量入口。跑出自然调用的插件直接变现（订阅/增值功能），或把「插件获客」能力卖给做 AI 应用的公司做增长顾问。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>长任务 Agent 成本黑洞：把「执行」和「验证」拆开，Token 账单砍数倍</h2>
+<p>良竹实测多套长任务流水线发现：最烧钱的不是模型生成，而是每次循环用昂贵推理大模型做「终局验收」。解法是架构拆分——执行用大模型单次生成，进度检查降维给轻量决策模型，不确定时才升级唤醒高阶模型。（来源：@liangzhu_AI）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>把复杂重构和方案设计交给大模型，做单次生成而不是循环调用；</li><li>每轮进度检查降维给超便宜的轻量决策模型（如做 goal 达标判定）；</li><li>只有轻量模型判定不确定时，才动态升级唤醒高阶模型介入验收。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/liangzhu_AI/status/2113619448590401546" target="_blank" rel="noopener">@liangzhu_AI（X）</a></p>
+<p class="take"><b>变现角度：</b>跑 Agent 自动化接单的人直接套用这套「执行-验证分离」架构，推理成本砍掉数倍 = 接单利润率直接提高；也可打包成「Agent 降本优化」咨询服务卖给用 Agent 的企业。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>用完 12 个 Personal Agent 后的系统实测：五维评估法 + 9 个可抄的工作流</h2>
+<p>@aiwarts 在 12 个 Personal Agent 上全跑了 1505 条 cases，提炼出五维评估模型：Computer Use、多端联动、信息获取、记忆、主动性。核心结论：好不好用不取决于模型，而取决于「你的日常 APP 跟它能连的服务重叠度」。文中 9 个真实 case（微信一句话自动记账、海鲜市场自动改价、6GB 4K 素材自动剪辑等）可直接抄。（来源：@aiwarts，X Article 长文，3275 浏览、28 收藏）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>按五维框架先给自己的工具盘点：日常用 APP 越多、可连 Agent 的越多，选型先看重叠度；</li><li>抄一个最小工作流起步（如微信一句「咖啡 28」自动记账进飞书多维表格）；</li><li>跑通后叠加第二个（自动剪辑/自动运营），形成个人自动化矩阵再考虑付费订阅。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2113277101629669865" target="_blank" rel="noopener">@aiwarts（X）</a></p>
+<p class="take"><b>变现角度：</b>每个可抄工作流都是一条服务：帮本地商家做微信自动记账、自动运营，按月收费；选型方法论本身可以做成付费咨询/教程内容。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>Personal Agent 入门：按可接入 APP 数量的 13 选 1 选型指南</h2>
+<p>@aiwarts 按「可接入 APP 数量」给 13 个主流 Personal Agent 做了综合排名：MCP/Skill 维度 openclaw 跟 Hermes 最强；dots 理论可接 codex 4000 个插件但尚未完全兼容。综合排序：muse 54 &gt; dots 50 &gt; spark 35 &gt; today 30 &gt; poke 30 &gt; grok bot 20 &gt; cue 15 &gt; Instinct 12 &gt; hark 2.0 10 = Go 10 = Hermes = OpenClaw。附各 Agent 可接入应用清单（Google Workspace、Slack、Notion、GitHub 等）。（来源：@aiwarts，3345 浏览）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>先列出你每天在用的 APP 清单，对照文中可接入应用表筛选候选；</li><li>按综合分数排序，优先试前 3（muse/dots/spark），免费用到极限再决定付费；</li><li>MCP/Skill 维度优先看 openclaw、Hermes：可扩展性决定上限。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2113458766280786027" target="_blank" rel="noopener">@aiwarts（X）</a></p>
+<p class="take"><b>变现角度：</b>选型不对 = 白交订阅费。直接用这个对照表省下逐个试错的时间和钱；帮中小企业做「Agent 选型+接入」咨询，收一次性服务费。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>视频号是最被低估的流量平台：每天 10 分钟，3 个月万粉的实战记录</h2>
+<p>@HaileyAILabs 实测：视频号是「做过最容易搞流量的平台之一」，停更一个多星期每天仍有赞、评论和新关注，前期每天只花约 10 分钟运营，3 个月做到万粉。优势是背靠微信：社交推荐强、粉丝离私域近，接广告/卖产品/做服务都方便。（来源：@HaileyAILabs，8361 浏览）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>定一个日更可坚持的轻量格式（她只花每天 10 分钟），先保证 30 天不断更；</li><li>做 AI/副业垂直内容，视频号公域推流 + 微信私域沉淀两手抓；</li><li>跑到万粉后接入变现：广告、卖产品（虚拟资料）、做服务三选一。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2113452016018289109" target="_blank" rel="noopener">@HaileyAILabs（X）</a></p>
+<p class="take"><b>变现角度：</b>流量阵地选择的直接答案：做 AI 搞钱内容，视频号的长尾流量 + 微信私域闭环是当下 ROI 最高的组合；流量起来后挂虚拟资料/接商单都是现成的变现路径。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>小红书情感测评虚拟产品：AI 生成 + 走量，卖出上万份的模板</h2>
+<p>@Sunkeke_AI 原本不信「AI 虚拟产品能赚钱」，看完小红书后改观：「测自己在相亲市场值几分」「你是隐藏的上嫁圣体吗」这类 AI 生成的情感测评虚拟产品，竟然能卖出上万份。结论：别闷头研究工具，多看市场需求。（来源：@Sunkeke_AI）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>去小红书搜「测评」「测试」类虚拟产品，看哪些标题下销量最高，记录前 10 的题型；</li><li>用 AI 批量生成同题材测评内容（题目+解析+结果页），做成图文/PDF；</li><li>低单价上架走量，用评论区互动引导复购和转介绍。</li></ol></div>
+<p class="src">来源：<a href="https://x.com/Sunkeke_AI/status/2113624780339617897" target="_blank" rel="noopener">@Sunkeke_AI（X）</a></p>
+<p class="take"><b>变现角度：</b>现成的低成本副业模板：AI 生成内容 + 小红书分发 + 低单价走量。情感测评跑通后可横向复制到星座、MBTI、职场测评等题材。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
