@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案例速递｜2026-10-24：5 个真实 AI 变现案例 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-24 AI 变现案例：Framer 转 Next.js 小工具 25 个付费用户赚 $609、SuperX 在红海里做到 $22,000/月、两款 Mac 应用 23 天卖 $500、LinkedIn 简历工具 Links 月入 $31,500、AI 雇人平台 12 周收入仍是 $0 的诚实记录。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fef3c7;color:#b45309}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .data{font-size:14px;color:#b45309;background:#fffbeb;border-radius:10px;padding:10px 16px;margin:12px 0 0}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="cases.html">← 返回变现案例归档</a>
+<span class="tag">变现案例</span>
+<h1>案例速递｜2026-10-24</h1>
+<div class="meta">2026-10-24 · 猪猪侠玩AI · 5 个真实案例，数据均标注口径</div>
+<div class="item">
+<h2><span class="n">1.</span>Framer 转 Next.js 小工具：解决一个具体搜索需求，25 个付费用户赚 $609</h2>
+<p>独立开发者把「Framer 网站转 Next.js 代码」这个自己搜过的需求做成小工具 FNJ：用户贴 Framer 链接就能拿到代码，还附带 MCP 服务器，让 Claude、Cursor 等 AI 编程工具直接操作 FNJ 网站。2026 年 6 月 28 日上线，定价 $29 终身买断，托管成本约每月 $5。作者每天亲自测试自己的转化漏斗，修掉一个坏按钮就等于修掉「没人想要」的假象。</p>
+<p class="data">数据：上线约 4 个月，注册 1137 人、转化 2156 次（734 人）、付费用户 25 人、收入 $609（税费前）；托管约 $5/月。口径：博主自述（Medium 亲身复盘，含完整漏斗数字）</p>
+<p class="src">来源：<a href="https://medium.com/@iamumioz/i-built-a-simple-saas-and-now-it-makes-me-a61550d907b1" target="_blank" rel="noopener">Medium</a></p>
+<p class="take"><b>可复制点：</b>选「别人已经在搜」的问题而不是凭空发明需求；免费带来注册、收费筛出真需求，两者缺一不可；成本压到每月个位数，增长才不可怕；每天亲自走一遍购买漏斗，别把产品 bug 误读成市场否定。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>SuperX：在 Typefully 们的红海里，用「Growth OS」做到 $22,000/月</h2>
+<p>面对 Typefully、Tweet Hunter、Hypefury 等一众社媒增长工具，创始人 Rob 没有再做一个定时器，而是做了个「Growth OS」：接入 X 的按量付费 API 试点做实时动态分析，上线时生成用户专属个性档案，让 AI 改写真正像本人说话，而不是套模板的企业腔。差异化不在功能数量，而在「写出来像你」。</p>
+<p class="data">数据：月收入 $22,000。口径：媒体转述（文章称该数字经其 Builders of X 个人资料卡验证）</p>
+<p class="src">来源：<a href="https://medium.com/@Bruteforceartist/5-indie-products-quietly-printing-cash-while-everyone-else-argues-about-ai-e8c9f3d5a1a2" target="_blank" rel="noopener">Medium（5 个闷声赚钱的独立产品盘点）</a></p>
+<p class="take"><b>可复制点：</b>红海里别拼功能清单，拼「结果像不像本人」这种可感知的差异；实时数据 + 个性化档案是两道别人懒得做的墙；用平台官方 API 试点能力做护城河，比堆界面管用。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>两款 Mac 应用 23 天卖 $500：Threads 流量是 X 的 7 倍，可点演示直接促成下单</h2>
+<p>开发者 Otabek 用 23 天卖出两款 Mac 应用，收入 $500。他给每个外链打上来源标记、用 Telegram 机器人实时收销售通知，数据复盘出三条反直觉结论：同一天、同一帖子，Threads 给 halo-mac.com 带来 100 个访客，X 只有 14 个；Hacker News 访客虽少但质量高，8 个访客带来 2 单；官网上的可点击互动演示直接促成一单——买家先点演示、再买、再回来跑演示、再付款。</p>
+<p class="data">数据：23 天收入 $500（两款应用合计）；某日 Threads 100 访客 vs X 14 访客；Ask HN 帖子带来 8 访客、2 单。口径：博主自述（DEV 亲身复盘，含分渠道访客统计）</p>
+<p class="src">来源：<a href="https://dev.to/otabek_abdiraimov/how-i-made-my-first-500-selling-mac-apps-in-23-days-72a" target="_blank" rel="noopener">DEV Community</a></p>
+<p class="take"><b>可复制点：</b>小账号别在 X 上死磕，Threads 对小账号更友好；给所有外链打标记，否则一半流量来源永远是谜；不会拍视频就做可点演示——它回答了「这东西到底删了什么」这个最关键的购买疑问；AI 搜索引用正在变成新流量入口，GitHub README 和论坛帖子值得提前布局。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>LinkedIn 简历工具 Links：副业起步、对手已有百万用户，仍做到 $31,500 MRR</h2>
+<p>软件工程师 Charlie Clark 在全职工作之余做了 Links——一个极简的 LinkedIn 个人主页工具，把分散的线上身份收进一个移动端优先的单页。赛道里已有坐拥数百万用户的竞品，他还是坚持做下去：先给自己两周做出能用的版本，利用业余时间打磨增长，直到 2024 年 8 月辞职全职做独立开发。</p>
+<p class="data">数据：月经常性收入约 $31,500。口径：博主自述（Starter Story 访谈中创始人自述）</p>
+<p class="src">来源：<a href="https://www.starterstory.com/stories/how-i-built-it-30k-month-micro-saas" target="_blank" rel="noopener">Starter Story</a></p>
+<p class="take"><b>可复制点：</b>有巨头不等于没机会，极简 + 垂直人群（LinkedIn 用户）就是差异化；副业期别贪大，两周先做出能用的版本；等副业收入能覆盖生活再全职，别用辞职倒逼自己。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>AI 雇人平台 Hire Humans：12 周 Build in Public，收入仍是 $0 的诚实记录</h2>
+<p>与「AI 替代人类」反向而行，Hire Humans 做的是「AI 雇人」：AI Agent 没法离开服务器去现实世界拍照、跑腿，于是平台让 AI 发任务、人类接单赚钱。第 12 周复盘：网站上有 2 个在招的付费任务（一个是 AI Agent Zander 出 $9–$12.75 雇人拍纽约哈德逊河公园的晨景），但真正发帖的 Agent 转化仍是 0，收入 $0。作者坚持不编造工人好评：「等有第一个真实工人故事时再写。」</p>
+<p class="data">数据：开放任务 2 个；Agent 发帖转化 0；收入 $0；平台抽成：会员 15%、免费账号 40%（工人保留 85%/60%）。口径：博主自述（DEV 第 12 周公开复盘）</p>
+<p class="src">来源：<a href="https://dev.to/agenthandsai/build-in-public-week-12-chasing-the-first-ai-agent-customer-the-distribution-diary-1il1" target="_blank" rel="noopener">DEV Community</a></p>
+<p class="take"><b>可复制点：</b>反向选题本身就有传播力（AI 雇人 vs AI 抢饭碗）；冷启动期别看注册数，看「有没有人真的用它完成一单」；Build in Public 的价值不在晒收入，而在公开卡点——$0 也写出来，反而攒下信任；不对称就是生意：Agent 出不了服务器，人能。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>

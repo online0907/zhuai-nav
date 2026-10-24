@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-24：17 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-24 AI 干货教程：Anthropic 沙箱、多 Agent 并行编排、知识图谱检索、无向量 RAG、原地解压、LiDAR 建房、电视干净桌面等 13 篇，附上手步骤和变现角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#eef2ff;color:#4338ca}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .data{font-size:14px;color:#b45309;background:#fffbeb;border-radius:10px;padding:10px 16px;margin:12px 0 0}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-24</h1>
+<div class="meta">2026-10-24 · 猪猪侠玩AI · 17 篇 AI 干货，附上手步骤和变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>Anthropic 开源沙箱 sandbox-runtime：不装 Docker 也能把 Agent 关进笼子</h2>
+<p>Anthropic 10 月 24 日开源的 sandbox-runtime（srt）是 Claude Code 背后的 OS 级沙箱：不用容器就能限制任意进程的文件与网络访问，网络默认拒绝、只放行白名单域名，还能给 MCP 服务器套上沙箱。</p>
+<p class="src">来源：<a href="https://www.marktechpost.com/2026/10/24/anthropic-sandbox-runtime-ai-agent-sandbox/" target="_blank" rel="noopener">MarkTechPost（10 月 24 日报道）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>安装 npm 包 @anthropic-ai/sandbox-runtime（需 Node.js 22.12+，Linux 上另需 socat、ripgrep）。</li><li>用 srt 包裹你要让 Agent 执行的命令，并配好可读写目录与域名白名单。</li><li>先在非生产目录实测一遍：确认越界读写与未授权联网都被拦下，再上生产。</li></ol></div>
+<p class="take"><b>变现角度：</b>给客户做的 Agent、自动化脚本套上这层沙箱，就是可收费的安全卖点；接单时把「防删库、防外泄」写进交付清单，比口头保证管用。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>openrig：让 Claude Code 和 Codex 组队并行干活的多 Agent 编排器</h2>
+<p>GitHub 热榜项目 openrig 把 Claude Code 与 Codex 放进同一个多 Agent 编排系统里并行跑：一个任务拆成多路，两个模型各干擅长的部分，最后汇总结果，适合大重构、多模块并行开发。</p>
+<p class="src">来源：<a href="https://github.com/mvschwarz/openrig" target="_blank" rel="noopener">GitHub：mvschwarz/openrig</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>克隆仓库，按 README 配好 Claude Code 与 Codex 的调用方式。</li><li>把大任务拆成互不依赖的子任务，分别指派给不同 Agent 并行执行。</li><li>汇总各路输出做一次人工审校，确认接口一致后再合并。</li></ol></div>
+<p class="take"><b>变现角度：</b>并行开发直接缩短交付周期：同样的外包单用更少工时交货，等于变相提价；也可以把「多 Agent 并行开发」本身包装成服务卖给小团队。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>openclaw：真正动手执行任务的跨平台 AI Agent</h2>
+<p>openclaw 定位是「真正执行任务」的跨平台 AI Agent：不只聊天问答，能在不同操作系统上实际操作系统、跑流程，适合把重复性电脑操作交给 Agent。</p>
+<p class="src">来源：<a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">GitHub：openclaw/openclaw</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按仓库文档在你的系统上安装并完成初始配置。</li><li>先从一个低风险重复任务试点（如整理文件、定时汇总信息），验证执行可靠性。</li><li>逐步扩大到跨应用流程，并给敏感操作保留人工确认环节。</li></ol></div>
+<p class="take"><b>变现角度：</b>把客户的重复电脑操作打包成「Agent 代劳」服务按月收费；先从一个岗位的重复活切入，跑通再复制到同类客户。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>iFixAi：120 秒审计你的 AI Agent 到底有没有按要求干活</h2>
+<p>iFixAi 是个独立的 AI Agent 审计工具：回答「你的 Agent 是不是真的在做它应该做的事」，号称 120 秒内出结论，适合 Agent 越跑越复杂、行为开始失控的团队。</p>
+<p class="src">来源：<a href="https://github.com/ifixai-ai/iFixAi" target="_blank" rel="noopener">GitHub：ifixai-ai/iFixAi</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>把 iFixAi 接到你的 Agent 运行环境，按文档跑一次审计。</li><li>对照审计报告找出偏离预期的行为（如多余调用、错误路径）。</li><li>修掉偏差点并把审计加入上线前的固定检查项。</li></ol></div>
+<p class="take"><b>变现角度：</b>把「Agent 审计」做成面向企业的检查服务：别人敢把 Agent 交给你，是因为你能证明它没乱来；审计报告本身就是交付物。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>Graphify：给代码库建知识图谱，让 Agent 按结构检索而不是瞎猜</h2>
+<p>Graphify 从代码库加文档、SQL 结构、配置、PDF 里建知识图谱，本地用 tree-sitter 解析 37 种语言语法，不调 LLM、不出本机；每条边标明是原文写明的还是工具推断的，Agent 能分清「读到的」和「猜到的」。它以 /graphify 技能形态装进 Claude Code、Cursor、Codex 等十几种编程助手，并提供 get_neighbors、shortest_path、get_pr_impact 等 MCP 工具。</p>
+<p class="src">来源：<a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">GitHub：Graphify-Labs/graphify</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>给你的编程助手装上 /graphify 技能，让它本地解析目标代码库。</li><li>改代码前先问它：这个改动会影响哪些模块（get_pr_impact）？</li><li>把「先查图谱再动手」写进团队的 Agent 使用规范，减少改崩的返工。</li></ol></div>
+<p class="take"><b>变现角度：</b>接代码改造、接手老项目的外包单时，先用图谱摸清结构再报价：评估更准、返工更少；也可以把「代码库知识图谱梳理」做成一次性咨询服务。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>PageIndex：不用向量的 RAG，靠文档结构 itself 找答案</h2>
+<p>PageIndex 是面向长专业文档（财报、合同、手册）的「无向量」RAG：它按文档版式建一棵树形索引，让 LLM 沿着树推理定位到相关章节，而不是切块算相似度。口号是「相似不等于相关」，官方称在 FinanceBench 上准确率 98.7%（约 50% 是向量 RAG 的水平，厂商自称数据）。</p>
+<p class="src">来源：<a href="https://github.com/VectifyAI/PageIndex" target="_blank" rel="noopener">GitHub：VectifyAI/PageIndex</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>准备一份长文档（财报、合同、产品手册），用 PageIndex 建树形索引。</li><li>针对文档提几个刁钻问题，对比它和传统向量 RAG 的答案准确度。</li><li>效果过关后通过它的 MCP 服务器或本地 SDK 接入你的问答流程。</li></ol></div>
+<p class="take"><b>变现角度：</b>给律所、券商、财税客户做「文档问答」时，准确率就是溢价理由；按文档集收费部署，比通用聊天机器人好卖。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>hatchzip：解压超大文件不用先腾两倍空间，原地「孵化」就行</h2>
+<p>hatchzip 是个 Rust 工具，解决一个具体痛点：解压大压缩包通常要先留出「压缩包 + 解压后」两份空间。它原地解压——文件一边解出来、压缩包一边缩小，最终磁盘占用只剩输出本身，支持 ZIP、7z、tar 与分卷。</p>
+<p class="src">来源：<a href="https://github.com/xevrion/hatchzip" target="_blank" rel="noopener">GitHub：xevrion/hatchzip</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按仓库说明安装 hatchzip（Rust 工具链或预编译版本）。</li><li>找一个大压缩包（或分卷包）实测原地解压，观察磁盘占用变化。</li><li>把它写进小硬盘 VPS、旧电脑、素材盘的日常工具箱。</li></ol></div>
+<p class="take"><b>变现角度：</b>帮客户处理海量素材、备份迁移时，磁盘不够是常见卡点：这个小工具能让你在低配机器上接下别人接不了的活；也可以写进你的效率工具清单做内容引流。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>3d-model-anything：用 iPhone LiDAR 扫一圈，房间变可编辑的 3D 网页</h2>
+<p>wesbos 的 3d-model-anything 用 iPhone LiDAR 与照片重建房间，输出可编辑的 Three.js 场景，直接在浏览器里漫游查看。看房、装修、民宿展示都能用上，不用专业建模软件。</p>
+<p class="src">来源：<a href="https://github.com/wesbos/3d-model-anything" target="_blank" rel="noopener">GitHub：wesbos/3d-model-anything</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用带 LiDAR 的 iPhone 按项目说明扫描一个房间。</li><li>生成 Three.js 场景并在浏览器里检查漫游效果与尺寸感。</li><li>把链接发给客户预览，确认后再谈定制（加标注、换材质、嵌进官网）。</li></ol></div>
+<p class="take"><b>变现角度：</b>给房产中介、民宿、装修队做「扫房出 3D 展示」服务：一次上门扫描、按套收费，比传统建模便宜一个量级；也可以做成标准化套餐在本地生活平台接单。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>aerial-tv：给国产电视换一块没有广告的干净桌面</h2>
+<p>aerial-tv 是参照 tvOS 设计的开源 Android TV 桌面，面向小米、TCL 等国产电视：没有广告，开机自动接管，老人小孩用着都不迷路。</p>
+<p class="src">来源：<a href="https://github.com/pengchujin/aerial-tv" target="_blank" rel="noopener">GitHub：pengchujin/aerial-tv</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>确认电视是 Android TV 体系，按项目说明安装 aerial-tv。</li><li>设为开机默认桌面，检查常用应用入口是否齐全。</li><li>给家里老人或客户演示一遍：开机即达，没有广告弹窗。</li></ol></div>
+<p class="take"><b>变现角度：</b>上门帮人「电视去广告、换桌面」是现成的本地服务：一次收费、口碑传播；也可以拍成短视频教程引流到你的数码服务号。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>claude-mem：让 Claude Code 记住上个会话的项目上下文</h2>
+<p>claude-mem 解决 Agent 编程的老毛病：换个会话就失忆。它在会话之间携带项目上下文，让你续写项目时不用每次都重新讲一遍背景、规则与进度。</p>
+<p class="src">来源：<a href="https://theseguysknow.io/popular-ai-github-repositories/" target="_blank" rel="noopener">The Guys Know（2026 热门 AI GitHub 工具盘点）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按盘点文章找到 claude-mem 项目并按其文档安装配置。</li><li>在一个进行中的项目上启用，让它记录会话间的关键上下文。</li><li>新开会话后先验证：它是否准确记得此前的约定与进度。</li></ol></div>
+<p class="take"><b>变现角度：</b>接长期维护、迭代开发的单子时，上下文不断片等于少返工；把「项目记忆管理」写进你的开发服务流程，客户感知到的就是靠谱。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>PPT Master：一句话生成可编辑的 PPT，不用再从模板里抠图</h2>
+<p>PPT Master 生成的是可编辑的 PowerPoint 文件，不是图片：大纲进去、版式出来，文字、图表都能在 PPT 里继续改，适合提案、汇报、课程课件的快速起草。</p>
+<p class="src">来源：<a href="https://theseguysknow.io/popular-ai-github-repositories/" target="_blank" rel="noopener">The Guys Know（2026 热门 AI GitHub 工具盘点）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按盘点文章找到 PPT Master 项目并完成安装。</li><li>输入一份大纲生成初版，检查版式与内容结构。</li><li>在 PPT 里直接改文字配色，导出成最终交付版。</li></ol></div>
+<p class="take"><b>变现角度：</b>帮小企业、讲师、学生做「代做 PPT」时，用它把起草时间压到原来的零头，按页收费仍有利润；也可以打包成「一小时出 PPT」服务。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>微工具做到 $1,000/月：一个不画饼的四个月路线图</h2>
+<p>开发者 Jakub Jirak 给出了一份诚实的微工具变现路线图：前两个月验证问题、做落地页、攒邮箱意向（预期收入 $0），第 3–4 个月出 MVP、向等候名单软启动、拿到第一批付费用户（预期 MRR $50–$200），再往后才谈 $1,000/月。他同时提醒：自动化 onboarding 会让你错过新用户最有价值的反馈，前 100 个客户要亲自上手接。</p>
+<p class="src">来源：<a href="https://jakubjirak.medium.com/how-to-make-1k-monthly-with-a-micro-tool-for-developers-no-vc-no-hype-5c3efb4b138c" target="_blank" rel="noopener">Medium（Jakub Jirak）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1–2 个月：只干验证——找一个具体问题、做落地页、收集意向邮箱，别急着写完整产品。</li><li>第 3–4 个月：出最小可用版本，向等候名单软启动，亲自 onboard 前 100 个客户并记下反馈。</li><li>按反馈迭代到 MRR $50–$200，再谈扩量；自动化只用在规则明确的环节（账单、通知、部署）。</li></ol></div>
+<p class="take"><b>变现角度：</b>按这张路线图给自己定 KPI：不以「上线」为终点，以「付费用户数」为终点；前 100 个客户的对话本身就是下一款产品的选题库。</p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>ColdMailAI 的 $9 定价课：低价不是贱卖，是去掉购买摩擦</h2>
+<p>ColdMailAI 创始人反其道而行之：别人都劝他定 $29、$49，他只定 $9/月。逻辑是：$9 的购买决策几乎是自动的，不用请示领导、不用比价走采购；100 个 $29 客户和 300 个 $9 客户收入相近，但后者带来 3 倍口碑、3 倍反馈数据、更难被撬走的用户群。而他是独立开发者，Vercel 免费额度 + 每封邮件几分钱的 API 成本，边际成本几乎为零。</p>
+<p class="src">来源：<a href="https://medium.com/@munjebag4/why-i-charge-9-month-for-my-saas-not-29-99bd97652b99" target="_blank" rel="noopener">Medium（Munjebag）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>算清你的边际成本：确认低价后每新增一个用户是否还赚钱。</li><li>把价格定到「不用想就能买」的档位，上线时就明码标价。</li><li>用低价换来的用户量去攒口碑与反馈，再决定是否加高价 tier。</li></ol></div>
+<p class="take"><b>变现角度：</b>边际成本接近零的 AI 小工具（API 成本几分钱、托管免费额度内）最适合低价冲量：先拿用户规模，再从中筛出愿意付高价的客户做升级包。</p>
+</div>
+<div class="item">
+<h2><span class="n">14.</span>Hailey 实测：用 Opus 5.5 做一本会画画的故事书，浏览器里实时画水彩</h2>
+<p>Hailey 用 Opus 5.5 做的《会画画的故事书》小狐狸系列又更新了：万圣节两章新内容，纯代码在浏览器里实时绘制手绘水彩风画面，附英文配音与中英双语字幕。前序第 7、8 章同样是这个路子：把秋天装进口袋变成金色鲸鱼、玻璃球里的冬天小镇。</p>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2113989766861799460" target="_blank" rel="noopener">X @HaileyAILabs（10 月 24 日）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>照着帖子里的思路定主题与分镜：一个主角 + 一章一个奇幻场景。</li><li>让 Opus 5.5 用纯代码在浏览器里实时绘制水彩风画面，并配上英文配音与双语字幕。</li><li>按章节连载发布，每章留一个悬念钩子，攒成系列再打包。</li></ol></div>
+<p class="take"><b>变现角度：</b>儿童绘本、双语启蒙内容是现成的变现方向：单章短视频引流、整本合集打包售卖；纯代码实时绘制的噱头本身就适合做演示类内容吸粉。</p>
+</div>
+<div class="item">
+<h2><span class="n">15.</span>Hailey 实测：给 Grok Bot 一个建房帖子，1 小时后拿到整栋建成的 3D 动画</h2>
+<p>Hailey 随手给 Grok Bot 一个建房帖子，1 小时后得到一段从图纸到施工、再到整栋建成的完整 3D 建房动画，还带专业级解说。Agent 从「回答问题」到「交付一段完整视频」，中间只隔了一个任务描述。</p>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2113941396935823479" target="_blank" rel="noopener">X @HaileyAILabs（10 月 24 日）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>找一个过程类主题（建房、做菜、组装），写清起点、关键步骤与终点。</li><li>把任务交给 Grok Bot，等待它生成完整过程动画与解说。</li><li>检查专业术语与画面衔接，修正后直接发布或嵌进自己的内容。</li></ol></div>
+<p class="take"><b>变现角度：</b>过程类 3D 动画是装修、科普、地产内容的高溢价素材：按条接单做演示视频，或做成系列账号的固定栏目，比纯口播更难被复制。</p>
+</div>
+<div class="item">
+<h2><span class="n">16.</span>Hailey 实测：用 GPT-6.1 SOL 做一个藏着城市的 3D 沙漏，看 1000 年兴衰</h2>
+<p>Hailey 用 GPT-6.1 SOL 做了一个藏着城市的 3D 沙漏：沙子落下，城市从兴盛走向废墟，可旋转、缩放，还能拖动时间轴看 1000 年的变化。交互式 3D + 时间叙事，比静态图片讲历史有力得多。</p>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2113474481733927091" target="_blank" rel="noopener">X @HaileyAILabs（10 月 23 日）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>定一个时间跨度叙事（如城市 1000 年、朝代兴衰、个人成长）。</li><li>让 GPT-6.1 SOL 生成可交互的 3D 场景：旋转、缩放、时间轴拖动。</li><li>把交互点做成视频演示或可嵌入网页的小应用，配一句点睛解说。</li></ol></div>
+<p class="take"><b>变现角度：</b>历史、地理、城市科普类账号可用这种交互 3D 做差异化内容；做成可嵌入的网页小应用，还能卖给教育、文旅类客户做展示页。</p>
+</div>
+<div class="item">
+<h2><span class="n">17.</span>孙可可转评：小红书接广完全指南，接广接到手软的创作者方法论</h2>
+<p>孙可可 10 月 24 日转评「小红书接广完全指南」，指这类创作者接广接到手软。接广不是等品牌找上门，而是一套可复制的方法：账号定位、报价体系、案例沉淀，缺一不可。</p>
+<p class="src">来源：<a href="https://x.com/Sunkeke_AI/status/2113980793278328942" target="_blank" rel="noopener">X @Sunkeke_AI（10 月 24 日转评）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先定垂类定位与代表作，让品牌一眼看懂你能带什么货。</li><li>沉淀报价单与过往合作案例，主动发给对口品牌的投放负责人。</li><li>每条商单都当成下一条的案例：保留数据截图，滚动抬高报价。</li></ol></div>
+<p class="take"><b>变现角度：</b>这是创作者最直接的变现路径：粉丝量不是唯一门槛，垂类匹配度与案例沉淀才是品牌付费的理由；按这套方法跑，先拿小单再抬价。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
