@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-25：11 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-25 AI 干货教程：无限画布、AI 矢量设计、Rust 参数化 CAD、Harness 远程访问、Claude 连 n8n、n8n 技能、语音 Agent 成本账、Laravel Agent 技能等 11 篇，附上手步骤和变现角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#eef2ff;color:#4338ca}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-25</h1>
+<div class="meta">2026-10-25 · 猪猪侠玩AI · 11 篇 AI 干货，附上手步骤和变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>infinite-canvas：AI 创作的无限画布，生图、视频、助手全在一块板上</h2>
+<p>GitDiscover 10 月 25 日每日精选第一名：开源无限画布工作台，集成 AI 生图、参考图编辑、视频生成、对话助手、提示词库与素材管理，支持可视化创作流程与多 Agent 协同，兼容 OpenAI 接口生态。9K star，单日新增 376 star。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/basketikun/infinite-canvas" target="_blank" rel="noopener">GitDiscover（basketikun/infinite-canvas，10 月 25 日精选）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按仓库说明部署或打开画布，先熟悉一块画布里的生图、参考图编辑与视频生成入口。</li><li>接上你已有的 OpenAI 兼容接口渠道，把提示词库与素材管理用起来，别只当白板用。</li><li>拿一个真实创作任务（比如一组短视频封面）全流程跑一遍，确认从灵感到成图不用跳出画布。</li></ol></div>
+<p class="take"><b>变现角度：</b>给短视频、电商、自媒体客户做“画布式”素材交付：一次出图成套、过程可视，比单张出图更好报价；也可以把常用画布模板打包成资料卖。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>openpencil：第一个 AI 原生的开源矢量设计工具，提示词直接变 UI</h2>
+<p>自称全球第一个开源 AI 原生矢量设计工具，也是第一个支持多 Agent 团队并发协作的设计工具：设计即代码，提示词直接在实时画布上生成 UI，被称为 Pencil 的现代替代品。6.6K star，10 月 25 日仍在增长。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/ZSeven-W/openpencil" target="_blank" rel="noopener">GitDiscover（ZSeven-W/openpencil，10 月 25 日精选）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按仓库说明启动 openpencil，先用提示词生成一个页面或海报初稿。</li><li>直接在画布上改布局、改文案，确认“设计即代码”的改动能实时回写。</li><li>导出给客户过一遍：重点看字体、间距与移动端适配，别只看首屏效果。</li></ol></div>
+<p class="take"><b>变现角度：</b>接 UI、海报、落地页外包时，用它把“初稿”时间压到原来的零头，按套收费仍有利润；多 Agent 协作的卖点，适合接需要多人并行的小团队单子。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>SolidCraft：纯 Rust 参数化 3D CAD，开源也能做正经建模</h2>
+<p>纯 Rust 写成的开源参数化 3D CAD 应用，支持桌面端、网页端，并可通过 MCP 做自动化。10 月 7 日发布，不到三周冲到 10.3K star、1.3K fork，增长曲线非常陡。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/tangency-labs/solidcraft" target="_blank" rel="noopener">GitDiscover（tangency-labs/solidcraft，10 月 25 日数据）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>打开网页端或桌面端，照着示例建一个参数化模型，改一个参数看整体联动。</li><li>试着用 MCP 把“改参数、出图”串成自动化流程，确认能批量出变体。</li><li>拿一个真实小物件（支架、收纳件、外壳）完整走一遍：建模、导出、检查尺寸。</li></ol></div>
+<p class="take"><b>变现角度：</b>3D 打印、产品原型、手办配件类接单的利器：参数化意味着改一处全盘联动，批量出变体很快；按“模型 + 改版次数”打包收费，比按小时划算。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>ds-harness-remote：手机也能远程操作你的 DeepSeek Harness 和 CodeX</h2>
+<p>基于 DeepSeek Harness 插件机制的多端远程访问方案：端到端加密、P2P 优先网络、低延迟，支持从 PC、Android 与 Web 随时访问并操作远程 Harness 和 CodeX。801 star，单日新增 331 star。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/liguobao/ds-harness-remote" target="_blank" rel="noopener">GitDiscover（liguobao/ds-harness-remote，10 月 25 日数据）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在远程主机上按仓库说明装好插件与服务端，确认 P2P 连接能通。</li><li>手机端与网页端各登录一次，试一次真实操作（比如查看任务、改一段代码）。</li><li>检查加密与访问权限：只放行你自己的设备，别把远程入口暴露给公网。</li></ol></div>
+<p class="take"><b>变现角度：</b>给小团队、独立开发者提供“远程开发环境搭建”服务：一次部署、按月维护；出差、在家都能干活的卖点，对自由职业者尤其好卖。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>Claude 连上 n8n：用嘴描述自动化，Agent 替你搭工作流</h2>
+<p>n8n 官方 MCP 集成让 Claude 可以直接调用你的工作流：MCP Server Trigger 节点把工作流暴露成工具，Claude 原生支持 MCP 客户端。作者称整套打通约 30 分钟，自托管 n8n 免费，n8n 云端约 $20/月起。核心分工是：你负责意图，Agent 负责接线；你审一遍再上线。</p>
+<p class="src">来源：<a href="https://dev.to/shaam_ai/how-to-connect-claude-to-n8n-and-let-an-ai-agent-run-your-automations-2026-guide-4k8h" target="_blank" rel="noopener">DEV（Shaam，2026 指南）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>自托管 n8n 里启用 MCP Server Trigger，并按官方文档配好 Claude Code/Codex 的 Agent 技能。</li><li>让 Claude 列出可用节点，确认它能读到你的工作流，再口头描述一个小流程让它搭建。</li><li>跑一次测试、检查重试与异常分支，确认无误后再把自动触发打开。</li></ol></div>
+<p class="take"><b>变现角度：</b>这是最适合接单的组合技：给小企业搭“线索到回复、订单到报表”的自动化，按流程收费；你卖的不是工具，是“不用再手动干这件事”。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>n8n-skills：教 Claude Code 建“不出错”的 n8n 工作流，四分钟跑通</h2>
+<p>czlonkowski 的 n8n-skills 插件让 Claude Code 按规范建 n8n 工作流：装插件、测 MCP 连接（应看到 525+ 节点）、描述需求、审验证、部署测试。关键在三档验证：先用 ai-friendly 快速档，再用 runtime 中档，最后用 strict 生产档；每个技能自带 3 个以上测试场景。</p>
+<p class="src">来源：<a href="https://www.blog.brightcoding.dev/2025/12/07/%f0%9f%9a%80-how-to-teach-claude-code-to-build-flawless-n8n-workflows-the-complete-2025-guide" target="_blank" rel="noopener">Bright Coding Blog（n8n-skills 完整指南）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>装好 Node.js 18+、Claude Code CLI 与 n8n（Docker 或云端），执行插件安装并配好 n8n-mcp。</li><li>先让 Claude 列出节点验证连接，再描述一个 webhook 分流流程（高优先级走 Slack、低优先级存 Airtable）。</li><li>按三档验证逐级过：检查硬编码密钥、缺失异常处理等红线，全部通过再部署。</li></ol></div>
+<p class="take"><b>变现角度：</b>接单交付时把“strict 档验证通过”写进验收标准：客户买的不是一个能跑的工作流，而是一个经得起查的工作流，这就是你比同行贵一点的理由。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>七步把年入 $1M 的生意交给 Claude Code：从 80 多件杂事降到每天 5、6 件</h2>
+<p>Nick Saraev 把一个年入约 $1M 的生意交给 Claude Code 做自动化：一周后，他每天只剩 5、6 件杂事，另外 80、90 件不再需要他。七步法是：一周屏幕观察审计（不是口头描述工作）、列出全部任务清单、做规划会、设评分目标的评估循环（大部分时间花在这里）、把胜出者固化成技能、批量测试（把一周迭代压到一天）、最后决定哪些排程、哪些保留人工。</p>
+<p class="src">来源：<a href="https://www.linkedin.com/posts/nick-saraev_i-gave-claude-code-access-to-a-business-of-activity-7518317965394722817-4g3j" target="_blank" rel="noopener">LinkedIn（Nick Saraev 自述，469 条评论）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先做一周“屏幕观察”审计：让 Claude 看你实际怎么干活，列出你碰过的全部任务，别靠回忆写清单。</li><li>给每个任务设一个可打分的评估目标，迭代到分数达标再固化成技能，别凭感觉上线。</li><li>批量跑测试、排程胜出者，敏感环节保留人工确认，形成“自动 + 兜底”两层。</li></ol></div>
+<p class="take"><b>变现角度：</b>把这套七步法做成企业自动化咨询产品：按“每周省下的工时”收费，而不是按工具收费；评估循环这一步最值钱，因为它决定了自动化会不会翻车。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>Voxtral 3 语音 Agent 成本账：$0.04/分钟，建之前先算清这张表</h2>
+<p>Mistral 10 月 20 日发布的 Voxtral 3 语音栈，让“建还是买”第一次能用价格表直接算：批量转录 $0.0035/分钟、实时转录 $0.008/分钟、语音输出 $13/百万字符；整条语音 Agent 管道（听、推理、调工具、说，全程流式）配 Mistral Small 4 是 $0.04/分钟，换其他推理模型是 $0.08/分钟。作者提醒：按 5 万分钟/月算，$0.04 档约 $2,000/月（未含 token 费）。</p>
+<p class="src">来源：<a href="https://dev.to/shivaysinghrajput/i-priced-a-real-voice-agent-on-voxtral-3-004min-changes-the-build-vs-buy-math-doi" target="_blank" rel="noopener">DEV（Shivay Singh Rajput，Voxtral 3 成本测算）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先算你自己的分钟数：预估月通话量 × 平均时长，分别按 $0.04 与 $0.08 两档算总账，再对比现有供应商报价。</li><li>按 LiveKit 管道搭最小版本：转录 → 推理 → 工具（日历、CRM、订单查询）→ 语音输出，全程流式。</li><li>实测打断、转人工与多语言场景，确认延迟与准确率达标后再谈上线。</li></ol></div>
+<p class="take"><b>变现角度：</b>电话客服、预约接待、订单查询类 Agent 可以按分钟或按月卖给小商家：成本表就是你的报价底稿，客户一看就懂“为什么比招人便宜”。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>Laravel AI SDK 1.1 的 Agent 技能：指令越长，越要拆成“按需加载”的小文件夹</h2>
+<p>2026 年 10 月 5 日发布的 Laravel AI SDK 1.1 加入 Agent 技能：把 Agent 指令拆成一个个小文件夹，每个文件夹一个 SKILL.md；模型平时只看到名字与描述列表，判断相关时才读全文。好处是：退款规则、发货规则、语气规范不用每次请求全量发给模型，又省 token 又不容易互相干扰。</p>
+<p class="src">来源：<a href="https://dev.to/devtalk94/laravel-ai-sdk-11-agent-skills-setup-guide-and-gotchas-9cf" target="_blank" rel="noopener">DEV（Laravel AI SDK 1.1 技能搭建指南）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>升级到 laravel/ai ^1.1（需 PHP 8.3+、illuminate/support 12 或 13、symfony/yaml）。</li><li>在 resources/skills 下一技能一文件夹，SKILL.md 顶部写好描述，描述要写成“Use when…”触发句——因为模型先看到的只有它。</li><li>拿一个真实客服问题验证：模型是否只加载了相关技能、没加载无关规则。</li></ol></div>
+<p class="take"><b>变现角度：</b>给已有的 Laravel 客户加 Agent 功能是最顺的升级单：不用换栈，按“技能包”收费；省下的 token 本身就是你能算给客户看的账。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>Amoxi：用 TypeScript 写第一个 AI Agent，构建时就把接线错误拦下来</h2>
+<p>开源 TypeScript Agent 框架 Amoxi：@Tool 把方法变成工具（参数类型直接生成 schema 与校验），@Agent 是带 instructions() 与工具列表的类；每个 Agent 自带流式 HTTP API 与浏览器 agentChat()；approval: true 会在关键步骤停下来等人工拍板。亮点是脚本化模型测试：不用联网、不用等真实模型，几分之一秒就验证工具代码、接线与循环逻辑。</p>
+<p class="src">来源：<a href="http://dev.to/karawash-projects/amoxi-your-first-ai-agent-in-typescript-hb4" target="_blank" rel="noopener">DEV（karawash-projects，Amoxi 系列）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按文档搭一个最小 Agent：一个工具类 + 一个 Agent 类，先跑通流式 HTTP 接口。</li><li>用脚本化模型写测试：验证工具接线、循环逻辑与审批暂停点，npm test 应在 1 秒内跑完。</li><li>把 approval: true 加到敏感工具上，确认人工拍板前 Agent 不会擅自执行。</li></ol></div>
+<p class="take"><b>变现角度：</b>TS 团队接 Agent 开发外包时，构建时校验 + 快速测试就是交付质量的护城河：改动不怕改崩，客户敢把后续迭代也交给你。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>免费课：用 Claude Code + n8n + GSD 从零做一个能收款的 SaaS</h2>
+<p>Class Central 收录的免费视频课：用 Claude Code 做编排、n8n 做自动化、GSD 做规划结构，完整走完一个 SaaS——从架构、环境搭建（VS Code、GitHub、Supabase、Vercel、Stripe）、登录鉴权、用户数据，到 AI 轮播图生成、用量统计与支付验证，最后部署上线。适合想把“会用 AI”变成“能卖产品”的人按课照做。</p>
+<p class="src">来源：<a href="https://www.classcentral.com/course/youtube-build-sell-a-saas-with-claude-code-n8n-gsd-complete-beginners-526025" target="_blank" rel="noopener">Class Central（Build and Sell a SaaS 免费课程）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>跟课搭好三件套：Claude Code 编排 + n8n 自动化 + GSD 规划，接好 GitHub、Supabase、Vercel、Stripe。</li><li>先做一个最小可收款功能（登录 + 一个核心 AI 功能 + 支付验证），别先做全套界面。</li><li>跑通“用户付费 → 用量统计 → 功能开通”闭环，再谈扩功能与推广。</li></ol></div>
+<p class="take"><b>变现角度：</b>这门课本身就是一条从 0 到收款的路线图：跟完课你手里就有一个可卖的 SaaS 骨架；也可以把“帮人按这套路线搭 SaaS”做成陪跑服务。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
