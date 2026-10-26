@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-26：12 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-26 AI 干货教程：ponytail、Cloudflare 安全审计技能、LearnHarness、AWS Agent 工具包、hallmark、n8n 系列与模型价格周报等 12 篇，附上手步骤和变现角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#eef2ff;color:#4338ca}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-26</h1>
+<div class="meta">2026-10-26 · 猪猪侠玩AI · 12 篇 AI 干货，附上手步骤和变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>ponytail：让 AI Agent 像最懒的高级工程师一样思考——不写的代码就是最好的代码</h2>
+<p>GitDiscover 10 月 26 日热榜：一个 Agent 技能，主张 YAGNI（你不会需要它）原则，让 Agent 先想“这段代码能不能不写”，而不是上来就堆功能。10 月 25 日已有约 17.56 万 star，单日新增 785 star，增长仍在继续。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/DietrichGebert/ponytail" target="_blank" rel="noopener">GitDiscover（DietrichGebert/ponytail，10 月 26 日数据）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>把 ponytail 作为 Agent 技能装进你的编码助手，先读一遍它的规则：能复用就不新写、能删就不留。</li><li>拿一个你正在做的功能重构一遍：让 Agent 先列出“可删代码清单”，再动手。</li><li>上线前对照检查：新增代码是否都有调用方、测试是否覆盖删改点。</li></ol></div>
+<p class="take"><b>变现角度：</b>接代码重构、Agent 落地咨询时，把“删代码、降维护成本”写进交付物：客户为省下的工时买单，而不是为代码行数买单。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>Cloudflare 安全审计技能：多阶段审计 + 机器可读结论，Agent 也能出合规报告</h2>
+<p>Cloudflare 的开源编码 Agent 技能，做多阶段安全审计，输出可独立验证、机器可读的审计结论，适合安全与合规团队。10 月 26 日约 4.73 万 star，单日新增约 2900 star，是当天增长最快的技能之一。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/cloudflare/security-audit-skill" target="_blank" rel="noopener">GitDiscover（cloudflare/security-audit-skill，10 月 26 日数据）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按仓库说明把技能装进 Claude Code / Cursor / Codex，先对一个自己的小项目跑一次完整审计。</li><li>重点看机器可读结论的字段：问题、证据、修复建议是否能直接进工单系统。</li><li>把高危项先修一遍，再跑第二轮，确认结论可复现、可比对。</li></ol></div>
+<p class="take"><b>变现角度：</b>给中小企业做安全体检、合规预检是现成的服务形态：一次审计出报告、按项修复收费，审计结论机器可读，复购时直接对比上一轮。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>LearnHarness：用 AI Agent 教难的东西，根据你的回答决定下一课讲什么</h2>
+<p>一个用 AI Agent 规划与教授课程的工具：根据学习者的回答与思路决定下一步教学内容，而不是按固定章节往下念。10 月 26 日约 2000 star，单日新增约 500 star，刚起量。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/amosblomqvist/learnharness" target="_blank" rel="noopener">GitDiscover（amosblomqvist/learnharness，10 月 26 日数据）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按仓库说明启动，先选一个你自己都觉得难的主题（比如统计、财报、编程概念）走完一课。</li><li>故意答错一次，看 Agent 是否调整讲解路径，而不是重复同一段话。</li><li>把一门课拆成 5 个小目标，验证每个目标都有可检查的掌握标准。</li></ol></div>
+<p class="take"><b>变现角度：</b>做知识付费、内训、企业培训的人可以直接套用：把“固定课表”改成“按学员回答走的自适应课”，续费与完课率是最容易讲给客户听的卖点。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>AWS Agent 工具包：让编码 Agent 在 AWS 上从开发、部署到运维一条龙</h2>
+<p>AWS 官方的 Agent 工具与插件集，帮 AI 编码 Agent 在 AWS 上构建、部署和管理应用。10 月 26 日 GitDiscover 每日精选，约 3300 star，单日新增 245 star。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/aws/agent-toolkit-for-aws" target="_blank" rel="noopener">GitDiscover（aws/agent-toolkit-for-aws，10 月 26 日精选）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先在测试 AWS 账号里装好工具包，别直接用生产账号练手。</li><li>让 Agent 走完一个最小闭环：生成应用 → 部署 → 看日志 → 修一个小 bug。</li><li>检查权限边界：Agent 能动哪些资源、不能动哪些，先收紧再放宽。</li></ol></div>
+<p class="take"><b>变现角度：</b>云上部署、运维托管是持续收费的好形态：一次上云 + 按月巡检，客户为“不用自己养运维”买单。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>hallmark：反 AI 味设计技能，专治“一眼就是 AI 做的界面”</h2>
+<p>Nutlope 的开源设计技能，目标是去掉 AI 生成界面那种千篇一律的“AI 味”：给 Claude Code、Cursor 与 Codex 用。10 月 26 日约 3.34 万 star，单日新增约 1359 star。</p>
+<p class="src">来源：<a href="https://gitdiscover.org/repositories/Nutlope/hallmark" target="_blank" rel="noopener">GitDiscover（Nutlope/hallmark，10 月 26 日数据）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>把 hallmark 装进你的编码助手，先用它重做一个你现有的页面，对比前后视觉差异。</li><li>重点检查三处：字体层级、留白节奏、按钮与卡片的真实质感，别只看配色。</li><li>把改动沉淀成你自己的设计检查清单，下次新项目直接复用。</li></ol></div>
+<p class="take"><b>变现角度：</b>UI 外包、落地页、产品官网的“去 AI 味”本身就是卖点：客户一眼能看出档次，报价时按“设计质感升级”而不是按页数算。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>n8n + Slack AI 助手：15–20 条消息的上下文上限，是成本与效果的平衡点</h2>
+<p>n8nlab 的实战指南：用 n8n 搭一个 Slack AI 助手，核心经验是把上下文控制在 15–20 条消息——既让助手记得住对话，又不让 token 账单失控；同时把 Claude Code 的调用收敛在受限用户与受限目录里，避免 Agent 越权。</p>
+<p class="src">来源：<a href="https://n8nlab.io/blog/build-slack-ai-assistant-n8n" target="_blank" rel="noopener">n8nlab（Slack AI 助手指南）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 n8n 里搭最小版本：Slack 触发 → AI Agent → 回复，先跑通一轮对话。</li><li>把上下文上限设为 15–20 条，实测长对话下的回复质量与 token 消耗。</li><li>给 Agent 的执行用户与工作目录加限制，敏感操作一律先人工确认。</li></ol></div>
+<p class="take"><b>变现角度：</b>企业内部助手、客服助手按“每月节省的人工工时”收费时，这篇里的上下文与权限两条经验就是你的成本底稿。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>Claude Code 一句话建 n8n 多 Agent：Telegram 触发 + 邮件、日历、调研三个子 Agent</h2>
+<p>免费视频课：用 Claude Code + n8n 的 MCP 服务器，口头描述就能生成并实测一个多 Agent 工作流——Telegram 触发，邮件、日历与调研子 Agent 分工，最后还要做“压力测试”验证 Agent 在真实输入下不跑偏。</p>
+<p class="src">来源：<a href="https://www.classcentral.com/course/youtube-how-to-use-claude-code-to-instantly-build-n8n-ai-agents-masterclass-521603" target="_blank" rel="noopener">Class Central（免费视频课）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 VS Code 里装好 Claude Code 扩展，接上 n8n MCP 服务器，先确认能列出你的工作流。</li><li>口头描述一个最小多 Agent 流程（触发 + 两个子 Agent），让 Claude 生成后逐节点检查。</li><li>做一次压力测试：喂几条边界输入，看 Agent 是否按预期分流、是否会误触发。</li></ol></div>
+<p class="take"><b>变现角度：</b>这是接单最顺的组合：给客户搭“收到消息 → 自动查资料 → 回邮件 → 记日历”的流程，按流程收费，压力测试环节写进验收标准。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>n8n AI Agent 节点全拆解：工具、记忆、成本三件套，先从计算器工具练起</h2>
+<p>ActivePieces 的 n8n AI Agent 节点指南：先接 Chat Trigger + AI Agent + 聊天模型跑通，再挂 Simple Memory 验证记忆，最后只接一个不需要凭证的计算器工具，看模型是否真的会调用工具、日志里能否看到工具的输入输出；再把最大迭代次数调到最小，看它“吵着失败”的样子——这比上线后循环烧钱好得多。</p>
+<p class="src">来源：<a href="https://www.activepieces.com/blog/n8n-ai-agent-node-explained-tools-memory-cost" target="_blank" rel="noopener">ActivePieces（n8n AI Agent 节点指南）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按指南搭五件套：触发、Agent、模型、记忆、一个工具，先跑通“你好”与记忆测试。</li><li>让 Agent 用计算器算一道大数乘法，打开执行日志确认工具调用链。</li><li>把最大迭代次数调到最小再跑一次，亲眼看到失败，再调回合理上限。</li></ol></div>
+<p class="take"><b>变现角度：</b>把这套“先算账、再上线”的调试流程做成交付清单：客户看到你有成本护栏，才敢把自动化交给你长期维护。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>AI 营销员工怎么做：Claude 写内容、n8n 管审批，Slack 一键通过才发出</h2>
+<p>视频教程：用 Claude Code + n8n 做一个“营销员工”——内容日历存在 Airtable、邮件用 MailerLite、博客存 WordPress 草稿、每周一出数据报告；关键是人始终在环里：所有对外内容停在“待审批”，Slack 点一下通过或打回修改，Agent 不会擅自发布。</p>
+<p class="src">来源：<a href="https://www.youtube.com/watch?v=jKRPbRC3nGQ" target="_blank" rel="noopener">YouTube（AI 营销员工教程）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先搭内容日历与审批状态：所有产出默认“待审批”，不要先开自动发布。</li><li>接好邮件与博客两个渠道，各跑一次“起草 → 审批 → 发布”全流程。</li><li>把每周报告接进 Slack，连续两周核对数据口径，确认无误再谈扩量。</li></ol></div>
+<p class="take"><b>变现角度：</b>给中小企业做内容代运营时，“人审后才发”是最好的信任卖点：按月收代运营费，审批记录就是你的工作证明。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>每周查一次模型价格与融资：TANDIU 10 月 19–25 日数据笔记，降价与新模型一目了然</h2>
+<p>TANDIU 每周数据笔记（截至 10 月 26 日，UTC+8）：一周新增 MiniMax M3.1 Flash（$0.15/$0.60 每百万 token）与 Kimi K3.1 Pro（$2/$10），Upstage Solar Pro 4 涨价约 66.7%；全站跟踪 71 个模型、170 多轮融资与 GPU 租金价格，适合每周固定查一次。</p>
+<p class="src">来源：<a href="https://dev.to/tandiudata/one-price-change-two-new-models-170-funding-rounds-tandiu-weekly-data-notes-oct-19-25-2026-1lno" target="_blank" rel="noopener">DEV（TANDIU 每周数据笔记）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>每周固定一天打开这份笔记，先看新增模型与涨价模型两行，再看你正在用的模型有没有变动。</li><li>把你产品的 token 成本按新价格重算一遍，涨价超过 20% 就评估换模型。</li><li>把融资集中的赛道记下来：钱往哪流，下季度客户需求大概率往哪走。</li></ol></div>
+<p class="take"><b>变现角度：</b>做 AI 产品选型咨询、成本优化服务时，这份周报就是你的情报源：帮客户换一次更便宜的模型，省下的钱就是你的服务费依据。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>X 只读挖到：aiwarts 的 6 条去 AI 味提示语，让 DeepSeek 与 Codex 的代码动画像 Opus 5.5</h2>
+<p>X 只读浏览 @aiwarts 最新帖：针对 DeepSeek 新模型与 Codex 做代码动画时常见的“说明书味”——中文大标题上顶一行无信息的英文小字、同一意思反复说——给出 6 条提示语，第一条就是审查画面全部文字，删掉无实际信息的口号、纯装饰英文小字与复述标题的解释，同一件事只说一次，优先靠位置、分组与间距表达关系。</p>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2114721604173541727" target="_blank" rel="noopener">X（@aiwarts，只读浏览）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先按帖子的方法审查你现有的一页代码动画：列出所有文字，标出无信息口号与装饰英文小字。</li><li>把 6 条提示语逐条加进你的生成提示词，每加一条重新生成一次，对比画面变化。</li><li>最后检查：同一信息是否只出现一次，信息层级是否靠位置与间距就能看懂。</li></ol></div>
+<p class="take"><b>变现角度：</b>做代码动画、网页 UI、演示视频接单时，“去 AI 味”就是溢价项：把这 6 条做成你自己的出图检查清单，客户一眼就能看出你不是直接套模板。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>X 只读挖到：Hailey 的纯代码跳舞少女 MV——绿幕抠像 + 157 BPM 节奏分析，代码只做擅长的事</h2>
+<p>X 只读浏览 @HaileyAILabs 最新帖：AI 纯代码制作二次元少女跳舞 MV 升级版——上一版 Grok Bot 生成舞蹈，这版换 Muse，动作流畅度与复杂度提升；Claude Opus 5.5 负责写代码，实现绿幕抠像、动态舞台、音乐节奏分析与实时特效；第一版教训是 SVG 骨骼 + 手写关键帧像木偶，第二版改成舞蹈用绿幕视频、代码只做抠像（连影子一起保留）、从音轨分析出 157 BPM 与底鼓军鼓节奏，节奏表盘、灯光、镜头全部踩鼓点走。</p>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2114712331896934747" target="_blank" rel="noopener">X（@HaileyAILabs，只读浏览）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先分工：舞蹈/人物动作用现成视频，别让 AI 从零画骨骼；代码只负责抠像、节奏分析与舞台特效。</li><li>从音轨提取 BPM 与鼓点时间轴，让灯光、镜头、特效都挂在同一张节奏表上。</li><li>绿幕抠像时保留影子，实测一遍：影子丢了，画面立刻假。</li></ol></div>
+<p class="take"><b>变现角度：</b>短视频、MV、品牌动画接单时，这套“视频管动作、代码管节奏与舞台”的分工是最省钱的路线：不用买昂贵动作捕捉，效果却比纯 AI 生成稳得多。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
