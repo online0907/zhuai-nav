@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-29：17 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="落地页设计 Skill、42K 星 Claude Code 指南、Claude+Codex 合体客户端、跨会话记忆插件、游戏工作室模板、插件管理、n8n 技能＋ X 只读挖到的 5 条干货，共 17 篇，附上手步骤和变现角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-29</h1>
+<div class="meta">2026-10-29 · 猪猪侠玩AI · 17 篇 AI 干货，附上手步骤和变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>落地页设计 Skill 单日涨 1395 星：AI 做页面，先定规则再动手</h2>
+<p>10 月 27 日 GitHub 热榜上的 ai-design-skills 单日涨约 1395 星、总量约 9100 星，目前只有一个 Skill：landing-page-design。它是一份很“较真”的规则文件，告诉 Claude Code、Cursor、Codex 怎么规划、写文案与排版落地页，连不能用 Inter 字体、文案不用连字符、不用背景渐变都写死了。</p>
+<p class="src">来源：<a href="https://explainx.ai/blog/ai-design-skills-elayadesign-landing-page-design-skill-claude-code-cursor-codex-github-trending-2026" target="_blank" rel="noopener">ExplainX</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先读一遍 Skill 的硬规则，确认它与你的品牌规范有没有冲突，有冲突先改规则再装</li><li>用它重做一个现有落地页，只改文案具体程度、主行动按钮数量与证据真实性三处</li><li>把前后对比截图存档，当作下一次接单的作品集素材</li></ol></div>
+<p class="take"><b>变现角度：</b>帮小商家做“AI 落地页去 AI 味”改造：规则化产出＋前后对比图，本身就是最容易讲清价值的服务。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>42K 星的 Claude Code 完全指南：10 个模块，照着抄模板就行</h2>
+<p>社区指南 claude-howto 约 42,600 星、5,300 forks，10 月 18 日更新，面向 Claude Code 2.1+，号称 11 至 13 小时学完。内容覆盖斜杠命令、记忆文件、Skill、子 Agent、MCP、Hooks 与插件，都是新手最容易卡住的地方，附可直接复制的模板。</p>
+<p class="src">来源：<a href="https://explainx.ai/blog/claude-howto-github-trending-42k-stars-claude-code-guide-templates-learning-path-2026" target="_blank" rel="noopener">ExplainX</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先学斜杠命令与记忆文件两章，把你每天重复的指令固化下来</li><li>再按模板配一个 Skill 与一个 Hooks，别一次全装，先跑通一个流程</li><li>涉及密钥与 Hook 的模板先通读再粘贴，不要闭眼复制</li></ol></div>
+<p class="take"><b>变现角度：</b>把这份指南的落地过程做成“Claude Code 开箱包”：帮小团队按模板搭好一次，收搭建费，后续按月维护。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>12 个爆火 GitHub 仓库一次看清：从免费剪辑到 AI 品牌可见度</h2>
+<p>一份 10 月 27 日星数快照盘点了 12 个 Claude Code 常用仓库：REA（392K 星，看别人功能怎么做的）、ECC（290K 星）、Paperclip 多 Agent 公司、VoiceStudio 本地配音、Hyperframes 动效、PPT Master、AI 求职猎手、Hypit 爆款视频模板、Anatomy 互动图解、Concat 免费剪辑、GenOffice 与 NiubiGEO 品牌可见度检测。</p>
+<p class="src">来源：<a href="https://www.samdespo.com/resources/viral-github-repos" target="_blank" rel="noopener">Sam Despo</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先按“你现在最痛的一件事”只挑一个仓库，不要 12 个全装</li><li>把仓库链接贴给 Claude Code，让它按 README 安装，全程逐条确认它要执行的命令</li><li>装完重启一次会话，再用一个真实小任务验收效果</li></ol></div>
+<p class="take"><b>变现角度：</b>用 Concat＋Hyperframes 接短视频剪辑与动效单，用 NiubiGEO 给商家做“AI 搜索可见度”审计：工具免费，收的是选型与落地的人工费。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>Cindy：一个客户端同时跑 Claude Code、Codex 与 Pi，记忆还能互通</h2>
+<p>Cindy 是 Apache-2.0 的桌面＋移动客户端，10 月 24 日单日涨约 471 星、总量约 3800 星。它把 Claude Code、Codex、Pi 装进一个 App，共享记忆、Skill、排程与 MCP，任务中途可以换模型、换工具而不丢上下文。免费版自带密钥或订阅即可用，Plus 起价每月 20 美元。</p>
+<p class="src">来源：<a href="https://explainx.ai/blog/cindy-open-source-agent-claude-code-codex-pi-harness-switching-apache-github-trending-risks-2026" target="_blank" rel="noopener">ExplainX（引 makecindy/cindy README）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先用 Skip Sign-In 在本地跑，关掉服务端能力，别一上来就连 Slack、GitHub</li><li>拿一个废弃仓库做测试：改动、回滚、换工具接力，看上下文是不是真的续上了</li><li>确认无敏感信息外泄后，再逐个接入你真正需要的集成</li></ol></div>
+<p class="take"><b>变现角度：</b>帮同时用多个 Agent 的团队做“多工具接力”搭建：省下的重复交代时间，就是能按项目报价的价值。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>claude-mem：给 Claude Code 装上跨会话记忆，约 104K 星但先看隐私账</h2>
+<p>claude-mem 是给 Claude Code 加跨会话记忆的插件，约 104K 星：用 6 个生命周期 Hooks 记录会话，本地 SQLite＋Chroma 做检索，号称约 10 倍 token 节省（项目方说法，未独立验证）。安装命令是 npx claude-mem install，注意 npm install -g 只装 SDK，不会注册 Hooks，等于没装上。</p>
+<p class="src">来源：<a href="https://explainx.ai/blog/claude-mem-persistent-memory-claude-code-hooks-sqlite-chroma-github-trending-guide-2026" target="_blank" rel="noopener">ExplainX（引 thedotmack/claude-mem README）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>本地安装并关闭云同步，选一个你已有合同的 Observer 服务商</li><li>跑两天后打开内置查看器，检查它到底存了什么、有没有混入密钥</li><li>用“继续周二开始的迁移”这类跨天任务，对照手写笔记文件比一次效果，再决定留不留</li></ol></div>
+<p class="take"><b>变现角度：</b>帮长期项目团队做“记忆系统审计＋清理”：记忆越久越值钱，也越危险，能讲清这笔账的服务本身就有人买单。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>Claude Code 游戏工作室模板：49 个 Agent、74 个 Skill，小项目反而更贵</h2>
+<p>Claude Code Game Studios 把一次游戏开发包成模板：49 个专职 Agent、74 个 Skill 与 Hooks，从点子走到可测试代码。实测结论很反直觉：做一个小游戏，模板版花 19 分钟、约 5 美元用量，产出带简报、7 个小故事与截图证明；裸跑 Claude Code 只要 38 秒、约 0.15 美元，游戏也能跑。</p>
+<p class="src">来源：<a href="https://aiparabellum.com/claude-code-game-studios-install-and-use/" target="_blank" rel="noopener">AI Parabellum（2026 年 10 月 29 日实测，Claude Code v2.1.312）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>小项目先裸跑出可玩版本，再决定要不要上模板</li><li>只有当项目需要多人分工、长流程与可交付文档时，才启用完整工作室模板</li><li>每次跑完记一笔时间与用量账，模板省下的返工要大于它多花的 token 才算赚</li></ol></div>
+<p class="take"><b>变现角度：</b>接游戏原型单时按“裸跑出原型＋模板做完整版”分两段报价：第一段快而便宜拿信任，第二段按文档与质量收费。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>Claude Code 插件怎么装才不踩坑：先看清单与上下文成本再点头</h2>
+<p>插件是把 Skill、子 Agent、Hooks、MCP 打包成一个整体安装的单位。实测指南提醒：打开 /plugin 面板看 Discover，先读详情页里的“会装什么”与上下文成本（示例插件每回合约 100 token、调用时约 930 token），再选安装范围；试验一律用 local 范围，别让试验插件跟进你所有项目。</p>
+<p class="src">来源：<a href="https://aiparabellum.com/claude-code-plugins/" target="_blank" rel="noopener">AI Parabellum（2026 年 10 月 25 日实测，Claude Code v2.1.310）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在空文件夹里试验：/plugin install 名字@市场名，先看清单与成本再选 local</li><li>跑一次它自带的命令，确认输出格式符合预期</li><li>不用的插件先禁用而非卸载，设置还在，需要时一键恢复</li></ol></div>
+<p class="take"><b>变现角度：</b>给团队做“插件清单治理”：定期清理没用又占上下文的插件，省下的 token 与返工就是可量化的服务价值。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>n8n 技能包：525 个节点、2653 个配置示例，让 Claude Code 替你搭自动化</h2>
+<p>n8n-skills 是一套 Claude Code 技能，覆盖 525 个以上 n8n 节点与 2653 个配置示例，安装命令为 /plugin install czlonkowski/n8n-skills，前置条件是先装好 n8n-mcp 服务器。装好后直接用自然语言描述工作流，Claude Code 会按节点与配置生成可部署的流程。</p>
+<p class="src">来源：<a href="https://svanews.com/2026/10/21/n8n-skills/" target="_blank" rel="noopener">SVA News（2026 年 10 月 21 日）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先装 n8n-mcp 并确认 Claude Code 能列出节点，再装技能包</li><li>从一个最小流程起步：Webhook 接数据 → 条件分流 → 发通知，跑通再扩</li><li>上线前检查硬编码密钥与异常分支，缺了这两项别直接投产</li></ol></div>
+<p class="take"><b>变现角度：</b>帮小商家搭“一个流程解决一个重复活”的自动化：按流程收费，流程跑起来后按月收维护费。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>20 分钟做出第一个 n8n＋Claude 早报 Agent：定时、搜索、发邮件一次跑通</h2>
+<p>一份免费指南把第一个自动化拆成 20 分钟：每天早上 8 点定时触发，Claude 做 Agent 读任务、决定搜什么、调用工具，最后把简报转成 HTML 用 Gmail 发出。全程无代码，计时从账号就绪开始算，n8n Cloud 版最顺，自托管版要先配好 Gmail 的 OAuth 凭证。</p>
+<p class="src">来源：<a href="https://theautomatedhour.com/guide.pdf?src=site" target="_blank" rel="noopener">The Automated Hour（指南 v1.0，2026 年 10 月 6 日更新）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先定一个你每天必读的主题，别贪多：一个主题、一封简报</li><li>按指南顺序搭：定时触发 → AI Agent＋Claude → 两个工具 → HTML → Gmail 发送</li><li>连续跑 3 天，检查有没有漏搜、错发与格式问题，再扩大主题</li></ol></div>
+<p class="take"><b>变现角度：</b>把“每日简报 Agent”卖给行业从业者：按主题、按收件人收费，跑通一个客户后同模板可复制给同行。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>Home Assistant 的 5 个 Claude Code Skill：先分清谁能碰设备、谁只能写规则</h2>
+<p>一篇 10 月 29 日的梳理把 Home Assistant 相关 Skill 按权限分开：写自动化用 home-assistant-best-practices（只改 YAML，不碰设备）；开关设备走 mcp-hass（经官方 MCP）；改配置走 hass-builder（hab 命令行，先 dry run）。文中还提醒：有 Skill 仍会发已被移除的参数，照抄旧参数会把暖白光变成 350K 的怪色。</p>
+<p class="src">来源：<a href="https://medium.com/@skillselion/what-each-home-assistant-skill-lets-claude-code-touch-and-where-it-stops-de159653b56e" target="_blank" rel="noopener">Medium / Skillselion（2026 年 10 月 29 日）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先装只写规则的 Skill，把自动化 YAML 写对，再考虑碰设备的 Skill</li><li>凡是改配置的操作，先 dry run 看一遍再真正执行</li><li>装 Skill 前读一遍它的 SKILL.md，确认它会碰哪些设备、停在什么边界</li></ol></div>
+<p class="take"><b>变现角度：</b>帮家庭与小办公室做“智能家居自动化＋权限分层”搭建：安全边界讲清楚，客户才敢把全屋交给你。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>你的 SaaS 一天断供要花多少钱？按 9 美元一天先算好备用方案</h2>
+<p>一篇备用方案指南用公开价算了一笔账：一天 200 万输入 token＋50 万输出 token 的量，GPT-5.6 Terra 约 10 美元、Claude Sonnet 5.5 约 9 美元（走 OpenRouter 约 9.5 美元）。核心建议是：主供应商断供时能切到备用模型跑一整天，成本不过 9 至 10 美元，远低于停服丢客户的损失。</p>
+<p class="src">来源：<a href="https://rapidflowautomation.beehiiv.com/p/your-saas-s-core-feature-runs-on-someone-else-s-uptime-the-9-a-day-ai-outage-plan-most-founders-dont-have" target="_blank" rel="noopener">RapidFlow Automation（引 2026 年 10 月 7 日官方价目）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先算你自己的日用量：输入、输出 token 各多少，再套两个模型的价目</li><li>做一个最小备用切换：模型名与密钥可配置，别写死在代码里</li><li>主动触发一次测试告警，确认断供时你真的会收到通知、切换真的能跑</li></ol></div>
+<p class="take"><b>变现角度：</b>给小 SaaS 团队做“断供演练＋备用切换”服务：一次演练收一笔费用，客户买的是不断供的安心。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>在 Reddit 发了 3 个月、0 客户：问题不在努力，而在发给了同行</h2>
+<p>一位创始人在 Indie Hackers 发帖：每天在 Reddit 发 3 个月，0 客户。评论区几十人附和“me too”：有人发 200 条私信只回 1 条，有人账号被封后渠道一夜归零。更扎心的共识是：r/SaaS 与 r/SideProject 里全是同行，大家都懂你的产品，但几乎没人需要买它——同行互动带来的感觉像增长，其实不付费。</p>
+<p class="src">来源：<a href="https://medium.com/@0xicaruss/three-months-on-reddit-zero-customers-and-the-comment-section-that-followed-184ca73e0f9f" target="_blank" rel="noopener">Medium（2026 年 10 月 13 日）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先列出买家真正出没的地方，而不是创作者扎堆的地方</li><li>把内容从“我在做什么”改成“帮你解决什么”：一个痛点、一张截图、一个可试用的入口</li><li>每周只看一个指标：来自非同行渠道的注册数，其他互动数先忽略</li></ol></div>
+<p class="take"><b>变现角度：</b>帮独立开发者做“渠道体检”：砍掉只赚同行点赞的渠道，把时间挪到买家出没的地方，这项诊断本身就能收费。</p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>X 只读挖到｜@Sunkeke_AI：别再把 Skill 当成一串代码，它是你自己做的工作流</h2>
+<p>10 月 29 日 @Sunkeke_AI 指出：不少刚接触智能体的人还以为 Skill 是一串代码、不知道原来可以自己做一个新的工作流。这正是很多人用不好 Agent 的根源：把 Skill 当黑盒，而不是当成“一步步可复用的工作方法”。</p>
+<p class="src">来源：<a href="https://x.com/Sunkeke_AI/status/2115786346266784060" target="_blank" rel="noopener">X @Sunkeke_AI（只读浏览）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先写下你每周重复做的一件事，把它拆成 3 到 5 步</li><li>把每步的输入、判断标准与输出格式写成一页规则，这就是你的第一个 Skill</li><li>让 Agent 按这页规则跑一次，哪里跑偏就改规则，而不是每次都重新讲一遍</li></ol></div>
+<p class="take"><b>变现角度：</b>帮小团队把重复流程写成 Skill 包：一次交付、可反复调用，按流程收费比按小时讲提示词更值钱。</p>
+</div>
+<div class="item">
+<h2><span class="n">14.</span>X 只读挖到｜@xaiwind：Wise 入门到精通亲测，个人可申请港户和美户</h2>
+<p>10 月 29 日 @xaiwind 分享 2026 年 10 月亲测的 Wise 入门到精通：个人可申请港户和美户，涵盖入金激活，以及用 Wise 接收 X 创作者收益的实操要点；帖子同时明确反对代充等非同名入金做法。</p>
+<p class="src">来源：<a href="https://x.com/xaiwind/status/2115790774642303041" target="_blank" rel="noopener">X @xaiwind（只读浏览）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先确认你要收的是哪种币种、哪个平台的款，再决定开港户还是美户</li><li>按官方流程走本人实名与入金激活，别走任何非同名代充通道</li><li>先收一笔小额测试款，确认到账路径与手续费后再接正式收入</li></ol></div>
+<p class="take"><b>变现角度：</b>给出海创作者做“收款路径梳理”咨询：合规开户＋测试到账，比代办更安全，也更容易长期收费。</p>
+</div>
+<div class="item">
+<h2><span class="n">15.</span>X 只读挖到｜@xaiwind：X 创作者收益开通，从发帖到绑定 Wise 都有实操教学</h2>
+<p>10 月 29 日 @xaiwind 转发一篇 X 创作者收益教程，称跟着它从发帖到绑定 Wise 都有细致的实操教学。对想在 X 上把流量变成收入的人来说，关键不在“发得多”，而在“收益开通与收款绑定”这两步有没有一次走通。</p>
+<p class="src">来源：<a href="https://x.com/xaiwind/status/2115809630722871678" target="_blank" rel="noopener">X @xaiwind（只读浏览，转述他人教程）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先确认你的账号是否满足创作者收益的开通条件，别在没达标时空等</li><li>按教程走通发帖规范与收益开通，再绑定本人 Wise 账户收款</li><li>先收一笔小额收益验证链路，再放大发帖量</li></ol></div>
+<p class="take"><b>变现角度：</b>把“开通＋收款”做成一次性的陪跑服务：很多创作者卡的不是内容，而是最后这一步。</p>
+</div>
+<div class="item">
+<h2><span class="n">16.</span>X 只读挖到｜@xaiwind：WorkBuddy 包月 700 块 vs OpenAI Pro 倒送 500 美元 API 额度</h2>
+<p>10 月 29 日 @xaiwind 对比了两份 AI 会员：腾讯 WorkBuddy 新会员包月 700 块，而 OpenAI Pro 订阅可倒送最多 500 美元 API 额度。同样是 AI 会员，一个是纯支出，一个还附带可用于开发的 API 额度，算账方式完全不同。</p>
+<p class="src">来源：<a href="https://x.com/xaiwind/status/2115805867945918608" target="_blank" rel="noopener">X @xaiwind（只读浏览）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先列出你每月真正用的功能：聊天、Agent、还是 API 开发</li><li>把 API 额度折算成你本来就要花的用量成本，再比较两份会员的总账</li><li>只为“用得上的部分”付费，别为打包里的闲置功能买单</li></ol></div>
+<p class="take"><b>变现角度：</b>帮团队做“AI 订阅成本审计”：把重复订阅与闲置额度找出来，省下的钱就是服务费的最好证明。</p>
+</div>
+<div class="item">
+<h2><span class="n">17.</span>X 只读挖到｜@aiwarts：豆包工作上线录制回放，电脑操作录一次就能复刻</h2>
+<p>10 月 28 日 @aiwarts 实测豆包工作新上线的录制回放技能：把电脑操作录下来，交给 AI 生成步骤并复刻，适合跨软件、多步骤的电脑自动化。也就是说，自动化不一定要先写脚本，先“做一遍给它看”也是一种做法。</p>
+<p class="src">来源：<a href="https://x.com/aiwarts/status/2115466075462832469" target="_blank" rel="noopener">X @aiwarts（只读浏览）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先挑一个你每周重复的跨软件流程，例如整理文件＋发消息＋填表</li><li>完整、慢速地操作一遍并录制，别在中途跳步</li><li>让 AI 生成步骤后先在测试数据上复刻一遍，确认无误再用于真实任务</li></ol></div>
+<p class="take"><b>变现角度：</b>帮小商家把重复电脑操作录制成自动化流程：按流程收费，录一次、长期省时间，客户很容易算清账。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
