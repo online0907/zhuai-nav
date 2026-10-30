@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速递｜2026-10-30：13 篇 AI 干货教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-10-30 干货教程：远程操控 Claude/Codex、Claude 定时任务 vs n8n、小企业选型、Claude Code 赚钱模式、10 月 AI 副业数据版、Bubble Agent 2、GitHub 开源榜、B2B 获客信号＋ X 只读挖到的 5 条干货。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速递｜2026-10-30</h1>
+<div class="meta">2026-10-30 · 猪猪侠玩AI · 13 篇，每篇附上手步骤和变现角度</div>
+<div class="item">
+<h2><span class="n">1.</span>远程操控 Claude 与 Codex：在虚拟机上跑 Agent 的完整指南</h2>
+<p>Claude Code 2.1 的 remote-control 与 Codex 0.164 的守护进程，让跑在远程虚拟机上的 Agent 可以直连手机 App 或网页端，不用一直开着电脑盯着终端。指南讲清了三种连接模型：SSH 直连、官方远程控制、App Server + SSH 隧道，以及各自的适用场景。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>在虚拟机里用 tmux 启动会话，保持 Agent 进程不随终端关闭而退出。</li>
+<li>Claude 路线执行 claude remote-control --name “devbox app”；Codex 路线执行 codex remote-control start 后配对。</li>
+<li>手机端打开 Claude / ChatGPT App 验证远程会话可接管，再把常用任务写成固定提示词模板。</li>
+</ol></div>
+<p class="src">来源：<a href="https://dev.to/devandrew/mastering-remote-ai-agents-a-comprehensive-guide-to-claude-and-codex-on-virtual-machines-m7n" target="_blank" rel="noopener">DEV 教程</a></p>
+<p class="take"><b>变现角度：</b>远程 Agent 是“代跑任务”服务的基础设施：帮客户 24 小时跑爬虫、跑测试、跑内容生产，按月收托管费。先给自己搭一套，再打包成服务卖给不懂服务器的小商家。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>Claude Code 能定时跑吗？云端任务、桌面任务与 n8n 三档调度怎么选</h2>
+<p>Anthropic 把原来的 routines 改名为云端定时任务，但三档调度差别很大：云端任务电脑关机也能跑、但最低一小时一次且是研究预览；桌面任务与 /loop 可到一分钟，但要求本机开着。选错调度器是新手最常见的坑。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>先判断任务性质：固定流程、高频、需他人修改 → n8n；每次运行需要判断 → Claude 定时任务。</li>
+<li>云端任务在 claude.ai/code/routines 或桌面端用 /schedule 创建，绑定仓库与连接器。</li>
+<li>给每个定时任务配错误处理：失败时发通知或触发备用流程，别让静默失败吃掉一夜的运行。</li>
+</ol></div>
+<p class="src">来源：<a href="https://dev.to/tariq_osmani/can-claude-code-run-on-a-schedule-scheduled-tasks-vs-n8n-2gi2" target="_blank" rel="noopener">DEV 教程</a></p>
+<p class="take"><b>变现角度：</b>定时任务是最容易卖的自动化：日报、舆情监控、竞品价格盯盘、社媒定时发布，按“每月帮客户省多少小时”定价，比按功能定价好卖得多。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>n8n vs Claude Code：给小企业的从零选型指南</h2>
+<p>一个四人油漆公司的例子讲清了核心区别：工作流是事先定好的步骤，Agent 是自己决定步骤。报价请求这类“步骤每次都一样”的活归 n8n；“来什么处理什么”的活归 Claude Code；固定流程里夹一个思考步骤时，两者叠加用。视频还演示了同一个报价处理任务在两边的完整搭建与成本。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>用“能不能写在索引卡上且每次都一样”做判断题：能 → n8n，不能 → Claude Code。</li>
+<li>n8n 免费试用搭 Gmail 触发器：收到含“报价请求”的邮件即记入表格并起草回复。</li>
+<li>在 n8n 设置里开启实例级 MCP，让 Claude Code 直接帮你生成 n8n 工作流，形成双向加速。</li>
+</ol></div>
+<p class="src">来源：<a href="https://www.youtube.com/watch?v=qR-UE-nXSiE" target="_blank" rel="noopener">YouTube 教程视频</a></p>
+<p class="take"><b>变现角度：</b>给本地小商家做“报价 10 分钟必回”这类自动化，是最容易成交的 AI 服务：痛点明确、效果当天可见，按月收维护费，续费率远高于一次性开发。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>用 Claude Code 赚钱的 5 种真实模式</h2>
+<p>把 Claude Code 当成放大器而非替代品：卖自动化脚本、接 AI 加速的自由职业编码、做微 SaaS、做代码评审、做定制工作流。文章给每种模式配了工具栈与起步建议，并提醒：起步成本可以控制在 50 美元以内，关键是先拿到第一个付费客户再扩规模。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>选一个你已经会的手艺（写代码、做表格、搞运营），别从零学一个新行当。</li>
+<li>用 Claude Code 在两小时内做出一个可交付的成品：脚本、落地页或自动化流程。</li>
+<li>先在 Gumroad、CodeCanyon 或自由职业平台上架一个 15–30 美元的版本，验证有人付钱再迭代。</li>
+</ol></div>
+<p class="src">来源：<a href="https://wealthfromai.com/how-to-make-money-with-claude-code-5-real-business-models-2/" target="_blank" rel="noopener">WealthFromAI</a></p>
+<p class="take"><b>变现角度：</b>最稳的起手式是“脚本即商品”：发票自动归档、文件批量改名这类小痛点脚本，单价低但可无限复制，适合当作副业的第一笔收入。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>2026 年 10 月真正有效的 AI 副业：用数据说话的版本</h2>
+<p>这篇 10 月更新先给诚实基线：2026 年副业调查中位数约每月 1275 美元（每周约 13 小时），AI 辅助新手通常半年内做到每月 500–1000 美元。Upwork 数据显示：简单创意生产的单均收入下滑 13%，而复杂 AI 增强工作的收入同比上涨 45%、AI 工作者时薪高出 34%。结论：AI 加上客户真正需要的技能才值钱，单卖 AI 本身不值钱。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>写下你已经能收钱或能教人的一个技能，别追热门赛道。</li>
+<li>从三个方向挑一个匹配的 lane：给熟行当写内容、卖一个小数字产品、给本地商家做 AI 提效服务。</li>
+<li>今晚花一小时做一个真实样品（不是计划书），拿去给一个潜在客户看反应。</li>
+</ol></div>
+<p class="src">来源：<a href="https://nocodeclaude.com/2026/10/19/ai-side-hustles-that-work-2026-update/" target="_blank" rel="noopener">NoCode Claude</a></p>
+<p class="take"><b>变现角度：</b>按“每天 1 小时、每周 5 天、坚持 6 个月”的节奏做副业，别按“日入 300”的清单做。能坚持的节奏，才是把 500–1000 美元月收入跑出来的前提。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>Bubble Agent 2：不会写代码也能让 AI 建 App，附 3 种赚钱法</h2>
+<p>Bubble 10 月 6 日上线的 Agent 2：描述需求即可生成带页面、数据库与业务逻辑的 App；新增的 Bubble MCP（测试版）还能让 Claude、ChatGPT、Claude Code 直接改你的 Bubble 应用，另支持把 Lovable、v0、Replit 做的 App 打包导入成可编辑的 Bubble 应用。但要注意 10 月 6 日起 Agent 编辑要消耗 AI 点数（免费版每月 500 点），且 Starter 网页版 10 月 20 日起涨到每月 39 美元。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>用一句话写清 App 的用户、核心流程与数据表，先让 Agent 生成第一版，再逐页验收。</li>
+<li>接 MCP：把 Claude 或 ChatGPT 连上 Bubble 应用，小改动直接对话完成，不用进编辑器。</li>
+<li>上线前算清点数账：高频编辑的项目选 Growth 档，别让免费点数在半路断掉。</li>
+</ol></div>
+<p class="src">来源：<a href="https://www.youtube.com/watch?v=B_CETBYEoMI" target="_blank" rel="noopener">YouTube 教程视频</a></p>
+<p class="take"><b>变现角度：</b>三种现成打法：给创始人几天交付 MVP 收固定费 + 月维护费；给小商家做预约、客户门户、订单跟踪类内部工具按月收费；把卡住的 Lovable/Replit 应用导入 Bubble 修好再收月费。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>10 月 GitHub 开源 AI 项目榜：10 个值得亲手跑一遍的项目</h2>
+<p>按使用场景而非星数排序的 10 月榜单：从日常办公、内容创作到代码协作与专业工程，覆盖了 Anthropic 的 knowledge-work-plugins（把岗位知识打包成插件）、Matt Pocock 的 skills（先问清需求再让 AI 写代码的 grill-me 方法）、claude-mem（跨会话记忆）、REA（AI 辅助逆向工程）等。榜单的筛选标准是“能直接装进工作流”，而非单纯热门。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>先按你的痛点选一类：需求不清 → skills；上下文总丢 → claude-mem；岗位知识复用 → knowledge-work-plugins。</li>
+<li>克隆仓库后只跑官方 README 的最小示例，确认在你的环境里能跑通再深入。</li>
+<li>把跑通的配置写成你自己的 SKILL.md 或模板，下次同类任务直接复用。</li>
+</ol></div>
+<p class="src">来源：<a href="https://aipings.io/content/10-open-source-ai-projects-diagrams-video-cad" target="_blank" rel="noopener">AIPings 榜单</a></p>
+<p class="take"><b>变现角度：</b>开源项目榜是最好的接单选题库：把榜单里的工具组合成“开箱即用的工作流包”，卖给没时间折腾的同行或小团队，收的是配置与落地的时间差。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>B2B 获客信号实战：用 Claude Code + MCP + n8n 挖“正在换工作的人”</h2>
+<p>出海团队都在用同一批信号：融资新闻、意向数据、换工作动态。这篇实战用 Apify 的 LinkedIn 人才库 Actor，从 API、Claude Code（MCP）、n8n 三种调用方式完整跑通：按职位、级别、公司规模、前雇主、入职时间筛人，输出“人名 + 现任职位 + 入职时间 + 是否有邮箱”的人才行，再用 n8n 的定时触发 + 去重 + 过滤，做成每周推送到 Slack 的“新入职高管”情报流。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>先用 count/market 模式跑聚合数，确认目标人群规模够大，再用 people 模式按条付费拉明细。</li>
+<li>Claude Code 里添加 MCP：claude mcp add --transport http apify “https://mcp.apify.com?tools=…”，把 Actor 权限收敛到只用的两个工具。</li>
+<li>n8n 里串起四节点：定时触发 → 跑 Actor（排除上周已跑过的数据集）→ 按你的客户画像过滤 → 推到 CRM 或 Slack。</li>
+</ol></div>
+<p class="src">来源：<a href="https://dev.to/kevinhall/gtm-signals-from-career-data-querying-a-b2b-people-database-from-the-api-claude-code-and-n8n-2846" target="_blank" rel="noopener">DEV 教程</a></p>
+<p class="take"><b>变现角度：</b>这套东西直接能卖给出海 SaaS 与猎头：按“每周一条高管换工作情报”订阅收费，或按线索条数收费。注意合规边界：只用公开职业信息做触达，别碰私人联系方式的灰色买卖。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>X 只读挖到：EverOS Cloud 让 Grok Bot 与 Muse 共享记忆，不必二选一</h2>
+<p>孙可可转发的保姆级教程：用 EverOS Cloud 把 Grok Bot 和 Muse 接进同一套记忆，不用在两个工具之间二选一、反复重讲背景。记忆一旦打通，换工具就不用换上下文，跨工具接力干活成为可能。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>按教程开通 EverOS Cloud，把两个工具接进同一记忆层。</li>
+<li>先拿一个小任务验证：Grok 里聊过的偏好，到 Muse 那边能直接接着用。</li>
+<li>把常用记忆写成固定模板（人设、项目背景、输出格式），避免每次从头讲一遍。</li>
+</ol></div>
+<p class="src">来源：<a href="https://x.com/Sunkeke_AI/status/2116056625207558530" target="_blank" rel="noopener">@Sunkeke_AI 转发的 EverOS Cloud 教程</a></p>
+<p class="take"><b>变现角度：</b>记忆共享是跨工具接单的基础：写文案、做视频、跑自动化可以在不同工具间接力，交付更快；这套配置本身也能打包成教程或代配置服务卖给同行。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>X 只读挖到：WorkBuddy 灵感社区，一键复制他人模板做同款</h2>
+<p>孙可可实测 WorkBuddy 的灵感社区：看中哪个模板一键复制就能做同款，尤其个人工作台模板，复制后稍加改造就能直接用。找模板的思路比从零搭建重要得多。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>进灵感社区按场景筛模板，个人工作台类最值得先抄。</li>
+<li>复制后只改三个地方：数据源、输出格式、触发条件。</li>
+<li>用自己的真实数据跑一遍验收，通过后再存为自己的模板复用。</li>
+</ol></div>
+<p class="src">来源：<a href="https://x.com/Sunkeke_AI/status/2116044141255962957" target="_blank" rel="noopener">@Sunkeke_AI 实测帖</a></p>
+<p class="take"><b>变现角度：</b>验证过的模板是最容易卖的 AI 商品：打包成付费模板包，或接“帮你搭一套工作台”的代配置单，卖的是别人验证过的时间差。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>X 只读挖到：Grok Bot 半小时做极简动画，很适合做自媒体内容</h2>
+<p>Hailey 用 Grok Bot 半小时做出自律与自我提升主题的极简动画，并认为这种风格很适合做自媒体内容。极简意味着制作门槛低、产出速度快，恰好匹配日更账号的需求。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>先定一句主题（自律、自我提升类最稳），别贪多。</li>
+<li>让 Grok Bot 按“画面极简 + 文案短句 + 节奏统一”生成动画。</li>
+<li>半小时内出片直接发，评论区反馈好的方向再做成系列。</li>
+</ol></div>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2116138300868374861" target="_blank" rel="noopener">@HaileyAILabs 实测帖</a></p>
+<p class="take"><b>变现角度：</b>极简动画是低成本内容杠杆：日更成本低、适合矩阵号起量，先靠它把账号权重养起来，再接商单或带货，顺序别反了。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>X 只读挖到：Suno + Muse 做完整 AI 女团 MV，参考图加一首歌磨 5 版定稿</h2>
+<p>Hailey 用 Suno 做音乐、Muse 做视频，挑战零成本 30 秒街头风 AI 女团 MV 后，又以同样组合做出完整作品《ECLIPSE NOX》：一张参考图加一首歌，磨了 5 版定稿 50 秒成片。分工明确、逐版迭代是关键。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>一张参考图加一首歌，先把风格定死再开工。</li>
+<li>Suno 出音乐、Muse 出画面，分开打磨，最后合成 50 秒左右的成片。</li>
+<li>按“磨 5 版”的节奏：每版只改一个变量（镜头、口型、节奏），别全盘重做。</li>
+</ol></div>
+<p class="src">来源：<a href="https://x.com/HaileyAILabs/status/2115987287653916855" target="_blank" rel="noopener">@HaileyAILabs 实测帖</a></p>
+<p class="take"><b>变现角度：</b>一条 AI MV 就是一份作品集：可接品牌短片、艺人宣传、活动暖场视频；成片本身发视频号、小红书涨粉后也能接广，作品即获客。</p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>X 只读挖到：良竹感悟——每天 20% 的时间，必须用来“搭建机器”</h2>
+<p>良竹离线两天后的 AI 变现感悟：把精力分成两部分，“维持当下”与“搭建机器”，后者即使只占 20% 也要做；可复制的杠杆包括 AI 工具、自动化工作流或自媒体。只干维持的活，时间永远换不成资产。</p>
+<div class="steps"><b>3 步上手：</b><ol>
+<li>把手头的事分成两类：维持当下的收入活，和能复利的机器。</li>
+<li>每天硬划 20% 的时间给机器，哪怕只是写一个自动化或发一篇长尾内容。</li>
+<li>每月复盘一次：机器部分有没有变成不依赖你时间的收入或流量。</li>
+</ol></div>
+<p class="src">来源：<a href="https://x.com/liangzhu_AI/status/2116141063727657226" target="_blank" rel="noopener">@liangzhu_AI 感悟帖</a></p>
+<p class="take"><b>变现角度：</b>这是副业的底层分配律：工具、自动化流、自媒体资产才是能脱离本人的收入；20% 不是上限，是最低配额，低于它就永远在出卖时间。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
