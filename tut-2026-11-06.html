@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-06：19 篇 AI 幹貨教程 · 豬豬俠玩AI</title>
+<meta name="description" content="2026-11-06 AI 幹貨教程：NVIDIA Auto Ontology、Vercel agent-desktop、Claude Skills 選型與實測、AI 賺錢四條實在路徑、Genspark 手機一人公司＋ X 隻讀挖到嘅 7 條幹貨，共 19 篇。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#f4effe;color:#6d28d9}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>豬豬俠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 熱點</a><a href="index.html#tutorials">幹貨教程</a><a href="index.html#cases">變現案例</a><a href="index.html#freebie">免費樣章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回幹貨教程歸檔</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-06：19 篇 AI 幹貨教程</h1>
+<div class="meta">2026-11-06 · 豬豬俠玩AI · 每篇附 3 步上手與變現角度</div>
+
+<div class="item">
+<h2><span class="n">1.</span>NVIDIA Auto Ontology：畀 AI 代理一個識睇數據庫嘅語義層</h2>
+<p>NVIDIA 開源嘅 Python 框架，將數據庫 metadata 抽成圖譜本體（ontology），等代理將自然語言問題轉成 SQL 時唔會撈亂指標定義，答案連同 SQL 同推理步驟一齊交回，方便核查。</p>
+<p class="src">來源：<a href="https://blog.aivaded.com/blog/oss-nvidia-auto-ontology/" target="_blank" rel="noopener">Aivaded 博客</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 Docker Compose v2 加 uv 喺本機跑起服務，Postgres + pgvector 存本體。</li><li>喺 .env 填入 NVIDIA API key（nvapi-...），連接你嘅數據庫（支援 PostgreSQL、MySQL、Snowflake、ClickHouse 等十種引擎）。</li><li>經 MCP server 接入你嘅代理，代理可用 search_terms、ask_question 等唯讀工具查數。</li></ol></div>
+<p style="margin-top:12px">變現角度：接企業數據分析外包或做內部 BI 代理服務——客戶問一句自然語言就出數，賣嘅係「可審計嘅答案」而唔係黑盒聊天；原文例子：查某產品 2015 年 6 月賓州銷售，答案連 SQL 一齊回傳 588.80 美元、來自 3 行發票。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">2.</span>Vercel agent-desktop：唔靠截圖，等 AI 直接操作你成部電腦</h2>
+<p>Vercel Labs 推出嘅開源 CLI，透過操作系統無障礙樹（accessibility tree）讀取桌面軟件界面，等代理唔使估像素都可以撳掣、打字，仲可以多個代理同時做嘢。</p>
+<p class="src">來源：<a href="https://flaviocopes.com/agent-desktop/" target="_blank" rel="noopener">Flavio Copes</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>安裝（npm install -g agent-desktop，需 Node 18 或以上，支援 macOS、Windows、Linux）。</li><li>喺 macOS 授權無障礙權限。</li><li>用 agent-desktop snapshot --app Finder -i 睇界面 JSON，再用 click '@ref' 操作，做完再 snapshot 驗證。</li></ol></div>
+<p style="margin-top:12px">變現角度：幫中小企搭「桌面自動化」服務——例如自動處理 Excel、報表軟件等瀏覽器以外嘅重複工序，按流程收費；據 11 月 6 日 Medium 文章（作者引述），項目上線後數日衝破 13,000 stars，需求熱度高。注意：快照可能包含私人桌面資料，唔好倒入公開 log。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">3.</span>起一個識修 Bug 嘅 AI 代理：守住「重現唔到就唔好修」</h2>
+<p>將 DeepSeek Harness 團隊 11 月 1 日發表嘅超級代理設計論文，落實成一條五步除錯流水線：代理收到 bug 報告，先寫一個今日會失敗嘅測試，重現到先修，修完跑埋全套測試先交 PR。</p>
+<p class="src">來源：<a href="https://dev.to/hassann/ai-agent-that-fixes-bugs-build-one-that-reproduces-first-4nl7" target="_blank" rel="noopener">DEV（Hassan）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>叫代理將 bug 報告轉成 API 測試個案（可用 Apidog CLI：npm install -g apidog-cli@latest 後叫代理寫 JSON 測試）。</li><li>喺隔離分支跑測試，確認佢今日真係失敗。</li><li>代理落 patch、重跑測試加全套 suite，全部綠燈先開 PR，否則保持沉默。</li></ol></div>
+<p style="margin-top:12px">變現角度：將呢套流程包裝成開發團隊嘅「自動除錯」服務或課程，慳返工程師逐單人手重現嘅時間；留意原文提醒：論文講嘅係架構，唔係已出貨功能，原型 dsh-superagent-prototype 並非 DeepSeek 官方產品。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">4.</span>唔好一次裝 100 個 Claude Skills，由呢 10 個開始</h2>
+<p>新手最常犯嘅錯唔係揀錯 Skill，而係一次裝晒——呢篇 11 月 5 日刊出嘅指南教你按日程逐個裝，每個一星期內喺真實工作上用一次，仲教你點寫自己第一個 Skill。</p>
+<p class="src">來源：<a href="https://dev.to/skillstack/stop-installing-100-claude-skills-start-with-these-10-3i3j" target="_blank" rel="noopener">DEV（SkillStack）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 日裝除錯組合，喺真 bug 上用一次，唔好用玩具例子。</li><li>第 2–4 日順序加上測試驅動、代碼審查、Git 工作流程、品味（taste）等 Skill。</li><li>當你發現同一樣嘢第三次用人手解釋，就係時候寫自己嘅 Skill。</li></ol></div>
+<p style="margin-top:12px">變現角度：慳 token 就係慳錢——Skill 只喺啱用時先載入，唔使次次將成套流程貼入對話；將呢套「首週計劃」做成付費教學或顧問 onboarding 流程，幫團隊快速上手 Claude Code。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">5.</span>Superpowers：等 Claude Code 設計、計劃、測試完先寫代碼</h2>
+<p>一套可組合嘅 Skill，逼代理喺寫代碼之前先問清楚需求、寫設計畀你批、再拆成 2–5 分鐘一件嘅小任務，逐件做、逐件測、逐件審查，唔再一嚟就亂寫。</p>
+<p class="src">來源：<a href="https://dev.to/dedupedai/make-claude-code-design-plan-and-test-before-it-writes-code-cjg#comments" target="_blank" rel="noopener">DEV（DedupedAI）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>喺 Claude Code 安裝：/plugin install superpowers@claude-plugins-official。</li><li>用幾句話講你想做嘅功能，等 brainstorming 階段問返你問題，批咗設計先繼續。</li><li>計劃拆細後逐任務執行，每件都行測試驅動（先寫失敗測試、再寫最少代碼、再重構）。</li></ol></div>
+<p style="margin-top:12px">變現角度：獨立開發者或一人工作室用佢接外包——設計先行減少中途改單同返工，成個流程本身亦可做成「AI 開發工作流」收費課程。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">6.</span>咩係 Claude Skills？點安裝、點用，一篇講清</h2>
+<p>11 月 2 日刊出嘅入門指南，解釋 Skill 其實係一個資料夾加一個 SKILL.md，寫一次、重複用，唔使每段對話重複講同一套指示。</p>
+<p class="src">來源：<a href="https://dev.to/motion-prompt/what-are-claude-skills-how-to-install-and-use-them-364o" target="_blank" rel="noopener">DEV（Motion Prompt）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>喺 Claude.ai 設定入面嘅 Skills 區上傳 Skill（通常係 zip），或喺 Claude Code 將 Skill 資料夾放喺 ~/.claude/skills/。</li><li>開新對話講出任務，Claude 會喺啱用時自動載入。</li><li>安裝前先讀 SKILL.md——內容含糊嘅 Skill 唔好裝。</li></ol></div>
+<p style="margin-top:12px">變現角度：將你成日重複嘅工作流程（例如寫報價單、審稿、生成報告）寫成 Skill 套裝出售或做成訂閱制模板；慳返嘅唔只係時間，仲有每次重複解釋所燒嘅 token 成本。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">7.</span>一個檔案寫出你第一個 Claude Code Skill</h2>
+<p>最簡入門教學——一個 Skill 就係項目入面 .claude/skills/&lt;名&gt;/SKILL.md 一個檔案，頂部寫名同描述，下面寫步驟，本文已對照 11 月 4 日嘅官方文件核實。</p>
+<p class="src">來源：<a href="https://tools.benibix.com/blog/make-your-first-claude-code-skill/" target="_blank" rel="noopener">Benibix Tools</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>開資料夾 .claude/skills/pr-description/，入面放 SKILL.md。</li><li>頂部 --- 之間寫 name 同 description（描述要寫明咩情況下用），下面寫步驟，例如先跑 git diff main...HEAD --stat 再寫 PR 描述。</li><li>喺 Claude Code 打 /pr-description 或直接講出任務，/skills 可睇晒所有已載入嘅 Skill。</li></ol></div>
+<p style="margin-top:12px">變現角度：將你幫客戶重複做嘅流程寫成 Skill，連同服務一齊交付——客戶唔止買到一次結果，仲買到可重複用嘅工作方式；長 Skill 只喺用時先載入，唔會長期食 context。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">8.</span>實測：寫一個履歷 Skill，效果好過直接叫 AI 寫履歷</h2>
+<p>作者用 Claude Code v2.1.318 喺 2026 年 11 月 5 日實測，同一份求職筆記，有 Skill 嗰組寫出 51 行履歷、附關鍵字檢查同四條追問，冇 Skill 嗰組得 30 行、冇追問。</p>
+<p class="src">來源：<a href="https://aiparabellum.com/claude-code-resume-skill-build-test/" target="_blank" rel="noopener">AI Parabellum（作者實測）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>開資料夾 .claude/skills/resume-builder/，寫 SKILL.md，描述寫明「將求職筆記變成一頁 ATS 友善履歷」，加 disable-model-invocation: true 等佢只喺你叫先行。</li><li>步驟寫明：讀筆記 → 按 Header、Summary、Experience、Skills、Education 順序寫 resume.md。</li><li>跑 /resume-builder notes.md，對照輸出逐項檢查。</li></ol></div>
+<p style="margin-top:12px">變現角度：求職顧問或自由工作者可將呢類 Skill 包裝成收費服務——幫客戶一鍵生成針對唔同職位嘅履歷版本，按份收費；同理可複製去求職信、面試準備等場景。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">9.</span>2026 用 AI 賺錢四條實在路徑（唔吹水版）</h2>
+<p>11 月刊出嘅指南，唔講「奇蹟月入截圖」，逐條拆解四條路：AI 訓練／評測工作、企業自動化、AI 輔助交易、代幣化資產，逐條講明人工、付出同風險。</p>
+<p class="src">來源：<a href="https://medium.com/@barronvandenberg/how-to-make-money-with-ai-in-2026-4-realistic-paths-no-hype-68bd8b9f1a32" target="_blank" rel="noopener">Medium（Barron Vandenberg）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>零技術背景由 AI 訓練／評測入門（作者引述：入門約每小時 20 美元，一般評測工作頂到每小時 40–80 美元，具備醫療、法律、金融等專業背景、直接接客先去到每小時 150–200 美元以上）。</li><li>識少少技術就做企業自動化，由一個流程嘅痛點切入。</li><li>交易同代幣化資產先訂規則、控制風險，唔好將佢當第一收入。</li></ol></div>
+<p style="margin-top:12px">變現角度：最大價值係幫讀者避開「乜都話賺錢」嘅陷阱——按自己背景揀啱路，唔使浪費時間追唔適合自己嘅副業；文中提到嘅平台包括 Scale AI、Surge AI、Outlier AI、Appen、Remotasks（作者引述）。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">10.</span>AI 賺錢新手指南：揀啱模型、寫識賺錢嘅提示詞、做 AI 影片</h2>
+<p>軟件工程碩士生作者 10 月 30 日發表、11 月 4 日更新嘅入門指南，話你知點樣揀模型、點寫提示詞先賣到嘢、點用 AI 影片工具做無面孔短片。</p>
+<p class="src">來源：<a href="https://medium.com/@SmartEbookShelf/how-to-make-money-with-ai-in-2026-the-complete-beginners-guide-a806b51cacfa" target="_blank" rel="noopener">Medium（SmartEbookShelf）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按任務揀模型：ChatGPT 做全能寫作同規劃最啱新手起步，Claude 適合長文件同寫代碼，Gemini 適合 Google 生態。</li><li>用作者提供嘅提示詞結構寫 Fiverr gig（例如：「扮 Fiverr 頂級賣家，寫一個 80 字內標題、150 字描述、5 個標籤、3 條 FAQ」）。</li><li>用 Sora、Veo、Kling、Runway 做無面孔短片，放 YouTube、TikTok、Reels。</li></ol></div>
+<p style="margin-top:12px">變現角度：零成本起步——免費 AI 賬戶加每日一小時；七大方向包括 AI 輔助自由寫作、無面孔短片、賣電子書／模板／提示詞包、社交媒體管理、幫小生意裝聊天機械人、履歷改造、寫博客／電子報（作者列舉）。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">11.</span>用 Genspark 手機做 Podcast、填色書、Landing Page，一日搞掂一人公司</h2>
+<p>11 月刊出嘅手機實操指南，用免費 AI 工具 Genspark，由電話做到三樣嘢：AI Podcast、兒童填色書（放 Amazon KDP 賣）、賣產品嘅 Landing Page，全程唔使露面。</p>
+<p class="src">來源：<a href="https://medium.com/@info.qudsiabano/how-to-make-money-from-your-phone-with-genspark-ai-in-2027-no-camera-needed-7b0b304b8604" target="_blank" rel="noopener">Medium（Qudsia Bano）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>喺應用商店下載 Genspark，免費計劃每日有 100 credits（作者引述），夠跟晒下面步驟。</li><li>揀 AI Pods 做一集 5 分鐘 Podcast（例如「新手第一個應該用嘅 AI 工具」）。</li><li>用 Genspark 生成填色書圖案，上載 Amazon KDP，再做一個 Landing Page 直接賣。</li></ol></div>
+<p style="margin-top:12px">變現角度：三樣都係「做一次、賣多次」嘅數碼產品，唔使囤貨、唔使請團隊；作者亦有提醒現實一面：Podcast 收入靠持續更新，唔係一集就賺幾千，穩定出片先有回報。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">12.</span>小生意新手用 AI：覆客、待辦、睇數，三招每招十分鐘</h2>
+<p>11 月 3 日刊出、寫畀完全新手嘅老闆：唔使學成套 AI 理論，免費版 ChatGPT、Claude 或 Gemini，每招十分鐘，交一個細任務畀 AI 試下。</p>
+<p class="src">來源：<a href="https://medium.com/@bedrockry/how-to-use-ai-in-your-business-as-a-beginner-839b8f5f5bef" target="_blank" rel="noopener">Medium（Bedrockry）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>覆客查詢：開新對話，貼上客戶電郵加價目表，叫 AI 草擬回覆。</li><li>語音變待辦：將語音備忘交畀 AI 整理成清單。</li><li>睇數：將數字檔案交畀 AI 讀，問佢邊啲值得留意——每次開新對話、每次檢查輸出。</li></ol></div>
+<p style="margin-top:12px">變現角度：唔係直接賺錢，而係慳時間慳成本——小生意老闆每星期慳幾個鐘，就等於多咗接客同做生意嘅時間；進階可將成套流程整理成「生意大腦」，等 AI 越嚟越識你間舖。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">13.</span>小紅書電商保姆級合集：開店到售後，收藏一條就夠（X：@Sunkeke_AI 轉推）</h2>
+<p>孫可可轉推 Hytidel 嘅小紅書電商保姆級教程合集，讚其非常齊全，錯過任何一篇都可憑此補課，收藏一條就夠。合集涵蓋開店、選品、找貨源、做內容、發貨、售後及工具箱（附 7 款工具）共 7 個部分。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI/status/2118702186234610044" target="_blank" rel="noopener">X @Sunkeke_AI（轉推 Hytidel）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>打開合集帖收藏，按開店 → 選品 → 找貨源嘅順序逐篇跟做。</li><li>做內容同發貨環節對照自己嘅店，逐項補齊缺口。</li><li>用工具箱入面嘅 7 款工具將流程固定落嚟，唔好靠人手逐單處理。</li></ol></div>
+<p style="margin-top:12px">變現角度：小紅書電商係「內容即貨架」——合集本身就係一條由零到出單嘅路線圖，照住做可以慳返自己逐篇搵教程嘅時間，直接將精力放喺選品同內容上。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">14.</span>爆款長文創作流程：700 粉絲寫出 200 萬瀏覽，Idea → AI → Revision → Publish（X：@Sunkeke_AI 轉推）</h2>
+<p>孫可可分享爆款長文創作流程，稱呢個係內容創作嘅大師課；佢自己嘅爆款文章都係 AI 參與創作出嚟。轉推嘅 Koda 文章指，作者喺只有 700 粉絲時寫出 200 萬瀏覽量嘅爆款長文，第一篇爆文 116 萬瀏覽時帳號只有 300 粉絲（博主自述）。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI/status/2118665499181814089" target="_blank" rel="noopener">X @Sunkeke_AI（轉推 Koda）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>Idea：先定一個值得寫嘅觀點，唔好由 AI 憑空諗題目。</li><li>AI：用 AI 起草初稿，大幅提升寫作效率。</li><li>Revision → Publish：人工修訂、加入自己嘅例子同判斷，再發佈。</li></ol></div>
+<p style="margin-top:12px">變現角度：長文係建立專業形象最平嘅方式——一篇爆文可以帶嚟長期流量同諮詢，AI 負責速度、人負責觀點，分工清楚先至寫得出有說服力嘅內容。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">15.</span>用 Opus 5.5 為開源項目做 40 秒種草動畫，幾千蚊宣傳片而家一部機做到（X：@HaileyAILabs）</h2>
+<p>Hailey 用 Opus 5.5 為微軟開源項目 VibeVoice 製作咗一支 40 秒種草動畫，幾乎完美還原其腳本，效果驚艷；佢指出市場價幾千元嘅宣傳片，而家用 Opus Code 就能做到。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs/status/2118515644165734527" target="_blank" rel="noopener">X @HaileyAILabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先寫好動畫腳本：每 5–10 秒一個鏡頭，寫明畫面同旁白。</li><li>用 Opus Code 按腳本生成動畫，逐鏡檢查還原度。</li><li>唔啱嘅鏡頭逐個重做，唔好成條片推倒重來。</li></ol></div>
+<p style="margin-top:12px">變現角度：幾千蚊一條嘅宣傳片，而家一個人加 AI 就做到——幫開源項目、初創公司做產品介紹動畫，按條收費，成本主要係你嘅時間同腳本功力。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">16.</span>Claude Code / Codex + Seedance AI 影片：由一個想法到成片嘅全流程（X：@HaileyAILabs 推薦）</h2>
+<p>Hailey 推薦 Eian 於 11 月 5 日嘅文章《Claude Code / Codex + Seedance AI 影片：從一個想法到成片的全流程》，重點係用盡量少嘅錢、盡量低嘅抽卡率做出滿意嘅 AI 影片。Hailey 本人最近亦嘗試用 Opus、Codex、Muse、Grok 生成 2D 手繪動畫、離譜短劇及 3D MV，效果意外好玩，計劃把實驗整理成系列。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs/status/2118621813471052211" target="_blank" rel="noopener">X @HaileyAILabs（推薦 Eian 文章）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>讀 Eian 嘅全流程文章，記低佢慳錢同降抽卡率嘅關鍵設定。</li><li>用 Claude Code 或 Codex 搭好由想法到成片嘅流程，先做一條短片驗證。</li><li>將每次實驗嘅參數記低，慢慢累積自己嘅出片配方。</li></ol></div>
+<p style="margin-top:12px">變現角度：AI 影片最大成本係反覆抽卡——掌握低成本出片流程，就可以接短片、廣告、社群內容嘅單，報價比傳統製作低一大截，仍然有賺。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">17.</span>GPT Image 2.6 完整指南：8 大高頻場景，每個都有高完成度提示詞模板（X：@xaiwind 轉推）</h2>
+<p>想風轉推龍海嘅 GPT Image 2.6 完整指南，涵蓋 8 大高頻場景，每個場景都附有高完成度嘅提示詞模板；想風評論指呢 8 個場景每一個都值得反覆練習。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind/status/2118508674486620371" target="_blank" rel="noopener">X @xaiwind（轉推龍海）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>打開指南，8 個場景先揀一個你最常用嘅嚟練。</li><li>直接套用佢附嘅提示詞模板出圖，對照效果微調。</li><li>練熟一個場景再練下一個，逐步存成自己嘅模板庫。</li></ol></div>
+<p style="margin-top:12px">變現角度：出圖能力可以直接變現——幫店主做產品圖、幫內容號做封面、幫客戶做宣傳物料，提示詞模板就係你嘅生產工具，練熟 8 個場景等於備齊 8 種接單能力。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">18.</span>銀行戶口連上 Claude：用大白話查餘額流水，官方寫明隻讀權限（X：@xaiwind）</h2>
+<p>想風分享：把銀行帳戶連上 Claude 後，可用大白話查詢餘額、流水等，官方寫明為唯讀權限；以後唔使再打開銀行 App。帖子附有操作截圖。呢個功能就係 Anthropic 11 月 5 日推出嘅 Claude 個人理財 Beta（美國測試版，經 Plaid 接駁）。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind/status/2118594189202165990" target="_blank" rel="noopener">X @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>喺 Claude 開個人理財 Beta（目前美國 Pro、Max、Ultra 用戶測試版）。</li><li>經 Plaid 隻讀接駁銀行同信用卡戶口，確認權限係唯讀、唔會郁到錢。</li><li>直接用大白話問 Claude：今個月食飯用咗幾多、邊啲訂閱仲喺度扣錢。</li></ol></div>
+<p style="margin-top:12px">變現角度：識用呢類工具可以幫客戶做記賬同訂閱體檢服務——好多人唔知自己每月畀緊幾多冤枉訂閱費，幫佢哋搵出嚟就係一門小生意；同時提醒：接駁前先睇清楚權限，唔好亂授權。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">19.</span>哥飛 SEO Agent：一做 SEO 同新詞就用佢（X：@liangzhu_AI 推薦）</h2>
+<p>良竹推薦哥飛 SEO Agent，稱實在太好用，一做 SEO 和新詞就會用它；附圖顯示該工具介面設有「新對話」及「搜索對話（標題和內容）」功能。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI/status/2118684069940916722" target="_blank" rel="noopener">X @liangzhu_AI</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>打開哥飛 SEO Agent，開一個新對話。</li><li>直接問你要做嘅 SEO 問題或者新詞，例如點樣搶一個新關鍵詞。</li><li>用佢嘅搜索對話功能翻查之前嘅討論，唔好每次由零問起。</li></ol></div>
+<p style="margin-top:12px">變現角度：SEO 係內容變現嘅長尾入口——識搶新詞就等於搶到免費流量，呢類專用 Agent 幫你慳返逐個關鍵詞人手研究嘅時間，適合幫客戶做內容排名服務。</p>
+</div>
+
+<div class="cta-box">
+<h3>免費領：5 個鎖臉模板樣章</h3>
+<p>先試後買。入群免費領，樣章 PDF 已上傳到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免費領取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 豬豬俠玩AI · 聯繫 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
