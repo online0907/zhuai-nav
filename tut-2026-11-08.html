@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-08：20 篇 AI 乾貨教程 · 豬豬俠玩AI</title>
+<meta name="description" content="2026-11-08 AI 乾貨教程：GitHub 熱榜 AWS 模擬器與 AI 電商監控、Agent Skill 實戰、Claude Code 工作台、n8n 自動化、OpenMAIC 互動課堂、連發 3 個 MVP 教訓，加 X 只讀挖到的 5 條乾貨，共 20 篇。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#f4effe;color:#6d28d9}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>豬豬俠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 熱點</a><a href="index.html#tutorials">乾貨教程</a><a href="index.html#cases">變現案例</a><a href="index.html#freebie">免費樣章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回乾貨教程歸檔</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-08</h1>
+<div class="meta">2026-11-08 · 豬豬俠玩AI · 每篇附 3 步上手與變現角度</div>
+
+<div class="item">
+<h2><span class="n">1.</span>GitHub Trending 11 月：28K 星 AWS 模擬器＋16K 星 AI 電商監控</h2>
+<p>今期 Trending 有三個全新上榜項目，標誌住 AI Agent 時代由基建層進入企業應用層：floci-io/floci（28,330 星）係免費開源 AWS 模擬器，24 毫秒啟動、閒置記憶體僅 13 MiB；Usagi-org/ai-goofish-monitor（16,211 星）用 Playwright＋多模態模型實時監控二手平台商品；spotify/portal-ai-plugins 將 Spotify 內部開發者平台接駁 Claude Code、Codex 等 Agent。</p>
+<p class="src">來源：<a href="https://www.coddykit.com/pages/blog-detail?id=5130019&amp;slug=github-trending-november-2026-from-a-28k-star-aws-emulator-to-a-16k-star-ai-comm" target="_blank" rel="noopener">CoddyKit</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>開源倉庫 floci-io/floci 試本地 AWS 模擬器，啟動只需 24 毫秒</li><li>睇 ai-goofish-monitor 點用 Playwright＋多模態模型實時監控二手平台商品</li><li>睇 spotify/portal-ai-plugins 學大廠點將內部開發者平台接駁 Claude Code</li></ol></div>
+<p class="take"><b>變現角度：</b>用 floci 取代 LocalStack 慳雲端測試成本；抄 ai-goofish-monitor 嘅監控思路，做商品／價格監控自動化服務收月費。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">2.</span>GitHub AI Radar 11 月 6 號榜單：48 小時內最熱 AI 倉庫</h2>
+<p>一份每 48 小時更新嘅 AI 倉庫熱度報告，分核心層同應用層排名，附評分。核心層頭三位：ECC（298.3k 星）、claude-mem（113.8k 星）、hermes-agent（261.1k 星）；應用層頭位 NVIDIA auto-ontology 單日新增 2,000 星；語言分佈以 Python（15 個）同 TypeScript（7 個）為主。</p>
+<p class="src">來源：<a href="https://raw.githubusercontent.com/JuliaYu907/github-ai-radar/main/reports/2026-11-06/github_ai_hot_repo_2026-11-06_en.md" target="_blank" rel="noopener">GitHub AI Radar</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>睇核心 Top 10：ECC、claude-mem、hermes-agent 各解決咩問題</li><li>睇應用層頭位 NVIDIA auto-ontology，單日新增 2,000 星</li><li>按語言分佈（Python 15 個、TypeScript 7 個）揀自己識嘅棧去試</li></ol></div>
+<p class="take"><b>變現角度：</b>跟住榜單學最受歡迎嘅 Agent 框架同記憶引擎，快人一步接相關開發外判。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">3.</span>AI＋開發者文摘 11 月 2 號：Agent 記憶層、AI 專用瀏覽器</h2>
+<p>一次過睇晒當日 GitHub Trending 嘅重點：持久記憶、為 AI 而寫嘅無頭瀏覽器、遊戲開發 Agent 團隊。thedotmack/claude-mem 單日增逾 1,500 星，解決 Agent 每個 session 由零開始嘅痛點；lightpanda-io/browser 用 Zig 寫、專為 Agent 而設嘅無頭瀏覽器，單日 825 星；Donchitos/Claude-Code-Game-Studios 用 49 個 Agent 砌遊戲開發流水線，單日近 1,000 星。</p>
+<p class="src">來源：<a href="https://www.jonathanfernandez.dev/blog/2026-11-02-ai-dev-digest/" target="_blank" rel="noopener">Jonathan Fernandez</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>試 thedotmack/claude-mem，等 Claude Code 跨 session 記得你個項目</li><li>睇 lightpanda-io/browser，一個用 Zig 寫、專為 Agent 而設嘅無頭瀏覽器</li><li>睇 Donchitos/Claude-Code-Game-Studios 點用 49 個 Agent 砌遊戲開發流水線</li></ol></div>
+<p class="take"><b>變現角度：</b>用 claude-mem＋Lightpanda 砌自動化抓取／測試服務，賣畀需要長期跑 Agent 嘅小團隊。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">4.</span>點樣由零寫一個 Agent Skill（Flavio Copes，11 月 8 號）</h2>
+<p>作者有 46 個自用 Skill，今次實戰由零寫一個 release-readiness Skill，仲要真係測試邊啲提示會觸發、邊啲唔會。關鍵心法：觸發全靠 SKILL.md 嘅 description 寫得準唔準。</p>
+<p class="src">來源：<a href="https://flaviocopes.com/agent-skills/" target="_blank" rel="noopener">Flavio Copes</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 SKILL.md 格式（YAML frontmatter＋Markdown）寫好 name 同 description，觸發全靠 description 寫得準</li><li>個人 Skill 放 ~/.claude/skills/</li><li>用 skills-ref validate 驗證，再用 claude -p 做啟用測試</li></ol></div>
+<p class="take"><b>變現角度：</b>將重複工作流程寫成 Skill 賣／分享（作者寫作 Skill 三星期內被調用 139 次），或用 Skill 幫客戶將發佈、測試流程標準化收費。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">5.</span>Claude Code Skills 實戰：我真正用緊嘅 10 個＋安裝前安全檢查</h2>
+<p>作者按過去三個月工作記錄，揀出 10 個真正用得着嘅 Skill，逐個講安裝方法、授權同埋 11 月 1 號再核實過嘅更新。重點提醒：安裝前先查 README 講明嘅授權同安裝方式，閒置時每個 Skill 約佔 150 token 上下文。</p>
+<p class="src">來源：<a href="https://fieldnotes-guide.com/en/claude-codex-skills-en" target="_blank" rel="noopener">Fieldnotes Guide</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>分清兩個安裝位置：個人用 ~/.claude/skills/、項目用 .claude/skills/</li><li>安裝前先查 README 講明嘅授權同埋安裝方式</li><li>裝完用 /skills 睇每個 Skill 嘅上下文成本（閒置時每個約 150 token）</li></ol></div>
+<p class="take"><b>變現角度：</b>識揀 Skill 等於慳 token 慳錢；幫團隊搭一套安全審核過嘅 Skill 庫，係一門可以收費嘅顧問服務。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">6.</span>Claude Code 實用指南：免費課程，10 章＋證書</h2>
+<p>免費文字課程，10 章、約 2 小時閱讀量，2026 年 11 月 3 號更新，學完通過測驗有證書。內容包括點寫一份短而具體、可驗證嘅 CLAUDE.md，用 /context、/clear、/compact 管理上下文，Plan Mode 拆大任務，再用 Skills、Hooks、MCP 擴充。</p>
+<p class="src">來源：<a href="https://academy.rinoova.com/en/courses/claude-code-fondamenti" target="_blank" rel="noopener">Rinoova Academy</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>學點寫一份短而具體、可驗證嘅 CLAUDE.md</li><li>用 /context、/clear、/compact 管理上下文</li><li>學 Plan Mode 拆大任務，再用 Skills、Hooks、MCP 擴充</li></ol></div>
+<p class="take"><b>變現角度：</b>課程本身免費，但學識之後可以接 Claude Code 輔助開發外判；證書可放喺接案檔案度加分。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">7.</span>Karpathy Skills：一個檔案令 AI 寫 code 好啲</h2>
+<p>一個 CLAUDE.md 檔案，將 Andrej Karpathy 對 AI 寫 code 嘅不滿變成四條規則：寫 code 前先諗、簡單至上、精準改動、以目標為本。截至 11 月 4 日累積超過 22.9 萬星（來源原文數字）。留意：倉庫作者係 multica-ai，靈感嚟自 Karpathy 公開評論，唔係 Karpathy 本人出品。</p>
+<p class="src">來源：<a href="https://dev.to/itxtayab/karpathy-skills-one-file-that-makes-your-ai-coding-agent-write-better-code-he1" target="_blank" rel="noopener">DEV</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>注意：倉庫作者係 multica-ai，靈感嚟自 Karpathy 公開評論，唔係 Karpathy 本人出品</li><li>將倉庫嘅 CLAUDE.md 放入項目根目錄，Claude Code 會自動讀取</li><li>四條規則係：寫 code 前先諗、簡單至上、精準改動、以目標為本</li></ol></div>
+<p class="take"><b>變現角度：</b>將呢套規則加埋自己嘅項目規範，打包成團隊開發範本收費；程式質素好咗，返工改 bug 嘅時間就係慳返嚟嘅錢。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">8.</span>將爛咗嘅 UI 截圖掟入 Claude Code，再用 Playwright 證明修好咗</h2>
+<p>實戰教學：截圖＋失敗測試＋像素對比，三步令 Agent 唔可以「話修好就算」。先用 Playwright 截低出事畫面，寫一個針對呢個 bug 會失敗嘅測試，再將截圖貼入 Claude Code 修，修好後再由 Playwright 截圖對比驗證。</p>
+<p class="src">來源：<a href="https://dev.to/gabrielanhaia/paste-the-broken-ui-into-claude-code-then-make-playwright-prove-the-fix-3oa9" target="_blank" rel="noopener">DEV</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 Playwright 截低出事畫面</li><li>寫一個針對呢個 bug 會失敗嘅測試</li><li>將截圖貼入 Claude Code（Ctrl+V），叫佢修好後再由 Playwright 截圖對比驗證</li></ol></div>
+<p class="take"><b>變現角度：</b>呢個「截圖＋自動驗證」流程可以直接賣畀接案客戶做 UI QA 服務，按次收費。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">9.</span>搭建 Claude Code 工作台：規則＋規格＋Skill 三層</h2>
+<p>作者分享點用 CLAUDE.md（全項目規則）、docs/specs（需求規格）、.claude/skills（具體寫法）三層管住 Claude Code：CLAUDE.md 保持精簡約 100–150 行，只寫全項目通用規則；需求寫喺 docs/specs，短而講結果唔講實現細節；Skill 要短、細、專注一件事，觸發描述要寫得準。</p>
+<p class="src">來源：<a href="https://medium.com/@allousas/setting-up-claude-code-harness-specs-skills-and-global-rules-65d425340f36" target="_blank" rel="noopener">Medium</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>CLAUDE.md 保持精簡，約 100–150 行，只寫全項目通用規則</li><li>需求寫喺 docs/specs，短而講結果唔講實現細節</li><li>Skill 要短、細、專注一件事，觸發描述要寫得準</li></ol></div>
+<p class="take"><b>變現角度：</b>幫小團隊搭呢套三層工作台，減少 AI 出錯返工，係實實在在可以收費嘅導入服務。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">10.</span>n8n 實戰：AI 供應商跟進 Agent（免費教學）</h2>
+<p>用 n8n 砌一個 Agent，自動幫你追遲咗嘅採購單，寫好禮貌而堅定嘅跟進訊息，記入 Google Sheets。流程包括 Chat Trigger＋AI Agent＋模型＋記憶＋Google Sheets 工具，系統提示要寫明公司背景同跟進語氣。</p>
+<p class="src">來源：<a href="https://learn.ynteractive.com/content/ai-vendor-follow-up-agent-n8n" target="_blank" rel="noopener">Ynteractive</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>喺 n8n 開新 workflow，加 Chat Trigger＋AI Agent＋模型＋記憶＋Google Sheets 工具</li><li>寫好系統提示，話畀 Agent 知公司背景同跟進語氣</li><li>餵一份遲交訂單清單入去，逐單生成跟進訊息同到期日</li></ol></div>
+<p class="take"><b>變現角度：</b>同一模板可以賣畀中小企做採購／營運自動化，每間收一次設定費＋月費維護。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">11.</span>用 n8n 生成 AI 影片：先報價、再建立、慢慢等、再下載</h2>
+<p>唔用社群節點，只用 n8n 內置 HTTP Request 節點，穩陣咁調用影片生成 API，重點係唔好畀人重複收費。先 call 報價接口（以 Seedance 2.5、720p、5 秒、9:16 為例，2026 年 11 月 5 號報價係 1.05 美元），建立任務時加 Idempotency-Key 防止超時重試變雙倍收費，再用 Wait 節點輪詢，唔好狂撳 API。</p>
+<p class="src">來源：<a href="https://medium.com/@aribkhan2004/generate-ai-videos-in-n8n-with-plain-http-request-nodes-quote-create-wait-download-2aa9ab1edca5" target="_blank" rel="noopener">Medium</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先 call 報價接口（以 Seedance 2.5、720p、5 秒、9:16 為例，2026 年 11 月 5 號報價係 1.05 美元）</li><li>建立任務時加 Idempotency-Key，防止超時重試變雙倍收費</li><li>用 Wait 節點輪詢，唔好狂撳 API</li></ol></div>
+<p class="take"><b>變現角度：</b>將流程打包成短影片批量生產線，接短片廣告／產品片外判；免費模型 minimax-h3-free 可以零成本試水。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">12.</span>地產線索變睇樓預約：n8n＋OpenAI 免費 Workflow</h2>
+<p>成套免費 workflow（JSON 下載即用）：線索評分、WhatsApp 跟進 21 日、自動約睇樓、寫入 PostgreSQL。OpenAI 按事實評分：70 分以上熱線索、40–69 分溫、40 分以下慢慢養；用 gpt-5.4-mini 做評分同覆訊，成本每條線索唔使一美分。</p>
+<p class="src">來源：<a href="https://makani-tech.com/resources/real-estate-lead-to-site-visit-n8n-openai" target="_blank" rel="noopener">Makani Tech</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>下載 workflow JSON 匯入 n8n，連好 Facebook Lead Ads、WhatsApp、Google Calendar</li><li>OpenAI 按事實評分：70 分以上熱線索、40–69 分溫、40 分以下慢慢養</li><li>用 gpt-5.4-mini 做評分同覆訊，成本每條線索唔使一美分</li></ol></div>
+<p class="take"><b>變現角度：</b>地產、教育、醫美等靠線索食飯嘅行業，呢套自動化可以直接賣斷或收月費。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">13.</span>OpenMAIC：一個 PDF 變 AI 互動課堂（安裝＋API＋踩坑）</h2>
+<p>清華 MAIC 實驗室開源項目，輸入主題或文件，AI 老師＋AI 同學＋白板＋測驗，自動生成互動課堂。安裝要 git clone 倉庫、pnpm install、複製 .env.example 做 .env.local，填好模型 API Key 後 pnpm dev，開 http://localhost:3000，輸入主題撳 Generate，課堂分兩階段非同步生成，之後可匯出 PPTX 或離線 HTML。</p>
+<p class="src">來源：<a href="https://langlabs.io/THU-MAIC/OpenMAIC" target="_blank" rel="noopener">LangLabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>git clone 倉庫，pnpm install，複製 .env.example 做 .env.local</li><li>填好模型 API Key，pnpm dev，開 http://localhost:3000</li><li>輸入主題撳 Generate，課堂分兩階段非同步生成，之後可匯出 PPTX 或離線 HTML</li></ol></div>
+<p class="take"><b>變現角度：</b>將公司內部培訓文件、操作手冊變成互動課程，賣畀中小企做員工培訓；或自己開線上課程，慳晒錄影同備課時間。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">14.</span>連發 3 個 AI MVP 嘅實戰教訓：點樣先至出到街</h2>
+<p>作者兩個月內出咗 3 個真係有人用嘅 MVP，分享點樣避開過度設計、限時 48 小時出街：揀一個細到唔好意思講出口嘅功能，48 小時死線，唔用向量數據庫、唔微調；用最平嘅模型（gpt-4o-mini 做文字、基礎 TTS），成本係幾分錢一個請求；出街後即刻去細社群搵第一批用戶，唔好等完美。數據對比（來源原文）：第三個項目 API 成本 12.80 美元、14 小時工時、31 個用戶；第一個過度設計嘅項目：40 小時、0 用戶。</p>
+<p class="src">來源：<a href="https://dev.to/shadie_ai/building-an-ai-side-project-that-actually-ships-lessons-from-shipping-3-mvps-47ac" target="_blank" rel="noopener">DEV</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>揀一個細到唔好意思講出口嘅功能，48 小時死線，唔用向量數據庫、唔微調</li><li>用最平嘅模型（gpt-4o-mini 做文字、基礎 TTS），成本係幾分錢一個請求</li><li>出街後即刻去細社群搵第一批用戶，唔好等完美</li></ol></div>
+<p class="take"><b>變現角度：</b>快出街就係慳錢——作者第三個項目 14 小時、$12.80 成本換到 31 個用戶，對比第一個項目 40 小時、0 用戶。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">15.</span>7 個 2027 年可以變成真正生意嘅 AI 副業（11 月 8 號新文）</h2>
+<p>作者提出 P.A.I.D. 框架：先問四條問題，答唔晒就唔做；再逐個講 7 個副業點樣由零開始：細分市場研究、數碼產品、AI 助手電子報、Pinterest 內容、AI YouTube、行業模板、AI 內容生意。每個方向都先低價賣畀兩三個人換真實反饋，唔好一次過大投資。</p>
+<p class="src">來源：<a href="https://medium.com/@ivankawright/7-ai-side-hustles-that-could-become-real-businesses-in-2027-f7abea3a0783" target="_blank" rel="noopener">Medium</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 P.A.I.D. 四問篩選諗法（問題、受眾、收入、今日第一步）</li><li>揀一個方向：細分市場研究、數碼產品、AI 助手電子報、Pinterest 內容、AI YouTube、行業模板、AI 內容生意</li><li>每個方向都先低價賣畀兩三個人換真實反饋，唔好一次過大投資</li></ol></div>
+<p class="take"><b>變現角度：</b>重點唔係用 AI 本身，而係解決一個人哋已經想解決嘅問題；數碼產品同模板可以一次製作、多次賣。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">16.</span>【X 挖到】@aiwarts：GPT Image 2.6 十大 GIF 玩法，提示語全公開</h2>
+<p>卡爾的AI沃茨花兩日實測 GPT Image 2.6，核心更新有三點：原生 GIF 支援、角色一致性大幅提升、連續編輯能力更強。以前做連續動作 GIF 要將提示語寫得非常具體，而家一句「保持角色一致，換個動作」就得，連續出圖角色唔會崩。十大玩法包括黏土手辦、扁平風貼紙、像素風貼紙、一鍵出片、賽博朋克風、3D 盲盒手辦、手繪鉛筆素描、角色融合、皮克斯風格，以及令動圖「動起來」。</p>
+<p class="src">來源：<a href="https://x.com/aiwarts/status/2119435411667980473" target="_blank" rel="noopener">X · @aiwarts</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>準備一張主角清晰嘅原圖，揀一個玩法（例如黏土手辦或皮克斯風）</li><li>將原圖＋玩法提示語一齊交畀 GPT Image 2.6，注明保持表情、動作同服裝不變</li><li>要做動圖就再加一句「生成一個 GIF，角色在做 XXX，動作流暢自然」，連續出圖驗證角色一致性</li></ol></div>
+<p class="take"><b>變現角度：</b>GIF 動圖＋角色一致性係短影片、表情包、商品展示嘅剛需，呢套提示語可以直接打包成「AI 動圖製作」接單服務，按張或按套收費。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">17.</span>【X 挖到】@HaileyAILabs：Opus 5.5 做音樂 MV，成支動畫用代碼實現</h2>
+<p>Hailey 實測：只畀 Opus 5.5 一份劇本同一首歌，佢就能根據歌詞內容設計畫面，令文字、人物動作、鏡頭同特效跟住音樂節奏變化，整支動畫都係用代碼實現。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs/status/2119354331111825711" target="_blank" rel="noopener">X · @HaileyAILabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>寫一份分鏡劇本：每段歌詞對應嘅畫面、人物動作同鏡頭</li><li>將劇本＋歌曲一齊交畀 Opus 5.5，叫佢用代碼生成跟住節奏變化嘅動畫</li><li>逐段檢查文字、動作、特效係咪對上節奏，唔啱就叫佢逐段改，唔好成支重做</li></ol></div>
+<p class="take"><b>變現角度：</b>音樂 MV、歌詞影片係獨立音樂人同短影片創作者嘅剛需，用 Opus 5.5 代碼生成比逐幀做平得多，可以按首歌收費接單。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">18.</span>【X 挖到】@xaiwind：Grok Bot Anywhere 開源，微信聊天記錄變自己知識庫</h2>
+<p>鐵柱 AGI 將 Grok Bot Anywhere 開源：裝上之後，隨手就可以將微信聊天記錄等平台嘅數據發到 Grok Bot，做成自己嘅知識庫，Grok 終於可以嚟到你身邊。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind/status/2119421046604574853" target="_blank" rel="noopener">X · @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>去開源倉庫睇安裝說明，裝好 Grok Bot Anywhere</li><li>將微信聊天記錄等平台數據發到 Grok Bot，建成自己嘅知識庫</li><li>之後直接問 Grok Bot 搵返自己講過嘅嘢，唔使逐個對話框翻</li></ol></div>
+<p class="take"><b>變現角度：</b>個人知識庫係高頻剛需，識搭呢套流程就可以幫客戶將散落嘅聊天記錄、文件整理成可問答嘅知識庫，按次或按月收費。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">19.</span>【X 挖到】@Sunkeke_AI：月入 10 萬自省清單，九條逐條對照</h2>
+<p>孫可可轉發逸塵嘅月入 10 萬自省清單：早睡早起（晚 11 早 5 或六點半）、每日早起健身至少一小時（必須有有氧）、真人出鏡做自媒體、每月至少一兩次主動約有價值嘅人線下傾、一年取關 80% 關注列表、擅於思考（市場、數據、策略、快速迭代）、持之以恆、及時止損、總係由第一性原理分析問題。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI/status/2119367057259343943" target="_blank" rel="noopener">X · @Sunkeke_AI</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>將九條抄低，逐條打分：邊條做到、邊條完全未做</li><li>揀最弱嘅一條先改，例如由每日一小時有氧或真人出鏡開始</li><li>每月複盤一次，對照數據睇邊條改咗之後收入或流量真係郁</li></ol></div>
+<p class="take"><b>變現角度：</b>清單本身唔賺錢，但佢將「月入 10 萬」拆成九個可執行習慣；做自媒體、做副業嘅人照住逐條執行，先至有穩定產出，先至有得變現。</p>
+</div>
+
+<div class="item">
+<h2><span class="n">20.</span>【X 挖到】@xaiwind：爆火嘅 DeepSeek Super Agent，學思路可以、接生產要先審</h2>
+<p>想風提醒：爆火嘅 DeepSeek Super Agent 拿嚟學思路可以，接生產倉庫要先自己審一遍。倉庫首頁原文寫明 Research prototype for reference only, not an official DeepSeek product——僅供參考嘅研究原型，唔係 DeepSeek 官方產品，仲寫明可能有 Bug，同 DeepSeek 內部版本亦唔完全一樣。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind/status/2119218349775192570" target="_blank" rel="noopener">X · @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先讀倉庫 README 嘅免責聲明，確認佢係研究原型唔係官方產品</li><li>將佢嘅 Agent 架構、工具調用思路抄低，對照自己項目學</li><li>真係要用，先逐個模塊審代碼、跑測試，唔好直接接生產倉庫</li></ol></div>
+<p class="take"><b>變現角度：</b>跟爆款開源學架構係最快嘅進修方法，但生產環境出事先至係最貴嘅學費；識審代碼、識寫測試，本身就係可以收費嘅能力。</p>
+</div>
+
+<div class="cta-box">
+<h3>免費領：5 個鎖臉模板樣章</h3>
+<p>先試後買。入群免費領，樣章 PDF 已上傳到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免費領取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 豬豬俠玩AI · 聯繫 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
