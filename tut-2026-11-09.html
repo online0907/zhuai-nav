@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-09：15 篇 AI 乾貨教程 · 豬豬俠玩AI</title>
+<meta name="description" content="2026-11-09 AI 乾貨教程：Claude Code 創業驗證流水線、n8n 免費新聞摘要、Python 工具調用搭 Agent、OpenMAIC 互動課堂、KDP 誠實復盤，加 X 只讀挖到的 5 條乾貨，共 15 篇。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#f4effe;color:#6d28d9}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>豬豬俠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 熱點</a><a href="index.html#tutorials">乾貨教程</a><a href="index.html#cases">變現案例</a><a href="index.html#freebie">免費樣章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回乾貨教程歸檔</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-09</h1>
+<div class="meta">2026-11-09 · 豬豬俠玩AI · 每篇附 3 步上手與變現角度</div>
+
+<div class="item">
+<h2><span class="n">1.</span>用 Claude Code 驗證／斃掉創業點子：25 步免費開源驗證流水線</h2>
+<p>作者把自己驗證創業點子的完整流程做成了一個免費 MIT 開源 Claude Code 技能（founder-pipeline），25 步串行跑完需求、付費意願、定價、競品等檢查，通不過就斃掉、省下開發時間；他自己的 AI 教練點子 4 項初檢全掛、只得 2.5/10 分。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>安裝技能：claude plugin marketplace add marian-kamenistak/founder-pipeline，再 claude plugin install founder-pipeline@founder-pipeline</li><li>對自己的點子跑一遍流水線，按提示逐項簽字確認</li><li>只看兩道「錢關」（定價／利潤、付費意願）的結論——不通過就先不寫代碼</li></ol></div>
+<p class="take"><b>變現角度：</b>最大的省錢是「不做錯的產品」——作者給自己的點子設了 40 小時上限（相當於 €8,000–9,600 的諮詢時間），驗證前置避免把幾週開發時間燒在沒人付費的點子上；流程本身也可包裝成「創業驗證」諮詢服務賣給想做產品的客戶。</p>
+<p class="src">來源：<a href="https://dev.to/mariankamenistak/how-to-use-claude-code-to-kill-or-launch-a-business-idea-2360" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>n8n 免費每日新聞摘要工作流：不用搜索 API，每天自動發郵件簡報</h2>
+<p>用免費社區節點 n8n-nodes-agentsearch（每天 25 次免費搜索、不用 API key）搭一個定時工作流，每天早上按你的主題搜網、去重、讓模型寫摘要、發郵件，附可直接導入的 workflow JSON。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>自托管 n8n 裡裝節點：cd ~/.n8n/nodes &amp;&amp; npm install n8n-nodes-agentsearch</li><li>按「定時觸發 → 主題列表 → AgentSearch 免費搜索 → 按 URL 去重 → 摘要提示詞 → 發郵件」的節點順序搭好</li><li>把主題換成你跟蹤的行業詞（如 AI、副業），設每天早上 7 點跑</li></ol></div>
+<p class="take"><b>變現角度：</b>零成本做出「行業早報」類內容產品——可做成付費 Newsletter、社群日報，或接「幫企業盯競品／行業動態」的代跑服務；省的是每天手動刷新聞的時間。</p>
+<p class="src">來源：<a href="https://dev.to/agentsearchhq/n8n-news-monitoring-workflow-build-a-free-daily-web-digest-17g0" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>你的 LLM 不是 AI Agent：Python 工具調用從零搭一個真 Agent</h2>
+<p>講透工具調用（function calling）架構的入門教程：LLM 只負責「決定調哪個函數」，你的 Python 程序負責執行並把結果還給模型，照著做能搭出一個會用計算器的任務助手，理解 Agent 的底層結構。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>裝依賴 pip install openai python-dotenv，建 main.py／tools.py</li><li>定義一個工具（如 calculator），把它的 JSON schema 交給模型</li><li>跑起來看模型如何自主決定何時調工具，再把計算器換成你自己的業務函數（如查訂單、發郵件）</li></ol></div>
+<p class="take"><b>變現角度：</b>這是接 AI Agent 定制開發單子的基本功——會搭工具調用就能給小企業做「能查庫存、能回客戶」的客服／助理 Agent，按項目收費；也是理解市面 Agent 產品的地基，避免被概念割韭菜。</p>
+<p class="src">來源：<a href="https://dev.to/srinivasamcjf/your-llm-is-not-an-ai-agent-build-a-real-ai-agent-using-python-tool-calling-and-apis-21g4" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>用 AI Agent 一句話搭帶推薦裂變的註冊 waitlist：數據庫＋登錄＋郵件一次配齊</h2>
+<p>通過一個 MCP 連接讓 Cursor／Claude Code 自動配好產品上線前的 waitlist 後端：Postgres 存註冊、Redis 做推薦排行榜和限流、郵件確認、推薦獎勵，CloudHike 新賬號有 $10 免費額度、不用綁卡。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 CloudHike 連 MCP：claude mcp add --transport http --scope user cloudhike https://cloudhike.dev/api/mcp</li><li>用 npx create-next-app@latest waitlist 起前端</li><li>直接對 Agent 說「用 cloudhike MCP 搭一個帶推薦的 waitlist 後端」，讓它建表、接登錄和郵件</li></ol></div>
+<p class="take"><b>變現角度：</b>每個新產品上線前都要 waitlist——這是一次性可復用的「上線標配」，能打包成給獨立開發者的付費上線服務，或自己每個產品都復用，省掉每次 4 個服務的手動接線時間。</p>
+<p class="src">來源：<a href="https://dev.to/cloudhike/build-a-referral-waitlist-with-your-ai-agent-postgres-auth-redis-and-email-over-one-mcp-1o5f" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>用 Python 和 OpenAI Agents SDK 做你的第一個 AI Agent（任務助手）</h2>
+<p>零基礎友好的 Agent 入門：用 OpenAI Agents SDK 做一個任務管理助手，覆蓋建 Agent、給工具、理解工具調用、運行和改進全流程，代碼量小、適合第一次動手。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>mkdir python-ai-agent，建虛擬環境並 pip install openai-agents</li><li>寫 main.py，用 Agent + Runner.run_sync 定義一個任務助手並給它第一個工具</li><li>跑起來測試，再按教程的「改進」一節加更多工具（如提醒、日程）</li></ol></div>
+<p class="take"><b>變現角度：</b>學會後可把「任務助手」換成面向具體人群的版本（如律師助理、電商客服）做成小產品或接單；對非技術用戶，這也是理解「Agent 能幫我幹什麼」的最便宜入口。</p>
+<p class="src">來源：<a href="https://dev.to/ali_raza_fa80fd8371162ce6/how-to-build-your-first-ai-agent-using-python-271n" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>「我讓 Claude 每月賺 $200」：10 天實測，37 本 KDP 謎題書上架、銷售額 $0 的誠實記錄</h2>
+<p>作者給 Claude Code 下指令「每月至少賺 $200，否則取消訂閱」，每天只花幾分鐘人工，10 天後產出 37 本按需印刷謎題書、7 本日文經典英譯、Gumroad／BOOTH／Payhip 三個店面和每日 Pinterest 發布——但銷售額是 $0，文章如實記錄了每道牆（KDP 每週上新限額、支付綁定、Cloudflare 人機驗證）。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>讓 AI 用代碼批量生成數獨／迷宮／找詞謎題 PDF（不用庫存、單本利潤 $2–3）</li><li>走 Amazon KDP 上架紙質書（新賬號每週約限 2 本紙質＋2 本電子，注意週日 UTC 零點重置），同時掛 Gumroad 賣可打印 PDF</li><li>每天用 Pinterest 發圖引流，設週六晚定時任務批量上傳下一批</li></ol></div>
+<p class="take"><b>變現角度：</b>按需印刷是「一次製作、長期賣」的典型：量起來後單本 $2–3 的利潤靠書目數量堆；文章的價值恰恰是反 hype——先看清限額和支付牆再投入，避免幻想「AI 自動賺錢」。適合做 KDP 副業的避坑指南。</p>
+<p class="src">來源：<a href="https://medium.com/@yuyusub741/i-told-claude-to-earn-200-a-month-368bf768c33d" target="_blank" rel="noopener">Medium（@yuyusub741）</a></p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>OpenMAIC：清華開源的多智能體互動課堂，一句話把任何主題變成 AI 課堂</h2>
+<p>清華 THU-MAIC 團隊開源的 OpenMAIC（42,800+ stars），輸入一個主題或上傳文檔，就能生成由 AI 老師＋AI 同學授課的互動課堂：講義、測驗、互動模擬、白板講解、語音旁白，還能一鍵導出 PPTX 或離線 HTML。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>克隆倉庫 git clone https://github.com/THU-MAIC/OpenMAIC.git，按 README 用 pnpm 安裝（需 Node.js 22.19+、PostgreSQL 16）</li><li>在 openmaic.yml 配一個模型 key（支持 OpenAI、Anthropic、Gemini、DeepSeek、Qwen、Kimi 及本地 Ollama）</li><li>輸入主題或上傳 PDF，生成課堂，或直接去 open.maic.chat 申請訪問碼免部署體驗</li></ol></div>
+<p class="take"><b>變現角度：</b>可做「AI 課程定制」服務——幫培訓機構／企業把內部文檔轉成互動課程收費；也可用來批量生產課程內容再賣課；注意許可證為 AGPL-3.0，對外提供服務需留意合規（或聯繫團隊拿商業授權）。</p>
+<p class="src">來源：<a href="https://github.com/THU-MAIC/OpenMAIC" target="_blank" rel="noopener">GitHub</a></p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>Claude Code vs Cursor vs Copilot：2026 年三選一實測對比</h2>
+<p>11 月 5 日更新的橫向對比：Claude Code 是終端 Agent、Cursor 是 AI 原生編輯器、Copilot 是多編輯器助手，附三者的實測命令和定價（Claude Pro $20/月起含 Claude Code），並給了一個「一下午在自己代碼庫上實測三款」的方法。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>從待辦裡挑三個真實任務（修小 bug、跨文件小功能、帶測試的重構）</li><li>每款工具各建一個分支跑同一批任務，記錄完成質量和耗時</li><li>按場景選：終端／腳本自動化選 Claude Code 或 Copilot CLI，日常寫代碼選 Cursor</li></ol></div>
+<p class="take"><b>變現角度：</b>選對工具直接省訂閱費（避免三份都交錢）和返工時間；對接單開發者，熟悉三款工具的差異本身就是接「AI 結對編程」「代碼審查」類單子的賣點。</p>
+<p class="src">來源：<a href="https://dev.to/devtalk94/claude-code-vs-cursor-vs-copilot-which-is-best-in-2026-b15" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>AI Agent 還是自動化？5 個問題幫你判斷（Claude Code 篇）</h2>
+<p>引用 Anthropic 官方《Building Effective Agents》的判斷框架：步驟能提前寫死的用腳本，需要臨場判斷的才上 Agent；附 5 個自測問題和「先腳本、只在腳本反覆失敗處加 Agent」的省錢策略。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>挑一個你每週重複的任務，問自己「步驟今天能完整寫下來嗎？能覆蓋九成情況嗎？」——能就寫腳本</li><li>不能的，拆出「需要判斷」的環節，只在那幾處用 Claude Code headless 模式（claude -p）加短工具白名單</li><li>跑在 GitHub 上的任務直接用 Claude Code GitHub Action</li></ol></div>
+<p class="take"><b>變現角度：</b>避免為每個任務都上 Agent 而燒掉 API 賬單——腳本幾乎零成本，Agent 只用在刀刃上；幫客戶做自動化時，這個判斷力本身就是報價的依據（不讓客戶為不需要的「智能」付費）。</p>
+<p class="src">來源：<a href="https://dev.to/aobaworks/ai-agent-vs-automation-a-5-question-test-for-claude-code-3mih" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>賣 Canva 輪播圖模板：一個 $127/月的副業算法（附可直接用的提示詞）</h2>
+<p>作者的 AI 副業週報：做一套 10 頁 Instagram 輪播圖模板掛 Gumroad 賣，按 $12/套×每月 15 單算，扣掉 Gumroad 手續費（10%+$0.50/單）和 Canva 付費版約 $18/月，到手約 $127/月；作者明確標註這是「假設數、不是實績」，首月真實預期是 0–3 單。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 Canva 付費版做一套 10 頁輪播模板並生成模板鏈接</li><li>用 ChatGPT（免費版即可）寫配套文案和產品描述，掛 Gumroad 定價 $12</li><li>在 Instagram／小紅書持續發「模板效果」內容引流，復用同一套模板換主題出新品</li></ol></div>
+<p class="take"><b>變現角度：</b>模板是「做一次、賣多次」的數字資產，邊際成本幾乎為零；關鍵是先驗證需求再批量做——作者提醒首月可能負收益（Canva 月費先扣），別一上來就囤幾十套。</p>
+<p class="src">來源：<a href="https://medium.com/@donlee_68109/ai-agent-ops-log-followers-up-reads-down-20-and-the-math-on-selling-canva-carousel-templates-c4ad19c1cca0" target="_blank" rel="noopener">Medium（Donlee）</a></p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>X @Sunkeke_AI：Reddit 運營全流程即插即用模板</h2>
+<p>孫可可轉發的 Reddit 運營長文：涵蓋賬號定位、Subreddit 調研、發帖模板及交流群，是一套可直接套用的 Reddit 冷啟動流程。Reddit 是目前 AI 產品獲取第一批付費用戶最有效的免費渠道之一。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>按模板先定賬號定位：只講一個細分領域，不發雜</li><li>做 Subreddit 調研：列出 10 個目標版塊，先潛水一週看版規與熱帖結構</li><li>按發帖模板每週發 2–3 帖，先給價值再提產品，評論區回覆每一條</li></ol></div>
+<p class="take"><b>變現角度：</b>Reddit 引流不花錢、轉化直接——很多 AI 小產品的第一批付費用戶都來自 Reddit；這套模板省的是自己摸索版規、踩雷被封的時間。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI/status/2119760357405405236" target="_blank" rel="noopener">X @Sunkeke_AI</a></p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>X @Sunkeke_AI：拆解兩篇 AI 拍視頻爆文，586 萬＋閱讀的選題與結構</h2>
+<p>Soren 拆解的兩篇教人用 AI 拍視頻的爆文：數據為 586 萬＋閱讀、8.2 萬＋收藏；一篇講 Claude Code + Codex + Seedance，另一篇講 Claude + H3 一個人拍短劇。拆解的重點是爆款文章的選題與結構，適合直接借鑑。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>先看拆解裡的兩篇文章結構：痛點開場 → 工具鏈全列 → 一步步實操 → 成果對比</li><li>照同樣的結構寫一篇自己的 AI 視頻教程，工具換成你手上有的</li><li>標題保留「一個人＋工具名＋成果」的爆款公式，發到 X／小紅書測數據</li></ol></div>
+<p class="take"><b>變現角度：</b>爆文不是運氣，是結構——把 586 萬閱讀的文章拆成可複用的寫作模板，下次寫 AI 教程直接套用，省的是反覆試錯標題與結構的時間。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI/status/2119681837534740816" target="_blank" rel="noopener">X @Sunkeke_AI</a></p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>X @liangzhu_AI：開發模型選型實測——Codex 10 分鐘 vs 國產模型 5.5 小時</h2>
+<p>良竹的開發模型選型實測對比：同一開發工作在 Codex 上約 10 分鐘完成，用 GLM 或 DeepSeek 卻要 5.5 小時，因此他多次嘗試換回國產模型後仍回到 Codex。對獨立開發者選擇主力編碼模型有直接參考價值。（數據口徑：博主自述實測）</p>
+<div class="steps"><b>3 步上手：</b><ol><li>在自己的項目裡挑一個真實任務，分別用 Codex 與國產模型各跑一遍，記錄完成時間與返工次數</li><li>算一筆賬：模型差價 vs 你的時薪，貴的模型如果省 5 小時反而更便宜</li><li>主力模型定下來後，把常用提示詞與工作流固化，別頻繁切換</li></ol></div>
+<p class="take"><b>變現角度：</b>選型錯了，開發時間直接翻 30 倍——花半天做一次自己的實測對比，比看十篇評測都有用；接單開發者尤其要算清「模型成本 vs 時間成本」這筆賬。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI/status/2119675100115149178" target="_blank" rel="noopener">X @liangzhu_AI</a></p>
+</div>
+<div class="item">
+<h2><span class="n">14.</span>X @MoonInAI：實地拜訪廣東 OPC 社區——除深圳外入駐率低、補貼難拿</h2>
+<p>MoonInAI 實地拜訪廣東多個 OPC 社區後的觀察：除深圳外大部分社區入駐率很低，省級補貼亦全部向深圳傾斜、其他地方很難拿到；引用的觀點是「OPC 跑不通，只有公司能跑通」，屬於創業選址與模式避坑判斷。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>做選址決策前，先實地走訪目標社區，別只看招商宣傳</li><li>問清楚補貼的實際發放門檻與地域限制，再算投入產出</li><li>模式上優先考慮「公司化運營」而非只靠社區流量</li></ol></div>
+<p class="take"><b>變現角度：</b>選址與補貼是創業最容易踩的坑——別人實地跑出來的結論，能幫你省下一筆試錯租金與時間；做線下／社區相關副業前，先看這類一手觀察。</p>
+<p class="src">來源：<a href="https://x.com/MoonInAI/status/2119685367976845331" target="_blank" rel="noopener">X @MoonInAI</a></p>
+</div>
+<div class="item">
+<h2><span class="n">15.</span>X @HaileyAILabs：Sherlock——一個用戶名查遍 400＋ 個網站</h2>
+<p>GitHub 10.5 萬 Star 的開源工具 Sherlock：輸入一個用戶名，即可在 400 多個網站查找同名賬號，連已遺忘的論壇、社區賬號也有機會找回。可用於副業調研、用戶名佔用檢查及競品賬號查找。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>pip install sherlock-project 或直接克隆 GitHub 倉庫</li><li>跑 sherlock &lt;用戶名&gt;，看目標用戶名在哪些平台已被佔用</li><li>用它做競品調研：查對手在哪些平台有賬號、活躍在哪裡</li></ol></div>
+<p class="take"><b>變現角度：</b>註冊新品牌前先查用戶名佔用，避免名字撞車；做競品調研時，一個命令就能摸清對手的平台佈局，省的是逐個平台手動搜索的時間。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs/status/2119725202582200532" target="_blank" rel="noopener">X @HaileyAILabs</a></p>
+</div>
+<div class="cta-box">
+<h3>免費領：5 個鎖臉模板樣章</h3>
+<p>先試後買。入群免費領，樣章 PDF 已上傳到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免費領取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 豬豬俠玩AI · 聯繫 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
