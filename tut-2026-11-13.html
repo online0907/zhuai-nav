@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-13：15 篇 AI 幹貨教程 · 豬豬俠玩AI</title>
+<meta name="description" content="2026-11-13 AI 幹貨教程 15 篇：Lightpanda、Handy、Hex、OpenBot 等 GitHub 熱榜項目，n8n×Claude Code 工作流，及 X 只讀挖到的 7 條幹貨。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#f4effe;color:#6d28d9}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2.n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item.take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item.take b{color:var(--brand)}
+.item.src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item.src a{color:var(--brand);text-decoration:none}
+.item.steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item.steps b{color:var(--brand)}
+.item.steps ol{margin:8px 0 0 20px}
+.item.steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>豬豬俠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 熱點</a><a href="index.html#tutorials">幹貨教程</a><a href="index.html#cases">變現案例</a><a href="index.html#freebie">免費樣章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回幹貨教程歸檔</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-13</h1>
+<div class="meta">2026-11-13 · 豬豬俠玩AI · 共 15 篇，每篇附上手步驟和變現角度</div>
+<div class="item">
+<h2><span class="n">1.</span>Lightpanda：Zig 寫的無頭瀏覽器，100 頁只用 123MB 記憶體、5 秒跑完</h2>
+<p>從零用 Zig 寫的無頭瀏覽器，不是 Chromium 分支，專為 AI Agent 與自動化而生。項目方實測 100 個真實頁面：峰值記憶體 123MB、耗時 5 秒，對比無頭 Chrome 的 2GB、46 秒。支援 Chrome DevTools 協議（Puppeteer／Playwright 可直接接）、MCP 伺服器，還有 Agent 模式：用自然語言指揮瀏覽器，產出的 PandaScript 可離線重跑、不用再花 token。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>安裝：Mac 用 Homebrew（brew install lightpanda-io/browser/lightpanda），或下載 nightly 二進制；Windows 需走 WSL 2。</li><li>起 CDP 伺服器：./lightpanda serve --port 9222，現有的 Puppeteer／Playwright 腳本改 browserWSEndpoint 即可接上。</li><li>需要 AI 操作時用 lightpanda agent 下自然語言任務，跑完後 /save 匯出 PandaScript，之後直接 lightpanda run 重跑，不再消耗模型 token。</li></ol></div>
+<p class="take"><b>變現角度：</b>做爬蟲、價格監控、競品監控接單時，伺服器成本直接降一個量級——同樣一台機器能多開十幾倍的瀏覽器實例；輕量＋可錄製重跑，適合打包成「監控即服務」按月收費。注意：遙測預設開啟，商用前設 LIGHTPANDA_DISABLE_TELEMETRY=true 關掉。</p>
+<p class="src">來源：<a href="https://github.com/lightpanda-io/browser" target="_blank" rel="noopener">GitHub · lightpanda-io/browser</a></p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>Handy：免費開源的離線語音轉文字，按快捷鍵說話即貼上</h2>
+<p>跨平台桌面聽寫工具：按快捷鍵、說話、鬆開，文字直接貼進任何輸入框，全程本地轉寫、音頻不出電腦。可選 Whisper 模型（Small 到 Large，支援 GPU 加速）或省 CPU 的 Parakeet V3（自動識別語言），附語音活動檢測自動去靜音段。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>安裝：Mac 用 brew install --cask handy，Windows 用 winget install cjpais.Handy，Linux 下載.deb。</li><li>首次啟動授權麥克風與無障礙權限，在設定裡選模型（求快用 Parakeet V3，求準用 Whisper Large）與快捷鍵。</li><li>按住快捷鍵說話、鬆開即貼上；進階可用 hooks/transcription 腳本在貼上前自動改寫文字。</li></ol></div>
+<p class="take"><b>變現角度：</b>寫稿、寫程式註釋、回覆客戶的速度直接翻倍，省下的時間就是接單量；可打包成「語音寫作工作流」賣給寫手、博主，或接語音轉寫外包。完全免費開源，零訂閱成本。</p>
+<p class="src">來源：<a href="https://github.com/cjpais/Handy" target="_blank" rel="noopener">GitHub · cjpais/Handy</a></p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>Hex：Mac 優先的本地語音聽寫，附錄屏餵 Agent 的 Annotate 功能</h2>
+<p>與 Handy 同類的本地聽寫工具，Mac 優先（Apple Silicon，macOS 15+），Rust 寫成：按鍵說話、鬆開即貼，首次運行下載語音模型後全程離線。特色是 Modes：可按 App 修正專有名詞拼寫、切換行為；另有 Annotate 功能，錄屏加語音畫標註，直接把上下文交給 Agent。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>安裝：下載 DMG，或 brew install --cask anomalyco/tap/hex；Linux 可用安裝腳本或 Nix。</li><li>首次運行下載語音模型，之後斷網也能用；在設定裡建 Modes，修正人名、術語等常錯拼寫。</li><li>需要給 Agent 提需求時用 Annotate：錄屏＋語音講解，產出的上下文比純文字需求準得多。</li></ol></div>
+<p class="take"><b>變現角度：</b>與 Handy 同理，省打字時間即省成本；Annotate 更適合接 AI 開發單——把客戶口述＋錄屏直接變成需求文檔，溝通環節省一半時間，報價時可把「需求梳理」也算進服務裡。</p>
+<p class="src">來源：<a href="https://github.com/anomalyco/hex" target="_blank" rel="noopener">GitHub · anomalyco/hex</a></p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>OpenBot：開源 AI 同事工作區，每個 Bot 有自己的沙箱電腦</h2>
+<p>CopilotKit 的開源項目：給每個 AI「同事」一台獨立的沙箱電腦（瀏覽器、檔案、工具），每個動作執行前經過策略審批、執行後留審計記錄，遇到登錄或雙重驗證可由真人接管。基於 AG-UI，可接 Claude Agent SDK、LangGraph、Google ADK 等多種 Agent 框架。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>部署：個人先下載桌面 App（Mac／Windows 均有簽名安裝包），團隊用 Helm 部署到 Kubernetes。</li><li>接模型金鑰與 CopilotKit Intelligence（個人本地授權免費），選好模型供應商。</li><li>建 Bot、設工具權限與審批規則，讓 Bot 在沙箱裡跑任務；敏感操作一律設為需人工批准。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫中小企搭「AI 員工」工作區收部署費＋月費；審批＋審計記錄是賣給企業的關鍵——純聊天機器人賣不上價，「可管、可查、可接管」才能收企業級的錢。注意：生產部署需 CopilotKit Intelligence 授權，報價前先確認授權成本。</p>
+<p class="src">來源：<a href="https://github.com/CopilotKit/OpenBot" target="_blank" rel="noopener">GitHub · CopilotKit/OpenBot</a></p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>Claude Code 非程式設計師指南：不會寫程式，也能用它賺錢</h2>
+<p>Claude Code 包含在 $20／月的 Pro 方案起（Max $100、Ultra $200），不用懂程式碼也能用：你用白話描述想要的結果，它寫程式、跑起來、看報錯再修。適合的任務包括批次改 400 個檔名、每週清理雜亂試算表、做報價計算器、搭簡單網站。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>開 Pro 訂閱（$20／月，年付 $17／月），安裝 Claude Code，先從一個重複性小任務開始，例如清理試算表。</li><li>在專案資料夾寫 CLAUDE.md，把常用要求固定下來，Claude Code 每次自動讀取。</li><li>先做給自己用、驗證效果，再把同樣的東西賣給有相同痛點的本地商家。</li></ol></div>
+<p class="take"><b>變現角度：</b>兩條路：省自己時間（每週省 1 小時手動活，按 $30／時薪算每月約值 $120）；賣小成果給別人——本地商家要落地頁、報價工具、報表清理，按成果收費，不要按工時收費。提醒：涉及客戶個資或收款的 App，安全與合規不能自己湊合。</p>
+<p class="src">來源：<a href="https://aibusiness.vc/tools/claude-code-for-non-programmers" target="_blank" rel="noopener">AI Business</a></p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>用 Claude Code 寫 n8n 工作流：2–4 小時壓到 10 分鐘以內</h2>
+<p>Claude Code 的終端 Agent 可以直接寫出完整可部署的 n8n workflow JSON：你用白話描述流程，它生成、配置、部署，全程不用手動連節點。據 r/n8n 社群基準，單個流程搭建時間從 2–4 小時壓到 10 分鐘以內。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>裝好 Claude Code，配好 n8n API 存取（API Key＋實例地址）。</li><li>寫 CLAUDE.md 釘死 n8n v2 API 端點——原文提醒，Claude Code 容易誤用已棄用的舊版端點，不釘死會反覆報錯。</li><li>用白話描述流程（觸發條件、要接的工具、輸出到哪裡），讓 Claude 生成 workflow JSON 並部署到 n8n，跑一次驗證。</li></ol></div>
+<p class="take"><b>變現角度：</b>接 n8n 自動化外包時，單個流程的人力成本從數百美元壓到幾美元 token，報價空間大；也可把驗證過的 workflow 打包成模板出售。注意：部署後務必跑一次真實數據驗證，別只看節點連通就交貨。</p>
+<p class="src">來源：<a href="https://dev.to/deepak_bagada_98e87bd2723/how-to-build-n8n-workflows-with-claude-code-6-steps-2026-2fm2" target="_blank" rel="noopener">DEV Community</a></p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>n8n AI Agent 零代碼教程：5 個真實流程，從研究到客服分流</h2>
+<p>n8n AI Agent 節點的完整入門：自架 Community 版真正免費（只需約 $5–7／月伺服器），雲端版只剩 14 天試用、付費 $20／月起。教程涵蓋安裝、AI Agent 節點理解與 5 個真實流程：研究 Agent、客服分流等；n8n 按整次執行計費，不按步驟數。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 Docker 在 $6／月左右的 VPS 自架 n8n Community 版，避開雲端訂閱費。</li><li>拖一個 AI Agent 節點，接模型（如 OpenAI 相容端點）與工具（搜尋、表格、郵件）。</li><li>先跑一個客服分流流程驗證（自動分類＋回覆草稿＋轉人工），跑通再擴到研究、跟進等流程。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫企業搭 AI 客服、線索跟進自動化，按月收費；自架成本每月不到 10 美元，毛利空間大。n8n 2025 年 10 月完成 $180M C 輪、估值 $25 億，生態穩定，值得長期投入學。</p>
+<p class="src">來源：<a href="https://aitechsafar.com/2026/09/n8n-ai-agent-tutorial-2026-build-automation-no-coding/" target="_blank" rel="noopener">AI Tech Safar</a></p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>用 Claude Code＋n8n 重建一個 $12M 的 App：CalAI 全流程拆解</h2>
+<p>影片教程實錄：把卡路里 App CalAI（創辦人稱月收入近 500 萬美元）用 Claude Code 從零重建。關鍵組合是 Claude Code 寫 App、n8n 在背景調 ChatGPT 分析食物照片——拍食物照片上傳，n8n workflow 經 webhook 收到圖片、調模型分析熱量，再回傳結果，全程不用手寫後端。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>找一個目標 App 的重建教程，把它的流程描述複製給 Claude Code 當需求文檔。</li><li>寫好 CLAUDE.md，規定技術選型與檔案結構，讓 Claude Code 按指令建 App，程式碼都在本地資料夾可查。</li><li>n8n 導入教程提供的現成 workflow 處理圖片分析（webhook 收圖 → 模型分析 → 回傳結果），不用自己寫後端。</li></ol></div>
+<p class="take"><b>變現角度：</b>照抄已驗證的 App 模式做細分市場版本（例如專做某類飲食、某類運動記錄），比從零想點子成功率高得多；CalAI 的月收入數字為創辦人自述，僅供參考。提醒：不要直接抄襲他人產品、品牌與介面，抄模式不抄成品。</p>
+<p class="src">來源：<a href="https://youtubetotranscript.com/transcript?v=hNPXxyEHvYs" target="_blank" rel="noopener">YouTube 教程轉錄（YouTubeToTranscript）</a></p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>Hailey 實測：30 秒 AI 成片，各家模型到底花多少錢</h2>
+<p>@HaileyAILabs 以兩三個月實測對比多款 AI 影片模型，按「能否成片、好不好改、最終花多少錢」選型，而非看排行榜。30 秒成片（6 個鏡頭 × 3 次生成，共 90 秒素材）的成本：MiniMax H3 約 48 元、Wan 3.0 約 54 元、Kling 4.0（720p）約 70 元、Seedance 2.5（720p）約 136 元、1080p 約 337 元。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>先定角色與分鏡，不要直接開生成——分鏡不定，生成全是浪費。</li><li>用最難的 3–5 秒鏡頭試各家模型，按「能否成片、好不好改、花多少錢」三個標準選型。</li><li>按鏡頭分配最便宜夠用的模型，設重試上限，防止單個鏡頭反覆燒錢。</li></ol></div>
+<p class="take"><b>變現角度：</b>接 AI 短片、廣告片外包時，選型直接決定利潤——同樣成片，成本可差 7 倍；把這張選型成本表做成報價依據，客戶問價時有數據支撐。數字為博主實測自述，價格隨官方調價而變，接單前再核對一次。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs/status/2121153106427756826" target="_blank" rel="noopener">X · @HaileyAILabs</a></p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>Hailey：用 Grok Bot 拆解 Ins 爆款，十幾分鐘出治癒短片</h2>
+<p>@HaileyAILabs 用 Grok Bot 拆解 Ins 爆款治癒影片後十幾分鐘出片：把參考影片連結交給 Grok Bot，自動拆解畫風、構圖、角色、光影與音效，再換場景換角色——這次選雲端童話旅館，先生成一張 9:16 豎版靜幀，再生成 15 秒治癒動畫；換場景即可二創，如海底玻璃酒店、森林樹屋、太空休眠艙。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>找一個 Ins／小紅書爆款治癒影片，把連結交給 Grok Bot 拆解畫風、構圖、角色、光影與音效。</li><li>換場景換角色，先生成一張 9:16 豎版靜幀，確認構圖與角色無誤。</li><li>由靜幀生成 15 秒動畫；換一個場景（如雪夜木屋、森林樹屋），同一流程再跑一遍即可批量二創。</li></ol></div>
+<p class="take"><b>變現角度：</b>治癒系短片是漲粉＋接廣的快車道，一套拆解流程可批量產出，做起號服務或接品牌治癒廣告都行。提醒：原文用了龍貓、皮卡丘等他人 IP 角色，商用前務必換成原創角色，否則有版權風險。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs/status/2121138315659452832" target="_blank" rel="noopener">X · @HaileyAILabs</a></p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>aiwarts 實測深度原理 Hydrogen-1.0：科研解題率勝過 GPT-6 Astra</h2>
+<p>@aiwarts 實測深度原理 Hydrogen-1.0（基於 GLM-5.3 後訓練、開源權重、API 可用）：FrontierScience Research 解題率 38.3%，高於 GPT-6 Astra 的 33.3%；用它做 2021–2025 年 LLM 路線圖與國產模型散點圖時，R² 僅 0.013 的錯誤結論會被自動刪去；科研場景還試了 GROMACS 40ns 分子模擬與 12 瓶 Suzuki 偶聯實驗規劃，實驗設計評分 5.59，高於 Kimi K3 的 4.57。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>從開源權重或 API 接入 Hydrogen-1.0，先用圖表、路線圖類任務試手。</li><li>檢查其自我糾錯：故意給弱相關數據，看它是否像實測中一樣刪去不可靠結論。</li><li>科研場景可試長鏈任務：分子模擬參數設定、實驗方案規劃，再與 Kimi K3 等模型對照評分。</li></ol></div>
+<p class="take"><b>變現角度：</b>科研輔助、數據圖表代做是高價服務；開源權重意味著可本地部署，幫實驗室搭私有科研助手收費。數字為博主實測自述，評分方法未公開，僅供參考。</p>
+<p class="src">來源：<a href="https://x.com/aiwarts/status/2120871883679900119" target="_blank" rel="noopener">X · @aiwarts</a></p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>良竹點評 HackerBooks：把社群「共識清單」做成垂直工具站</h2>
+<p>@liangzhu_AI 點評向陽喬木的 HackerBooks（hackerbooks.qiaomu.ai）：沿用 Karpathy 以 HackerNews 數據做 HackerTube 的思路，把社群多年沉澱的高讚推書數據清洗歸檔，並打通 Goodreads、豆瓣書評與外部搜索直達。打法核心：把散落在數百萬條評論中的「共識清單」用 Token 結構化，並把查評分、看書評、搜資源等高頻後續動作接在同一頁，天然帶 SEO 長尾詞與收藏屬性。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>選一個社群沉澱多年的公開數據源（論壇、評論區、投票帖），確認數據可合法取得。</li><li>把「共識清單」清洗結構化，做成可搜、可篩、可收藏的工具站。</li><li>把查評分、看書評、搜資源等後續動作接在同一頁，靠 SEO 長尾詞拿免費流量。</li></ol></div>
+<p class="take"><b>變現角度：</b>垂直工具站靠 SEO 長尾詞＋收藏屬性拿免費流量，再接聯盟行銷或廣告變現；關鍵是數據源要公開且持續有新內容，否則站點很快枯竭。同樣打法可複製到影視、課程、工具推薦等任何「大家反覆問同一份清單」的領域。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI/status/2121237143221670125" target="_blank" rel="noopener">X · @liangzhu_AI（點評向陽喬木 HackerBooks）</a></p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>良竹轉述：別賣 AI SaaS，把 Grok Bot 包裝成「外包數字員工」</h2>
+<p>@liangzhu_AI 轉述 Greg Isenberg 的打法：別向本地中小企推銷「AI SaaS」，改把 Grok Bot 包裝成「外包數字員工」按小時收費，時薪約 12 美元。每個 Agent 配一台獨立雲主機、一個專屬郵箱和一個電話號碼，代回覆詢盤、接預約、跟訂單；對僱不起全職前台的傳統老闆而言，按月計比僱真人便宜一大截，且不用交社保、不會請假。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>別賣 SaaS 賣「人」：向本地中小企推銷時，話術改成「一個每月比前台便宜的數字員工」，按小時／按月收費。</li><li>每個 Agent 配獨立雲主機＋專屬郵箱＋電話號碼，身份獨立，客戶觀感上就是一個員工。</li><li>先接回覆詢盤、接預約這類標準化任務，跑穩再擴到跟單、對帳。</li></ol></div>
+<p class="take"><b>變現角度：</b>時薪約 12 美元、按月結算，毛利取決於雲主機與 token 成本；關鍵是話術——傳統老闆聽不懂 SaaS，但聽得懂「比請人便宜」。提醒：代回覆客戶詢盤涉及商家信譽，出錯的責任邊界要在合約裡寫清。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI/status/2121234626672738618" target="_blank" rel="noopener">X · @liangzhu_AI（轉述 Greg Isenberg）</a></p>
+</div>
+<div class="item">
+<h2><span class="n">14.</span>良竹：iOS 獨立開發選品流程，專撿評分低但有人付費的舊產品</h2>
+<p>@liangzhu_AI 分享一套 iOS 獨立開發選品與增長流程：先在 AppFigures 篩選收入不低、評分低於 3.5、半年未更新的工具類產品作目標；再把競品 1 星與 2 星差評爬下聚類——若用戶嫌貴卻仍續費屬真剛需，若集中罵崩潰、廣告多、不好導出即為切入點；付費牆在首次幫用戶解決問題後才彈出，截圖寫明「無廣告、可離線、隨時取消」，詳情頁本地化為 10 種語言並配合短片轉化。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>AppFigures 篩選：收入不低、評分低於 3.5、半年未更新的工具類 App，列出目標清單。</li><li>爬競品 1–2 星差評做聚類：嫌貴仍續費＝真剛需；集中罵崩潰、廣告多、不好導出＝你的切入點。</li><li>付費牆設在首次幫用戶解決問題之後，截圖寫明「無廣告、可離線、隨時取消」，詳情頁做 10 種語言本地化＋短片。</li></ol></div>
+<p class="take"><b>變現角度：</b>撿「評分低但有人付費」的舊產品重做，需求已驗證、競品又弱，成功率遠高於憑空想點子；背景是蘋果把 Xcode 放進 Claude Code，開發門檻更低，一個人也能跑通選品到上架。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI/status/2121213235516846554" target="_blank" rel="noopener">X · @liangzhu_AI</a></p>
+</div>
+<div class="item">
+<h2><span class="n">15.</span>良竹轉述：AI 廣告素材流水線，一條 UGC 廣告從 500 美元壓到 4 美元</h2>
+<p>@liangzhu_AI 轉述 Greg Isenberg 以 AI Agent 跑通的營銷流水線：批量產出 100 多張靜態廣告圖，把以往一條 500 美元的 UGC 口播廣告壓至 4 美元一條，並可自動上傳投放。海外獨立開發與一人公司投流的最大門檻是素材耗不起：找海外真人拍攝要數百美元、等一兩週，測 10 條腳本預算即見底；現時應以高頻低成本素材快速測出前 3 秒鉤子，再把跑出 ROI 的腳本交真人放大。</p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 AI Agent 批量產出 100 多張靜態廣告圖，覆蓋多個角度與賣點。</li><li>高頻低成本投放測試，快速測出前 3 秒鉤子——不要一上來就拍貴的真人視頻。</li><li>跑出 ROI 的腳本再交真人拍攝放大，把錢花在已被驗證的創意上。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫人跑「廣告素材測試」服務按量收費，素材成本從數百美元壓到 4 美元一條是實打實的賣點；自用也一樣——自己產品的投流素材先 AI 批量測、再真人放大，預算利用率完全不同。價格為轉述的他人案例數字，僅供參考。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI/status/2121204176256708738" target="_blank" rel="noopener">X · @liangzhu_AI（轉述 Greg Isenberg）</a></p>
+</div>
+<div class="cta-box">
+<h3>免費領：5 個鎖臉模板樣章</h3>
+<p>先試後買。入群免費領，樣章 PDF 已上傳到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免費領取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 豬豬俠玩AI · 聯繫 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
