@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Passport · 代理护照 — Agent ID 链上信用护照</title>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#0b0e11; --card:#161a1e; --card2:#1e242a; --line:#2b3138;
+    --txt:#eaecef; --sub:#848e9c; --yellow:#f0b90b; --green:#0ecb81; --red:#f6465d;
+  }
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",Segoe UI,Roboto,sans-serif}
+  .wrap{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+  header{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{width:46px;height:46px;border-radius:12px;background:var(--yellow);color:#000;
+    display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
+  h1{font-size:24px;margin:0} .tag{color:var(--sub);font-size:13px;margin-top:2px}
+  .badge{margin-left:auto;padding:6px 12px;border-radius:999px;font-size:12px;border:1px solid var(--line)}
+  .badge.demo{color:var(--yellow);border-color:var(--yellow)}
+  .badge.live{color:var(--green);border-color:var(--green)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+  .card h2{font-size:16px;margin:0 0 12px}
+  .score{font-size:56px;font-weight:800;line-height:1;color:var(--yellow)}
+  .score small{font-size:16px;color:var(--sub);font-weight:400}
+  .bar{margin:9px 0}
+  .bar .lab{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);margin-bottom:4px}
+  .bar .track{height:8px;background:var(--card2);border-radius:99px;overflow:hidden}
+  .bar .fill{height:100%;background:var(--yellow);border-radius:99px;transition:width .5s}
+  button{background:var(--yellow);color:#000;border:0;border-radius:10px;padding:11px 18px;
+    font-size:14px;font-weight:700;cursor:pointer}
+  button:disabled{background:#3a3f45;color:#888;cursor:not-allowed}
+  button.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  input[type=text]{width:100%;background:var(--card2);border:1px solid var(--line);color:var(--txt);
+    border-radius:10px;padding:11px 12px;font-size:14px}
+  input[type=range]{width:100%}
+  .kv{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .kv b{font-weight:600} .muted{color:var(--sub);font-size:12px;line-height:1.7}
+  .verdict{border-radius:12px;padding:16px;text-align:center;font-size:18px;font-weight:800;margin-top:12px;display:none}
+  .verdict.ok{background:rgba(14,203,129,.12);color:var(--green);border:1px solid var(--green)}
+  .verdict.no{background:rgba(246,70,93,.12);color:var(--red);border:1px solid var(--red)}
+  .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .stat{display:flex;gap:22px;margin-top:6px}.stat div{font-size:12px;color:var(--sub)}
+  .stat b{display:block;font-size:18px;color:var(--txt)}
+  footer{margin-top:26px}
+  a{color:var(--yellow)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">护</div>
+    <div>
+      <h1>Agent Passport · 代理护照</h1>
+      <div class="tag">给每个 Agent ID 一本链上信用护照 —— 代理付款前，先验明正身</div>
+    </div>
+    <div id="modeBadge" class="badge demo">演示模式（模拟数据）</div>
+  </header>
+
+  <div class="grid">
+    <!-- 我的护照 -->
+    <div class="card">
+      <h2>我的护照</h2>
+      <div id="walletLine" class="muted">尚未连接钱包</div>
+      <div style="display:flex;align-items:flex-end;gap:18px;margin-top:10px">
+        <div class="score"><span id="myScore">--</span><small> / 100 信用分</small></div>
+        <div class="stat">
+          <div>累计打卡<b id="myDays">--</b></div>
+          <div>连续天数<b id="myStreak">--</b></div>
+        </div>
+      </div>
+      <div id="myBars" style="margin-top:12px"></div>
+      <div class="kv"><span>Agent ID</span><b id="myName">—</b></div>
+      <div class="kv"><span>护照状态</span><b id="myStatus">未注册</b></div>
+      <div class="kv"><span>注册时间</span><b id="myRegAt">—</b></div>
+      <div class="row">
+        <button id="btnConnect">连接钱包</button>
+        <button id="btnRegister" disabled>注册护照</button>
+        <button id="btnCheckIn" class="ghost" disabled>每日打卡 +活跃分</button>
+        <button id="btnNextDay" class="ghost" style="display:none">模拟次日（演示）</button>
+      </div>
+      <div id="myMsg" class="muted" style="margin-top:10px"></div>
+    </div>
+
+    <!-- 验身演示 -->
+    <div class="card">
+      <h2>商家验身演示 · 代理付款前先验身</h2>
+      <div class="muted">模拟商家在接受 AI 代理付款前，向护照合约查询其信用分并按门槛放行。试试演示地址：
+        <a href="#" data-demo-addr="alice">高分代理</a> ·
+        <a href="#" data-demo-addr="dave">低分代理</a> ·
+        <a href="#" data-demo-addr="ghost">未注册地址</a>
+      </div>
+      <div style="margin-top:12px"><input type="text" id="verifyAddr" placeholder="输入要验身的地址 0x..."></div>
+      <div class="bar" style="margin-top:14px">
+        <div class="lab"><span>商家放行门槛</span><span><b id="thVal">60</b> 分</span></div>
+        <input type="range" id="threshold" min="0" max="100" value="60">
+      </div>
+      <div class="row"><button id="btnVerify">开始验身</button></div>
+      <div id="verdict" class="verdict"></div>
+      <div id="verifyDetail" style="margin-top:10px"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h2>信用分怎么算（满分 100，全部来自可验证数据）</h2>
+    <div class="muted">
+      身份分 20（当前持有 Agent ID，实时查官方注册表）· 历史分 0–20（链下索引背书，唯一需人工/预言机写入的项，合约内已封顶）·
+      资产分 15（BNB 余额档位）· 资历分 15（护照年龄）· 活跃分 30（每日打卡，30 天封顶）。<br>
+      说明：EVM 合约读不到任意钱包的「历史交易笔数 / 首笔交易时间」，故资历用护照年龄近似、历史维度用背书位预留给索引预言机——我们如实标注，不假装能读到读不到的数据。
+    </div>
+    <div class="kv"><span>Agent ID 官方注册表（SPACE ID）</span><b>0x60B9…022F（BSC）</b></div>
+    <div class="kv"><span>护照合约</span><b id="passportAddrLine">待部署（当前为演示模式）</b></div>
+    <div class="kv"><span>全网已注册护照</span><b id="totalPassports">—</b></div>
+  </div>
+
+  <footer class="muted">
+    安全与红线：本应用不收集助记词/私钥/API 密钥；注册与打卡均由用户本人钱包签名发起，不绕过任何确认；
+    护照合约不托管、不经手任何资产；信用分只是身份信号，不构成任何收益承诺。
+    Agent Passport 为币安钱包 Agent ID 黑客松参赛作品（提交截止 2026-12-09）。
+  </footer>
+</div>
+
+<script>
+/* ================= 配置（部署后只改这里） ================= */
+const CONFIG = {
+  chainId: 56,                                   // BSC 主网
+  rpc: "https://bsc-dataseed.binance.org",       // 只读查询 RPC
+  passportAddress: "0x41591e0eb41e49003D2056ee3e9Af3bBcA502527", // AgentPassport（BSC 主网，2026-11-18 已部署）
+  merchantAddress: "0xDc623F4DcC1ac3c607Da3299b507DD653bA136De", // DemoMerchant（BSC 主网，2026-11-18 已部署）
+  registryAddress: "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F", // SPACE ID Agent ID 注册表
+};
+const PASSPORT_ABI = [{"inputs": [], "name": "checkIn", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [{"internalType": "address", "name": "user", "type": "address"}], "name": "getPassport", "outputs": [{"internalType": "bool", "name": "registered", "type": "bool"}, {"internalType": "string", "name": "name", "type": "string"}, {"internalType": "uint256", "name": "score", "type": "uint256"}, {"internalType": "uint256", "name": "registeredAt", "type": "uint256"}, {"internalType": "uint256", "name": "totalCheckInDays", "type": "uint256"}, {"internalType": "uint256", "name": "currentStreak", "type": "uint256"}, {"internalType": "uint256", "name": "lastCheckInDay", "type": "uint256"}, {"internalType": "uint256", "name": "historyBonus", "type": "uint256"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"internalType": "address", "name": "user", "type": "address"}], "name": "getScore", "outputs": [{"internalType": "uint256", "name": "score", "type": "uint256"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"internalType": "address", "name": "user", "type": "address"}], "name": "getScoreBreakdown", "outputs": [{"internalType": "uint256", "name": "identity", "type": "uint256"}, {"internalType": "uint256", "name": "history", "type": "uint256"}, {"internalType": "uint256", "name": "balanceTier", "type": "uint256"}, {"internalType": "uint256", "name": "seniority", "type": "uint256"}, {"internalType": "uint256", "name": "activity", "type": "uint256"}], "stateMutability": "view", "type": "function"}, {"inputs": [{"internalType": "address", "name": "user", "type": "address"}], "name": "isRegistered", "outputs": [{"internalType": "bool", "name": "", "type": "bool"}], "stateMutability": "view", "type": "function"}, {"inputs": [], "name": "register", "outputs": [], "stateMutability": "nonpayable", "type": "function"}, {"inputs": [], "name": "totalPassports", "outputs": [{"internalType": "uint256", "name": "", "type": "uint256"}], "stateMutability": "view", "type": "function"}];
+const DEMO_MODE = !CONFIG.passportAddress;
+
+/* ================= 演示模式：与合约同构的计分逻辑 ================= */
+const demoDB = {
+  // 演示「我」：持有 fomome.ai，演示余额 0.42 BNB
+  me: { address: "0x5B0A2876962a68E0d4Ea4B04E89CDCa70086bD88", name: "fomome.ai",
+        holdsID: true, balanceBNB: 0.42, historyBonus: 12,
+        registeredAt: 0, totalDays: 0, streak: 0, lastDay: -1 },
+  others: {
+    alice: { address: "0xA11CE00000000000000000000000000000000A11", name: "alice-agent.ai",
+             holdsID: true, balanceBNB: 1.6, historyBonus: 18, registeredDaysAgo: 41, totalDays: 25, streak: 9 },
+    dave:  { address: "0xDA9E0000000000000000000000000000000000DA9E", name: "dave.ai",
+             holdsID: true, balanceBNB: 0.005, historyBonus: 0, registeredDaysAgo: 0, totalDays: 0, streak: 0 },
+    ghost: { address: "0x6605700000000000000000000000000000000666", name: "",
+             holdsID: false, balanceBNB: 0.3, historyBonus: 0, registeredDaysAgo: -1, totalDays: 0, streak: 0 },
+  }
+};
+let demoNow = Date.now(); // 演示时钟，可用「模拟次日」推进
+
+function demoScore(p, nowMs) {
+  if (!p.registeredAt && p.registeredDaysAgo === undefined) return null;
+  const regAt = p.registeredAt || (nowMs - (p.registeredDaysAgo || 0) * 86400000);
+  if (p.registeredDaysAgo === -1 && !p.registeredAt) return null; // 未注册
+  let identity = p.holdsID ? 20 : 0;
+  let bal = p.balanceBNB >= 1 ? 15 : p.balanceBNB >= 0.1 ? 10 : p.balanceBNB >= 0.01 ? 5 : p.balanceBNB > 0 ? 2 : 0;
+  const ageDays = Math.floor((nowMs - regAt) / 86400000);
+  let sen = ageDays >= 30 ? 15 : ageDays >= 7 ? 10 : ageDays >= 1 ? 5 : 2;
+  let act = Math.min(p.totalDays, 30);
+  return { total: Math.min(100, identity + p.historyBonus + bal + sen + act),
+           parts: { 身份分: [identity, 20], 历史分: [p.historyBonus, 20], 资产分: [bal, 15], 资历分: [sen, 15], 活跃分: [act, 30] },
+           registeredAt: regAt };
+}
+
+/* ================= 通用渲染 ================= */
+const $ = id => document.getElementById(id);
+function renderBars(parts) {
+  $("myBars").innerHTML = Object.entries(parts).map(([k, [v, max]]) =>
+    `<div class="bar"><div class="lab"><span>${k}</span><span>${v} / ${max}</span></div>
+     <div class="track"><div class="fill" style="width:${v / max * 100}%"></div></div></div>`).join("");
+}
+function msg(t) { $("myMsg").textContent = t || ""; }
+
+/* ================= 演示模式逻辑 ================= */
+let demoConnected = false;
+function demoRefresh() {
+  const me = demoDB.me;
+  $("walletLine").textContent = demoConnected
+    ? `已连接（演示）：${me.address.slice(0, 6)}…${me.address.slice(-4)} · ${me.name}` : "尚未连接钱包";
+  const s = demoScore(me, demoNow);
+  if (!me.registeredAt) {
+    $("myScore").textContent = "--"; $("myDays").textContent = "--"; $("myStreak").textContent = "--";
+    $("myBars").innerHTML = ""; $("myStatus").textContent = "未注册";
+    $("myRegAt").textContent = "—"; $("myName").textContent = me.name;
+  } else {
+    $("myScore").textContent = s.total; $("myDays").textContent = me.totalDays; $("myStreak").textContent = me.streak;
+    renderBars(s.parts); $("myStatus").textContent = "已注册"; $("myName").textContent = me.name;
+    $("myRegAt").textContent = new Date(me.registeredAt).toLocaleString("zh-CN");
+  }
+  $("btnRegister").disabled = !demoConnected || !!me.registeredAt;
+  const today = Math.floor(demoNow / 86400000);
+  $("btnCheckIn").disabled = !demoConnected || !me.registeredAt || me.lastDay === today;
+  $("btnNextDay").style.display = demoConnected ? "" : "none";
+  $("totalPassports").textContent = (me.registeredAt ? 4 : 3) + "（演示）";
+}
+function demoVerify(addr) {
+  const all = [demoDB.me, ...Object.values(demoDB.others)];
+  const p = all.find(x => x.address.toLowerCase() === (addr || "").toLowerCase());
+  if (!p) return { found: false };
+  const s = demoScore(p, demoNow);
+  if (!s) return { found: true, registered: false, score: 0, name: p.name };
+  return { found: true, registered: true, score: s.total, name: p.name, parts: s.parts };
+}
+
+/* ================= 主网模式逻辑（部署后启用） ================= */
+let provider, signer, myAddress, passport, merchant;
+async function liveConnect() {
+  if (!window.ethereum) { alert("未检测到钱包扩展，请用币安钱包或 MetaMask 打开本页"); return; }
+  provider = new ethers.BrowserProvider(window.ethereum);
+  await provider.send("eth_requestAccounts", []);
+  signer = await provider.getSigner(); myAddress = await signer.getAddress();
+  const net = await provider.getNetwork();
+  if (Number(net.chainId) !== CONFIG.chainId) {
+    try { await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0x38" }] }); }
+    catch (e) { alert("请切换到 BNB Smart Chain（56）"); return; }
+  }
+  passport = new ethers.Contract(CONFIG.passportAddress, PASSPORT_ABI, signer);
+  $("walletLine").textContent = `已连接：${myAddress.slice(0, 6)}…${myAddress.slice(-4)}`;
+  $("btnConnect").disabled = true;
+  await liveRefresh();
+}
+async function liveRefresh() {
+  const gp = await passport.getPassport(myAddress);
+  const bd = await passport.getScoreBreakdown(myAddress);
+  $("totalPassports").textContent = (await passport.totalPassports()).toString();
+  if (!gp.registered) {
+    $("myScore").textContent = "--"; $("myStatus").textContent = "未注册";
+    $("btnRegister").disabled = false; $("btnCheckIn").disabled = true; $("myBars").innerHTML = "";
+    return;
+  }
+  $("myScore").textContent = gp.score.toString();
+  $("myDays").textContent = gp.totalCheckInDays.toString();
+  $("myStreak").textContent = gp.currentStreak.toString();
+  $("myName").textContent = gp.name || "（前端索引解析中）";
+  $("myStatus").textContent = "已注册";
+  $("myRegAt").textContent = new Date(Number(gp.registeredAt) * 1000).toLocaleString("zh-CN");
+  renderBars({ 身份分: [Number(bd[0]), 20], 历史分: [Number(bd[1]), 20], 资产分: [Number(bd[2]), 15], 资历分: [Number(bd[3]), 15], 活跃分: [Number(bd[4]), 30] });
+  $("btnRegister").disabled = true;
+  const today = BigInt(Math.floor(Date.now() / 86400000));
+  $("btnCheckIn").disabled = gp.lastCheckInDay === today;
+}
+async function liveVerify(addr) {
+  const ro = new ethers.Contract(CONFIG.passportAddress, PASSPORT_ABI,
+    new ethers.JsonRpcProvider(CONFIG.rpc));
+  const gp = await ro.getPassport(addr);
+  return { found: true, registered: gp.registered, score: Number(gp.score), name: gp.name };
+}
+
+/* ================= 事件绑定 ================= */
+$("btnConnect").onclick = async () => {
+  if (DEMO_MODE) { demoConnected = true; demoRefresh(); msg("演示模式：已模拟连接 Agentic 钱包（fomome.ai）"); }
+  else await liveConnect();
+};
+$("btnRegister").onclick = async () => {
+  if (DEMO_MODE) { demoDB.me.registeredAt = demoNow; demoRefresh(); msg("注册成功！护照已上链（演示）。现在可以每日打卡攒活跃分。"); }
+  else { msg("等待钱包确认…"); const tx = await passport.register(); await tx.wait(); msg("注册成功！"); await liveRefresh(); }
+};
+$("btnCheckIn").onclick = async () => {
+  if (DEMO_MODE) {
+    const me = demoDB.me, today = Math.floor(demoNow / 86400000);
+    me.streak = (me.lastDay === today - 1) ? me.streak + 1 : 1;
+    me.lastDay = today; me.totalDays += 1; demoRefresh(); msg("打卡成功，活跃分 +1");
+  } else { msg("等待钱包确认…"); const tx = await passport.checkIn(); await tx.wait(); msg("打卡成功！"); await liveRefresh(); }
+};
+$("btnNextDay").onclick = () => { demoNow += 86400000; demoRefresh(); msg("演示时钟已推进到次日，可以再次打卡"); };
+$("threshold").oninput = e => $("thVal").textContent = e.target.value;
+document.querySelectorAll("[data-demo-addr]").forEach(a => a.onclick = e => {
+  e.preventDefault();
+  const p = demoDB.others[a.dataset.demoAddr];
+  $("verifyAddr").value = p.address;
+});
+$("btnVerify").onclick = async () => {
+  const addr = $("verifyAddr").value.trim(), th = Number($("threshold").value);
+  const box = $("verdict"), det = $("verifyDetail");
+  box.style.display = "block"; box.className = "verdict"; box.textContent = "验身中…"; det.innerHTML = "";
+  try {
+    const r = DEMO_MODE ? demoVerify(addr) : await liveVerify(addr);
+    if (!r.found) { box.classList.add("no"); box.textContent = "演示库中无此地址（主网模式可查任意地址）"; return; }
+    const ok = r.registered && r.score >= th;
+    box.classList.add(ok ? "ok" : "no");
+    box.textContent = ok ? `✅ 放行 —— 信用分 ${r.score} ≥ 门槛 ${th}` : `⛔ 拦截 —— ${r.registered ? `信用分 ${r.score} < 门槛 ${th}` : "该地址未注册护照"}`;
+    det.innerHTML = `<div class="kv"><span>地址</span><b>${addr.slice(0, 10)}…${addr.slice(-6)}</b></div>
+      <div class="kv"><span>Agent ID</span><b>${r.name || "—"}</b></div>
+      <div class="kv"><span>护照状态</span><b>${r.registered ? "已注册" : "未注册"}</b></div>
+      <div class="kv"><span>信用分</span><b>${r.registered ? r.score : 0} / 100</b></div>`;
+  } catch (e) { box.classList.add("no"); box.textContent = "查询失败：" + (e.message || e); }
+};
+
+/* ================= 初始化 ================= */
+if (DEMO_MODE) { demoRefresh(); }
+else {
+  $("modeBadge").textContent = "BSC 主网"; $("modeBadge").className = "badge live";
+  $("passportAddrLine").textContent = CONFIG.passportAddress;
+  $("btnNextDay").remove();
+  const ro = new ethers.Contract(CONFIG.passportAddress, PASSPORT_ABI, new ethers.JsonRpcProvider(CONFIG.rpc));
+  ro.totalPassports().then(n => $("totalPassports").textContent = n.toString()).catch(() => {});
+}
+</script>
+</body>
+</html>
