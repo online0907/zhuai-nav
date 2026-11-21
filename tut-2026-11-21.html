@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-21：12 篇 AI 幹貨教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-11-21 AI 幹貨教程：Claude 自動記賬、4 個 Grok Bot 搭網頁工作室、多 Agent 拆分、AI 編程 5 概念、HyperFrames、FreeLLMAPI、OpenVINO＋ X 只讀挖到的 5 條幹貨，共 12 篇。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#f4effe;color:#6d28d9}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-21</h1>
+<div class="meta">2026-11-21 · 猪猪侠玩AI · 每天更新 12 篇</div>
+<div class="item">
+<h2><span class="n">1.</span>用 Claude + Google Sheets 自動給賬單分類，42 筆賬幾秒鐘分完</h2>
+<p>Make 監聽表格新增行，Claude 按商家和描述自動歸類，分類結果寫回同一行。演示用的 42 筆虛擬支出、共 $486.70，幾秒鐘全部歸類完畢（12 筆餐飲、9 筆交通、11 筆軟件、10 筆辦公，數字來自原文）。</p>
+<p class="src">來源：<a href="https://dev.to/stackscale/categorize-expenses-with-claude-ai-and-google-sheets-cn5" target="_blank" rel="noopener">DEV（2026-11-21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 Google Sheets 建支出表，加一列 Category，表頭寫好 4 個分類（Food &amp; Drink、Transport、Software、Office）。</li><li>在 Make 建場景，觸發器設為「表格新增行」，把商家和描述發給 Claude，提示詞要求只返回 JSON 且只能用列表內的分類。</li><li>把 Claude 返回的 category 映射回同一行的 Category 列，先用虛擬支出測試，跑通後再接真實賬單。</li></ol></div>
+<p class="take"><b>變現角度：</b>做成「小微企業記賬自動化」代運營服務，按月收費；或把這套流程打包成模板/教程賣給自由職業者和個體戶，幫他們省下每月手動對賬的時間。注意原文提醒：描述含糊的商家可能分錯類，要留人工覆核一步，不能聲稱可替代會計。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>用 4 個 Grok Bot 搭一個網頁設計工作室：獲客、建站、運維全自動</h2>
+<p>作者把 Grok Bot 按 Growth（獲客）、Builder（建站）、Ops（運維）、Content（內容）四人分工，每個 Bot 有固定職責和定時任務，人只負責審批發送、上線和 DNS，客戶站統一托管在 Novence。</p>
+<p class="src">來源：<a href="https://dev.to/lincchad/how-to-set-up-a-web-design-agency-run-by-a-team-of-grok-bots-every-site-on-novence-43j7" target="_blank" rel="noopener">DEV（2026-11-21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>給 4 個 Bot 寫好角色指令並設好「先問後發」規則：Growth 只起草不發送，Builder 不碰線上域名 DNS，Ops 不直接給客戶發郵件。</li><li>接入 Novence 的 MCP（api.novence.ai/mcp）或 CLI（npx novence deploy ./dist），讓 Builder 能一鍵發預覽站。</li><li>把 Growth 的找客戶流程存為定時任務：每個工作日早上 9 點搜本地商家、挑 5 家網站問題最明顯的、起草 80 詞以內的 outreach 郵件等你審批。</li></ol></div>
+<p class="take"><b>變現角度：</b>一人工作室接本地小商家建站單：Bot 負責找客戶和日常運維，人只做談單和終審，邊際成本低；每月運維報告還能做成固定月費服務。原文明確說數字均為示例、未編造成交數據。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>別再寫巨型提示詞了：把一個 Agent 拆成「解析—路由—執行」三層</h2>
+<p>單個提示詞膨脹到幾千 token 後約 20% 的情況會幻覺、漏指令，正確做法是按微服務思路拆成多 Agent：解析器抽實體、路由器分流、執行器只幹一件事，附 Python + Pydantic 可跑的示例代碼。</p>
+<p class="src">來源：<a href="https://dev.to/tanmay2627/stop-using-monolithic-prompts-move-to-multi-agent-systems-1alp" target="_blank" rel="noopener">DEV（2026-11-21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 Pydantic 定義路由輸出結構（分類、優先級、抽取的實體，如賬單號 INV-9402）。</li><li>寫一個只做分類的 Router Agent，再按 SUPPORT/BILLING/TECHNICAL 各寫一個只接已驗證輸入的 Executor。</li><li>簡單解析任務用 GPT-4o-mini 這類輕量模型，複雜邏輯再上大模型，調試時只改出問題的那一層。</li></ol></div>
+<p class="take"><b>變現角度：</b>這是能直接賣給中小企業的技能：把客戶現有的客服/工單流程按這套模式重構成多 Agent 系統，按項目收費；或做成企業內訓課，幫團隊把已有 Agent 的出錯率降下來。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>讓 AI 編程助手少翻車的 5 個概念：上下文、計劃、驗證循環、規則文件、MCP</h2>
+<p>Uber 的 AI 工程師總結：Agent 忘事、瞎改代碼、謊稱做完，根源不在模型，而在 5 個沒搭好的概念——任務拆小管上下文、先計劃後寫碼、生成—測試—覆核循環、把規則寫進 CLAUDE.md、用 MCP 接真實工具。</p>
+<p class="src">來源：<a href="https://dev.to/davidayo/5-concepts-to-know-for-coding-with-ai-agents-2h3o" target="_blank" rel="noopener">DEV（2026-11-20）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>把大任務拆成里程碑，關鍵決策寫進項目文檔，別指望聊天記錄能記住。</li><li>讓 Agent 先出計劃（改哪些文件、有什麼風險），你審過計劃再讓它動手。</li><li>在項目根目錄放一份規則文件（如 CLAUDE.md），寫清測試怎麼跑、哪些配置絕不能碰，每次會話自動生效。</li></ol></div>
+<p class="take"><b>變現角度：</b>接 AI 編程輔導/代碼審查單：很多新手不是缺工具，而是缺這套工作流，幫客戶搭好一次就能收諮詢費；也可以把這 5 條做成檢查清單，打包進自己的 vibe coding 接單服務裡，減少返工就是直接省錢。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>HyperFrames：開源免費的 AI 視頻編輯器，寫 HTML 就能出可逐幀改的 MP4</h2>
+<p>HeyGen 開源的視頻框架，把視頻寫成 HTML + CSS 動畫，用 FFmpeg 渲染成 MP4，生成結果是真實工程文件而不是一次性成片，哪裡不滿意改哪一行再渲染；GitHub 87,702 stars，Apache 2.0 協議，本週熱榜。</p>
+<p class="src">來源：<a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">GitHub（2026-11-21 當周熱榜）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>裝 Node.js 22+ 和 FFmpeg，跑 npx hyperframes init my-video 建項目。</li><li>讓 Claude Code / Cursor 等編程助手裝上 HyperFrames 技能（npx hyperframes skills update），一句話描述要做的視頻，如「10 秒產品介紹，標題淡入+背景音樂」。</li><li>npx hyperframes preview 在瀏覽器裡看效果，滿意後 npx hyperframes render 出 MP4；內置約 450 個現成組件（轉場、字幕、動效圖表等）先查再手寫。</li></ol></div>
+<p class="take"><b>變現角度：</b>批量做產品介紹、數據可視化、社媒短視頻接單：一次搭好模板後換文案就能出新片，邊際成本接近零；免費版就能用，Pro 才加 HeyGen 的頂級音視頻模型，起步不用花錢。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>FreeLLMAPI：把 87 家免費大模型額度拼成一個統一接口，每月約 101 億 token</h2>
+<p>自托管的路由器，把 Google、Groq、Cerebras、Mistral 等 87 家免費額度（項目自述：1,313 個免費模型端點、約 101 億 token/月）聚合成一個 OpenAI 兼容接口，自動選最優模型、被限流自動切換，Claude Code、Cursor、Gemini CLI 都能直接接。</p>
+<p class="src">來源：<a href="https://github.com/tashfeenahmed/freellmapi" target="_blank" rel="noopener">GitHub，55,966 stars（2026-11-21 當周熱榜；數字為項目自述口徑）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>一條命令裝好（curl -fsSL https://freellmapi.co/install.sh | bash，需 Docker），打開 http://localhost:3001。</li><li>在 Keys 頁把各家免費 API Key 加進去，排好 Fallback Chain，拿到統一的 freellmapi-… 密鑰。</li><li>用 npx freellmapi setup-claude --url http://localhost:3001 --api-key &lt;統一密鑰&gt; 一鍵把 Claude Code 等工具指過去，之後所有調用都走免費池。</li></ol></div>
+<p class="take"><b>變現角度：</b>直接省成本：個人開發、寫 Agent、跑自動化腳本的模型調用費可以壓到接近零；注意項目 README 明確寫著「僅供個人實驗」，且免費版模型目錄是月度快照（新模型晚 30 天），別拿去包裝成商業 API 轉賣。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>Intel OpenVINO：沒有顯卡也能本地跑 AI 模型，11 月 21 日 GitHub 日榜第 8</h2>
+<p>Intel 的開源推理工具包，把 PyTorch、TensorFlow、ONNX 等模型轉成優化格式，在普通 CPU、Intel GPU/NPU 上跑，附帶 LLM 聊天機器人、YOLOv11、Whisper 語音識別等官方示例 Notebook；11 月 21 日 GitHub 日榜第 8，當天新增 217 stars，總計約 11,873 stars（榜單數據口徑）。</p>
+<p class="src">來源：<a href="https://github.com/openvinotoolkit/openvino" target="_blank" rel="noopener">GitHub，Apache 2.0</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>pip install -U openvino，import openvino as ov 驗證安裝。</li><li>用 ov.convert_model() 把現有模型（如 torchvision 的 ShuffleNet）轉成 OpenVINO 格式，再 core.compile_model(ov_model, 'CPU') 編譯到 CPU 上跑推理。</li><li>照官方 Notebook 跑一個完整例子（LLM 聊天機器人或 Whisper 轉寫），再按需換成自己的模型和場景。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫小商家把 AI 功能部署到現有電腦上，不用買顯卡、不用按量付雲端推理費，一次性收部署費；尤其適合本地化要求高的場景（數據不出內網），是「低成本 AI 落地」接單的好賣點。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>GPT-6.2 純代碼造了一座宮崎駿風格 3D 夢幻小鎮《風眠鎮》</h2>
+<p>Hailey 用 GPT-6.2 純代碼打造了一座宮崎駿風格的 3D 夢幻小鎮《風眠鎮》：從建築、花草、江水到光影，前前後後打磨了整整 7 個版本。最難的不是把場景搭出來，而是讓每個角落都足夠精緻、自然，讓整座小鎮看起來真的有生活氣息。同系列還有 GPT-6.2 Sol 造的東方巨龍：數萬片獨立鱗甲、動態龍鬚和鬃毛、雲海山峰加 60 秒電影級飛行運鏡，全部在瀏覽器裡即時渲染。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs" target="_blank" rel="noopener">X @HaileyAILabs（2026-11-20/21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 GPT-6.2 生成 Three.js 場景骨架，先讓整體結構在瀏覽器跑起來。</li><li>分版本迭代：先搭建築，再逐個加花草、水面、光影細節，一個版本只改一類問題。</li><li>瀏覽器即時渲染驗收，哪裡不自然就改提示詞重出，別一次推倒重來。</li></ol></div>
+<p class="take"><b>變現角度：</b>接 3D 場景、品牌視覺、互動網頁訂單——純代碼出片的成本遠低於建模外包；把「提示詞—迭代—出片」流程做成課程或模板包也能賣。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>一個人、4 個模型、一周時間，手搓一部 6 分鐘 AIGC 電影</h2>
+<p>想風用 4 個模型、一周時間，手搓了一部 6 分鐘的 AIGC 影片：講一個退伍老兵的故事，配樂、鏡頭感都很強，建議戴耳機全屏看。一個人就是一支攝製組，模型分工代替了傳統的拍攝、剪輯、配樂流程。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X @xaiwind（2026-11-21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先寫好分鏡腳本：故事線、每場戲的鏡頭和情緒，一句話講清。</li><li>按鏡頭分工調用模型：出圖、生片、配樂各用最擅長的那個，別一個模型包到底。</li><li>剪輯合成、調色配樂，全屏戴耳機驗收一遍，節奏不對就回頭換鏡頭。</li></ol></div>
+<p class="take"><b>變現角度：</b>接企業宣傳片、短劇、廣告訂製——一人工作室的交付成本遠低於傳統攝製組；成片本身也是最好的獲客作品。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>Google API key 也能直接用 Gemini 4 Neon</h2>
+<p>想風實測：不用走訂閱，直接用 Google API key 也可以調用 Gemini 4 Neon。對已經有 Google 帳號和 API 額度的人來說，等於多了一條不用額外付費的調用通道。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X @xaiwind（2026-11-21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 Google AI Studio 拿到自己的 API key。</li><li>按官方文檔調用 Gemini 4 Neon 的模型端點，先跑一個小請求確認通路。</li><li>把 key 接進自己的工具或工作流，別把 key 提交到公開倉庫。</li></ol></div>
+<p class="take"><b>變現角度：</b>省訂閱費：已有免費額度就先用 API key 頂著；把這條通道包進自己的產品或代運營流程，成本比包月訂閱低。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>避坑：改 Google 帳號地區會掉 Pro 訂閱，別隨手切地區</h2>
+<p>想風親身踩坑：之前菲律賓的 Google Pro，因為把帳號地區改成了美國，Pro 直接掉了；只有美國 IP，想切回去已經不行，又得折騰。提醒大家更改谷歌地址要慎重，會影響之前地區的訂閱和權益。另：Google AI 老用戶 Pro 年付 5 折，新用戶黑五優惠 11 月 27 日揭曉。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X @xaiwind（2026-11-21）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>改地區前先截圖記下現有訂閱和權益，確認改完不會掉。</li><li>非必要別改帳號地區；確實要改，先查該地區的訂閱價格和政策。</li><li>等 11 月 27 日黑五優惠揭曉後再決定要不要動訂閱。</li></ol></div>
+<p class="take"><b>變現角度：</b>省錢避坑——訂閱翻車等於白交錢；這類實測避坑內容本身就是很好的引流素材，發出來就有人收藏轉發。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>留一個 Hermes 接飛書，用 Gemini 自動清理 Mac mini 多餘文件</h2>
+<p>卡爾的 AI 沃茨實測：留一個 Hermes 給飛書連著，自動清理 Mac mini 多餘文件，現在接上 Gemini 就能起飛。把重複的本地文件整理交給 Agent，電腦自己保持乾淨。</p>
+<p class="src">來源：<a href="https://x.com/aiwarts" target="_blank" rel="noopener">X @aiwarts（2026-11-20）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 Mac mini 上留一個 Hermes 常駐，接通飛書消息通道。</li><li>接上 Gemini，讓它按規則掃描並清理多餘文件。</li><li>先設好清理白名單和確認規則，跑幾天確認不誤刪再放手自動跑。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫人搭本地自動化清理、檔案管理服務；這類「讓電腦自己幹活」的輕量自動化，是向小商家收費的好切口。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
