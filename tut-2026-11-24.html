@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-24：16 篇 AI 幹貨教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-11-24 AI 幹貨教程 16 篇：MiniMind 兩小時訓小模型、Linger 本地 Agent、sherpa-onnx 語音工具箱、n8n 線索評分、無臉 YouTube 生產線、ChatGPT 副業清單……每篇附上手步驟和變現角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回 干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-24</h1>
+<div class="meta">2026-11-24 · 猪猪侠玩AI · 每天更新 16 篇</div>
+<div class="item">
+<h2><span class="n">1.</span>MiniMind：兩小時從零訓練一個自己的小語言模型</h2>
+<p>教學型項目，手把手教你從零訓練一個約 6400 萬參數的小語言模型，全程約兩小時；2026-11-24 當日新增 828 stars，總計 69,697 stars，單日增速較昨日幾乎翻倍（GitHub 趨勢榜單數據）。</p>
+<p class="src">來源：<a href="https://github.com/jingyaogong/minimind" target="_blank" rel="noopener">GitHub · jingyaogong/minimind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：克隆倉庫，按 README 準備環境與訓練數據。</li><li>第 2 步：跑通最小訓練腳本，親手訓出一個能接話的小模型。</li><li>第 3 步：改超參數、換數據集做對比實驗，理解預訓練每個環節在幹什麼。</li></ol></div>
+<p class="take"><b>變現角度：</b>做成「兩小時訓出自己的大模型」教學內容或付費小課；懂訓練流程後，接模型微調、私有數據訓練的諮詢單比只會調 API 更有議價空間。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>Linger：完全跑在自己電腦上的開源個人 Agent</h2>
+<p>開源個人 Agent，全部運算都在本地 PC 上完成，不依賴雲端訂閱；2026-11-24 當日新增 220 stars，總計約 4.3k stars，是本地 AI 分類當日增速最快的項目（GitHub 趨勢榜單數據）。</p>
+<p class="src">來源：<a href="https://github.com/simplexai-labs/linger" target="_blank" rel="noopener">GitHub · simplexai-labs/linger</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：按 README 在本地安裝 Linger。</li><li>第 2 步：接上本地模型，設定它能操作的本地工具與權限。</li><li>第 3 步：先從整理檔案、查資料等低風險任務開始試跑，逐步擴大授權範圍。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫注重隱私的中小企業或個人部署「不上雲的 AI 助手」，按部署加維護收費；自己用則省下雲端 Agent 的月費，數據不出本地也是賣點。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>sherpa-onnx：跨平台開源語音識別＋語音合成工具箱</h2>
+<p>開源語音工具箱，支援語音識別、語音合成、說話人識別與語音增強，可跑在多個平台與多種程式語言上；2026-11-24 當日新增 70 stars，總計 16.2k stars（GitHub 趨勢榜單數據）。</p>
+<p class="src">來源：<a href="https://github.com/k2-fsa/sherpa-onnx" target="_blank" rel="noopener">GitHub · k2-fsa/sherpa-onnx</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：按 README 選一個預訓練語音模型下載。</li><li>第 2 步：用示例代碼跑通「語音轉文字」與「文字轉語音」兩個最小流程。</li><li>第 3 步：把識別結果接進自己的工作流，例如會議錄音轉文字稿。</li></ol></div>
+<p class="take"><b>變現角度：</b>會議紀錄、播客轉文字稿、語音客服質檢都是按量收費的現成服務；本地跑模型省去按分鐘計費的雲端語音 API 成本。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>AgentScope：搭多智能體應用的 Python 框架</h2>
+<p>用 Python 搭建與運行多智能體應用的框架，可接多種語言模型與工具集，支援多模態互動與即時對話；2026-11-24 當日新增 76 stars，總計 36.6k stars（GitHub 趨勢榜單數據）。</p>
+<p class="src">來源：<a href="https://github.com/agentscope-ai/agentscope" target="_blank" rel="noopener">GitHub · agentscope-ai/agentscope</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：pip 安裝 AgentScope，跑通官方最小多智能體示例。</li><li>第 2 步：定義兩個分工不同的 agent（例如一個搜資料、一個寫稿），讓它們協作完成一個任務。</li><li>第 3 步：把常用協作模式沉澱成模板，複用到下一個項目。</li></ol></div>
+<p class="take"><b>變現角度：</b>多智能體協作是客戶願意付費的「AI 團隊」形態，可打包成客服、研究、內容生產等解決方案按項目收費；自己接單時，有框架模板比從零手寫快得多。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>MROffice：開源 AI 辦公套件，可編輯 Word／Excel／PPT／PDF</h2>
+<p>開源 AI 辦公套件，支援編輯 Word、Excel、PowerPoint 與 PDF 文件，並提供即時協同編輯；2026-11-24 當日新增 23 stars，總計 2.8k stars（GitHub 趨勢榜單數據）。</p>
+<p class="src">來源：<a href="https://github.com/XinaTian/MROfficeTypeScript" target="_blank" rel="noopener">GitHub · XinaTian/MROfficeTypeScript</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：按 README 部署或試用 MROffice。</li><li>第 2 步：導入一份真實文件，試它的 AI 編輯與協同功能。</li><li>第 3 步：對比現有辦公流程，找出能省人工的環節（例如批量改格式、彙整表格）。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫小團隊搭「免授權費的 AI 辦公套件」，省下商業辦公軟件的訂閱費；或用它批量處理文檔類代工單（格式整理、報表彙整），按件收費。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>讓 n8n AI Agent 讀完整網頁：先搜索、再抽全文轉 Markdown</h2>
+<p>解決 n8n AI Agent 只能看到搜索摘要的問題：先用免費的 AgentSearch 社群節點搜索，再用 MCP 把最好的一兩條結果抽成乾淨 Markdown 餵給 Agent，文末附可導入的工作流 JSON。</p>
+<p class="src">來源：<a href="https://dev.to/agentsearchhq/how-to-read-full-web-pages-in-an-n8n-ai-agent-search-then-extract-to-markdown-1loa" target="_blank" rel="noopener">DEV · agentsearchhq</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：在 n8n 安裝 n8n-nodes-agentsearch 0.2.4 社群節點。</li><li>第 2 步：用 npx -y @agentsearchhq/agentsearch-mcp 起 MCP 伺服器，經 MCP Client Tool 接進 AI Agent。</li><li>第 3 步：在提示詞裡規定 Agent「先搜索、再抽取一兩個 URL 的全文」，不要只憑摘要回答。</li></ol></div>
+<p class="take"><b>變現角度：</b>這個能力是競品監控、行業日報、資料研究類自動化服務的核心模塊；抽全文每次收費 0.005 USDC（x402 支付、免註冊），成本極低，可打包進代運營服務收月費。</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>用 n8n 搭 AI 線索評分工作流：收到詢問自動打分、分流</h2>
+<p>完整手把手教程：網站或 WhatsApp 收到詢問後，n8n 用 Webhook 接單、AI 抽取行業／預算／緊急度等欄位、Code 節點按規則打分，60 分以上進銷售、以下進培育，附完整評分代碼可直接複製。</p>
+<p class="src">來源：<a href="https://dev.to/hashim_khan_cb87a5b9a3613/build-an-ai-powered-lead-qualification-workflow-with-n8n-5c05" target="_blank" rel="noopener">DEV · hashim_khan</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：在 n8n 建工作流，加 Webhook 節點收詢問訊息。</li><li>第 2 步：加 AI 節點抽取結構化欄位（只輸出合法 JSON），再用 Code 節點按規則算分（例如有預算 +20 分）。</li><li>第 3 步：加 IF 節點按 60 分分流：高分進 CRM 跟進，低分進培育流程。</li></ol></div>
+<p class="take"><b>變現角度：</b>線索評分是 B2B 客戶願意按月付費的剛需自動化；判斷邏輯放 Code 節點、理解放 AI 的分工模式，可複用到客服分流、訂單審核等多個場景，一套模板賣多家。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>不露臉 YouTube 影片全流程：10 分鐘長片比一百條 Shorts 更值錢</h2>
+<p>2026-11-06 更新的實戰文：作者用 Ziztu 的 AI 影片工具做不露臉長片，貼出真實操作畫面與自己先踩過的兩個坑；核心觀點是一條 10 分鐘長片的收益可超過一百條 Shorts（引述 Korpi 2026 年區間數據，屬第三方估算）。</p>
+<p class="src">來源：<a href="https://dev.to/ehmad_fromqluedental_a1/how-to-make-a-faceless-youtube-video-with-ai-step-by-step-2026-update-2i1o" target="_blank" rel="noopener">DEV · ehmad_fromqluedental</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：先選定工具（文中用 Ziztu，Crreo、InVideo AI、Pictory、Fliki 同理），貼一條同類爆款影片連結或輸入一個想法。</li><li>第 2 步：生成後先審腳本，再確認畫面風格、長度、旁白語氣，Basic 版用 AI 圖片、Pro 版在關鍵時刻加 AI 影片片段。</li><li>第 3 步：逐鏡檢查畫面與旁白是否對得上，確認後拿發佈包（標題、縮圖、帶章節的描述）上傳。</li></ol></div>
+<p class="take"><b>變現角度：</b>不露臉長片頻道是可複製的內容資產，靠廣告分成與聯盟行銷變現；流程跑通後可接「代做不露臉頻道」單，或把方法做成教學內容。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>用 n8n 做線索生成：從抓取到 CRM 全流程 30 秒內跑完</h2>
+<p>2026 完整指南：n8n 線索生成系統的四個核心階段——抓取、豐富資料、AI 評分、同步 CRM 加觸發外聯，全程 30 秒內完成、不用寫一行代碼；文中以 Typeform 提交 → Clearbit 豐富 → AI 評分 → HubSpot 建檔 → Slack 通知為例逐步拆解。</p>
+<p class="src">來源：<a href="https://www.cleverly.co/blog/how-to-generate-unlimited-leads-using-n8n" target="_blank" rel="noopener">Cleverly</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：用 Webhook 節點做線索入口，接表單或抓取來源。</li><li>第 2 步：加 HTTP Request 節點調資料豐富 API，再加 AI 節點按理想客戶畫像打 1–10 分並給一句理由。</li><li>第 3 步：按分數分流進 CRM 建檔，高分自動發 Slack 通知銷售跟進。</li></ol></div>
+<p class="take"><b>變現角度：</b>這是 AI 自動化代運營最容易賣的服務之一：客戶按月為「持續有線索進來」付費；同一套流程換個行業畫像就能複用，邊際成本低。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>無臉 YouTube 六步生產線：按鏡頭選模型，Veo 3.1／Seedance 2.5／Hailuo 3 各有分工</h2>
+<p>把無臉影片拆成六道固定工序：寫分鏡腳本、逐鏡生成、同一聲音旁白、拼接混音、逐字字幕、AI 寫標題描述標籤；亮點是按鏡頭選模型——Veo 3.1 管對白與音效同步、Seedance 2.5 可生成 4–30 秒任意時長對齊旁白、Hailuo 3 管需清晰屏上文字的鏡頭。</p>
+<p class="src">來源：<a href="https://www.trezalabs.com/blog/how-to-make-faceless-youtube-videos" target="_blank" rel="noopener">TrezaLabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：先寫五行的 brief（主題、受眾、風格、長度、基調），再讓語言模型擴成「畫面＋旁白」的分鏡腳本。</li><li>第 2 步：按鏡頭特性選模型逐鏡生成，旁白全程固定同一個聲音。</li><li>第 3 步：拼接後用 Whisper 逐字上字幕，標題、描述、標籤留空讓模型按 transcript 寫，最後接排程觸發器做每日更新。</li></ol></div>
+<p class="take"><b>變現角度：</b>六步生產線跑通後可批量接無臉頻道代運營，或把「每天一條」的排程能力賣給需要穩定更新的商家號；工具選型經驗本身也可做成付費教程。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>5 個能用 ChatGPT 起步的 AI 副業（2026-11-24 發佈）</h2>
+<p>2026-11-24 當日發佈的新手向清單：賣數字產品、AI 內容服務、利基博客／newsletter、賣 AI 模板、AI 自動化服務，每個都給起步步驟，文末附 7 天行動計劃。</p>
+<p class="src">來源：<a href="https://medium.com/@kazushikondo91/5-ai-side-hustles-you-can-start-with-chatgpt-in-2026-1e7f47df80ae" target="_blank" rel="noopener">Medium · AI Side Hustle Lab</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：五選一，先定一個方向（建議選自己已有受眾或技能的方向）。</li><li>第 2 步：按文中步驟做三個樣品，搭一個最簡單的作品集頁面。</li><li>第 3 步：照 7 天計劃走：選方向 → 研究受眾 → 做樣品 → 找人評審 → 上線 → 宣傳收反饋。</li></ol></div>
+<p class="take"><b>變現角度：</b>五條路徑都是低成本起步：數字產品與模板走 Gumroad 等平台按件賣，內容與自動化服務按項目或月費收；先跑通一條再擴張，不要五條同開。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>7 個免費 ChatGPT 提示詞：從選副業到寫報價、拿到第一單</h2>
+<p>直接可複製的 7 個提示詞，覆蓋副業起步最難的三步：按自身技能與時間選方向、把想法寫成一句話報價、不靠猜法定價並找到前十個潛在買家；作者明言提示詞不能創造需求，只能加速決策。</p>
+<p class="src">來源：<a href="https://medium.com/@lionheartmarket1022/7-ai-prompts-to-start-a-side-hustle-pick-an-idea-write-your-offer-ask-for-your-first-sale-b7a3f67858b6" target="_blank" rel="noopener">Medium · Lionheart Market</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：把技能、每週時間、啟動預算、能觸達的人群填進提示詞 1，讓 AI 先提問再給 8 個 30 天內可測試的點子。</li><li>第 2 步：用提示詞 3 把選定的點子寫成五版一句話報價，挑最清晰的一版。</li><li>第 3 步：用提示詞 5 列出能找到前十個買家的人群與渠道，主動聯繫。</li></ol></div>
+<p class="take"><b>變現角度：</b>這套提示詞本身就是可賣的數字產品雛形（作者文末即有付費提示詞包）；更實際的是用它快速驗證方向，省下「想兩個月、零行動」的時間成本。</p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>這個週末就能起步的 3 個 AI 副業：寫郵件、做縮圖、改商品描述</h2>
+<p>2026-11-20 發佈，專挑「找得到付費方」的三個小服務：幫本地小商家寫行銷郵件、幫小播客做 YouTube 縮圖、幫電商店家重寫商品描述，每個都給找客戶、做樣品、報價的具體步驟，價格均標註為「可測試的收費建議」（作者口徑）。</p>
+<p class="src">來源：<a href="https://medium.com/@jimdderr/3-ai-side-hustles-you-can-start-this-weekend-with-just-a-laptop-d30f0cbaa7a0" target="_blank" rel="noopener">Medium · Jimdderr</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：選一個方向，週六用免費 AI 工具做三個樣品。</li><li>第 2 步：週日上午找十個有明顯短板的目標（例如行銷郵件寫得很差的本地商家）。</li><li>第 3 步：週日下午帶著樣品私信聯繫，先免費給一個樣品，再談收費套餐。</li></ol></div>
+<p class="take"><b>變現角度：</b>文中建議的測試價：郵件每封 25–50 美元、縮圖每張 15–30 美元或每月 60–100 美元四張、商品描述每條 15–30 美元或十條 100–225 美元；關鍵是先免費樣品換信任，再談包月。</p>
+</div>
+<div class="item">
+<h2><span class="n">14.</span>Claude Code Skills：10 步做出你自己的第一個 Skill</h2>
+<p>對照 Anthropic 官方文件核查過（2026-11-03）的入門教程：Skill 就是一個裝著 SKILL.md 的資料夾，文中以 review-changes 為例，從建資料夾、寫 frontmatter 到測試觸發，10 步完整走完。</p>
+<p class="src">來源：<a href="https://aivibesofficial.com/claude-code-skills/" target="_blank" rel="noopener">aivibesofficial</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：確認已裝 Claude Code，在 ~/.claude/skills/ 下建一個以任務命名的資料夾。</li><li>第 2 步：在裡面寫 SKILL.md：頂部 frontmatter 寫清描述（描述就是觸發條件），正文寫步驟與禁區。</li><li>第 3 步：開 Claude Code 問相關任務，確認 Skill 被列出並自動載入，再用斜槓加技能名直接調用測試。</li></ol></div>
+<p class="take"><b>變現角度：</b>把重複工作寫成 Skill 就是把服務產品化：同一套 Skill 可複用到多個客戶項目，省下的 token 與時間直接變成利潤；也可把行業專用 Skill 打包成付費模板賣。</p>
+</div>
+<div class="item">
+<h2><span class="n">15.</span>Skill 裝太多反而變慢：目錄成本與該留哪些的實測</h2>
+<p>實測向深度文：作者用自己的 Skill 目錄在 Claude Code 2.1.312 與 Codex CLI 上跑測試，結論是成本不在單個 Skill、而在目錄——每個已裝 Skill 每輪都佔一個位置，裝多了最不常用的會丟失描述；文件於 2026-11-18 對照官方文件複核。</p>
+<p class="src">來源：<a href="https://dev.to/actuallyshipped/claude-code-skills-how-they-load-what-a-big-catalog-costs-and-which-ones-to-keep-jkl" target="_blank" rel="noopener">DEV · actuallyshipped</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：盤點現有 Skill 目錄，關掉出於好奇裝的。</li><li>第 2 步：只保留重複貼過三次以上的流程型 Skill，事實類內容放回 CLAUDE.md。</li><li>第 3 步：每裝一個新 Skill 前先讀一遍它的內容，像審代碼一樣審，確認無越權指令再啟用。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫團隊做「AI 工具瘦身」本身就是一項服務：Skill 目錄越乾淨，Agent 出錯越少、token 花費越低；省下的模型成本與返工時間可以直接報價。</p>
+</div>
+<div class="item">
+<h2><span class="n">16.</span>讓 Coding Agent 先寫行為再寫代碼：一段貼進 CLAUDE.md 的規則</h2>
+<p>來自 Reddit 的實用技巧：把一段「行為優先」規則貼進 CLAUDE.md 或 AGENTS.md，要求 Agent 對任何用戶可見的功能先寫驗收場景、轉成可執行測試、看著測試失敗再寫最小實現，適用 Claude Code、Codex 與 ChatGPT。</p>
+<p class="src">來源：<a href="https://playbooks.bot/playbooks/behavior-first-rule-for-coding-agents/" target="_blank" rel="noopener">Playbooks.bot（源自 Reddit 用戶 u/cannyshammy 的帖子）</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>第 1 步：把文中那段 Behaviour-First 規則原文貼進項目指令文件。</li><li>第 2 步：提交一個示例場景文件，讓 Agent 照格式抄而不是自己發明格式。</li><li>第 3 步：每次改功能先自己寫場景、讓 Agent 轉測試並展示失敗，再放手讓它實現，跑 CI 長期守住行為。</li></ol></div>
+<p class="take"><b>變現角度：</b>這是接 AI 開發單的品質護城河：行為先行讓交付物自帶測試、返工率大降，客戶更願意為「可驗證的交付」付高價；也可把這套規則寫進自己的開發服務標準流程裡對外展示。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
