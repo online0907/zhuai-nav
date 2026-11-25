@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-25：13 篇 AI 幹貨教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-11-25 AI 幹貨教程 13 篇：n8n 官方個人 Agent、Firecrawl、Plannotator、Chrome DevTools MCP、AG-UI、Antigravity 插件兩枚、Google AI Pro 黑五、3D 童話世界與代碼動畫實測——每篇附 3 步上手與變現角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回 干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-25</h1>
+<div class="meta">2026-11-25 · 猪猪侠玩AI · 每天更新 13 篇</div>
+<div class="item">
+<h2><span class="n">1.</span>n8n nod：n8n 官方開源個人 Agent，給它一台自己的電腦</h2>
+<p>n8n 剛開源的個人 Agent：跑在你自己的機器上，用你選的模型，會追發票、準備會議、取消試用訂閱，直接在真實網站上操作，動手前先問你一句。跟雲端 Agent 最大的分別是：電腦是你的，數據不出門。</p>
+<p class="src">來源：<a href="https://github.com/n8n-io/nod" target="_blank" rel="noopener">GitHub · n8n-io/nod</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按 README 在本地裝好 nod，選一個你常用的模型接上。</li><li>先開最小權限：只准它讀日曆和郵件，試著讓它幫你準備一場會議。</li><li>逐步放開：追發票、取消試用這類花錢的操作，先設好「動手前必問」的規則再放行。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫中小企業部署「不上雲的個人 Agent」，按部署加維護收費；自己用則是把每月重複的行政雜事自動化，省下來的時間就是收入。</p>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>Firecrawl：給 Agent 的知識基礎設施，一個 API 搞定搜索與抓取</h2>
+<p>熱榜項目：讓 Agent 更聰明的知識基礎設施——搜索、抓取、調用 550 多個數據源，全部走一個 API。不用再為每個網站寫一套爬蟲，Agent 需要資料時直接問它。</p>
+<p class="src">來源：<a href="https://github.com/firecrawl/firecrawl" target="_blank" rel="noopener">GitHub · firecrawl/firecrawl</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>註冊拿 API key，照文件跑通一次搜索加抓取。</li><li>把它接進你的 Agent 或 n8n 工作流，取代零散的爬蟲腳本。</li><li>設好抓取頻率與緩存，別讓重複請求吃掉額度。</li></ol></div>
+<p class="take"><b>變現角度：</b>接「競品監控、價格追蹤、行業情報」這類定製數據服務：客戶按月付費，你的成本只是一個 API；也可以把它包進自己賣的 Agent 產品裡。</p>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>Plannotator：給 Agent 的工作台，審查完一鍵把反饋發回去</h2>
+<p>本週熱榜第一：專門管 Agent 的工作台——塑形、決策、規劃、批註、審查代碼、跟團隊分享，改完一鍵把反饋發給 Agent。適合已經讓 Agent 寫代碼、但審查流程一團亂的團隊。</p>
+<p class="src">來源：<a href="https://github.com/backnotprop/plannotator" target="_blank" rel="noopener">GitHub · backnotprop/plannotator</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>克隆倉庫跑起來，把正在進行的 Agent 任務接進去。</li><li>先用它審查一次 Agent 的輸出：標出要改的地方、寫清原因。</li><li>把「審查—反饋—重跑」跑成固定流程，團隊每人照同一套來。</li></ol></div>
+<p class="take"><b>變現角度：</b>接 AI 開發團隊的流程諮詢：很多小團隊 Agent 用得很多、管得很亂，幫他們搭一套審查流程就是一單生意；自己團隊用則直接省下返工時間。</p>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>Chrome DevTools MCP：讓 coding agent 直接用上 Chrome DevTools</h2>
+<p>Google Chrome 團隊的官方 MCP 伺服器：把 Chrome DevTools 交給 coding agent 用，Agent 可以直接調試網頁、看報錯、測性能，不用你來回複製控制台信息。</p>
+<p class="src">來源：<a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" target="_blank" rel="noopener">GitHub · ChromeDevTools/chrome-devtools-mcp</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>照 README 把 MCP 伺服器接進 Claude Code 或 Cursor。</li><li>開一個有前端報錯的項目，讓 Agent 自己開瀏覽器重現問題。</li><li>把「先在瀏覽器裡驗證再改代碼」寫進你的 CLAUDE.md，讓它變成默認流程。</li></ol></div>
+<p class="take"><b>變現角度：</b>前端調試是最耗時的接單環節之一：用這套工具把排錯時間砍半，同樣的單接得更多；也可以做成「前端問題定位」的小服務，按次收費。</p>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>AG-UI：Agent 與前端對話的協議，讓 Agent 走進你的應用界面</h2>
+<p>Agent-User Interaction Protocol：讓 Agent 不只在聊天框裡回文字，而是直接走進前端應用——在界面裡操作、更新狀態、跟用戶即時互動。做 AI 產品的人值得跟進的底層協議。</p>
+<p class="src">來源：<a href="https://github.com/ag-ui-protocol/ag-ui" target="_blank" rel="noopener">GitHub · ag-ui-protocol/ag-ui</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>讀一遍協議文檔，理解 Agent 事件怎麼跟前端狀態同步。</li><li>找一個現成的前端項目，照示例接一個最小的 Agent 互動。</li><li>先做一個場景：讓 Agent 在界面裡幫用戶填表、跑流程，而不是只聊天。</li></ol></div>
+<p class="take"><b>變現角度：</b>懂這套協議的開發者現在很少：接「把 Agent 嵌進現有產品」的單子，報價可以比普通前端開發高一檔；自己做產品則是差異化賣點。</p>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>Claude Trading Skills：給股票投資者的 Claude Code 技能包</h2>
+<p>一套給股票投資者的 Claude Code 技能：市場分析、技術圖表、財經日曆、選股篩選、交易策略開發，全部打包成 Skill，Claude Code 裝上就能用。</p>
+<p class="src">來源：<a href="https://github.com/tradermonty/claude-trading-skills" target="_blank" rel="noopener">GitHub · tradermonty/claude-trading-skills</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按 README 把技能裝進 Claude Code。</li><li>先拿一隻你熟悉的股票試跑：讓它做一次市場分析加技術圖表，對照你自己的判斷。</li><li>只把它當研究助手：結論自己拍板，別讓它直接替你下單。</li></ol></div>
+<p class="take"><b>變現角度：</b>幫投顧、財經自媒體搭「AI 投研助手」，按月收費；自己用則是把重複的看盤、篩股流程自動化，省下的時間拿去寫內容、接諮詢。（提醒：這是研究工具，不是投資建議。）</p>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>Obsidian Prism：給 Google Antigravity 換一套黑曜石風工作台</h2>
+<p>孫可可 11 月 24 日推薦的開源項目：給 Google Antigravity 重新設計一套黑曜石風工作台界面，亮點是輸入框旁邊的 512K 上下文實時儀表——剩多少上下文、用了多少額度一眼看到。倉庫 11 月 17 日才建立，8 天已漲 500 多 stars。</p>
+<p class="src">來源：<a href="https://github.com/RMvdesi/obsidian-prism" target="_blank" rel="noopener">GitHub · RMvdesi/obsidian-prism</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先備份 Antigravity 的原有設置，確認一鍵還原能用。</li><li>照 README 安裝，開一個會話看上下文儀表是否正常顯示。</li><li>留意版本：目前是 v1.0.8-beta.1，Google 一更新就可能失效，先在小項目上用。</li></ol></div>
+<p class="take"><b>變現角度：</b>Antigravity 插件生態正在爆發：會寫這類界面增強插件，就能接定製插件單；也可以把「幫團隊配好一套 Antigravity 工作流」做成付費服務。注意：這是獨立社區項目，與 Google 無關。</p>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>agy-fast：給 Antigravity 提速的 MCP 插件，作者稱省三成 token</h2>
+<p>Antigravity 的非侵入式 MCP 加速插件：不用改 Antigravity 本體，據作者實測可減少約 34% 的 LLM 對話輪次、31% 的 token 額度與 40% 的上傳流量。數字是作者自述，未經第三方驗證，先自己測了再信。</p>
+<p class="src">來源：<a href="https://github.com/INK-Q/agy-fast" target="_blank" rel="noopener">GitHub · INK-Q/agy-fast</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>照 README 安裝插件，不動 Antigravity 原有配置。</li><li>跑同一個任務對比開關插件前後的 token 用量，自己驗證省了多少。</li><li>有效再留著：把它寫進團隊的 Antigravity 標準配置裡。</li></ol></div>
+<p class="take"><b>變現角度：</b>Antigravity 額度就是成本：幫重度用戶把 token 花費打下來，省下的錢分你一份就是現成的收費模式；也可以寫一篇實測對比文章引流。</p>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>Google AI Pro 黑五 $99/年：原價 4 折拿下 Gemini Neon</h2>
+<p>孫可可 11 月 25 日實測分享：Google AI Pro 黑五直接殺到 $99/年。原價 $19.99/月、一年約 $240，現在等於打了 4 折、每月約 $8.25，就能用上 Gemini 的 Neon 模型（博主稱為 Opus 5.5 平替），還能接 Antigravity 用。價格以博主當日實測為準，優惠隨時可能結束。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI" target="_blank" rel="noopener">X · @Sunkeke_AI</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先確認自己的 Google 帳號地區與付款方式符合優惠條件。</li><li>在 Google One 或 AI Pro 頁面找到黑五 $99/年方案再下單。</li><li>開通後先在 Antigravity 裡接上 Neon 模型，實測效果再決定續不續。</li></ol></div>
+<p class="take"><b>變現角度：</b>每月省下的十幾美元是小頭，真正的價值是低成本拿到一個強模型：拿它跑內容、跑客服、跑自動化，成本直接比同行低一截；也可以把「低成本 AI 工具組合」整理成內容引流。</p>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>純代碼做出宮崎駿風 3D 童話世界：GPT-6.2 Codex 實戰</h2>
+<p>Hailey 11 月 25 日分享：用「網易叭哥說」加 GPT-6.2 Codex，純代碼做出一座宮崎駿風格的 3D 童話世界《巨樹之國》。她的心得是：做這類作品最磨人的不是創意，而是跟 AI 反覆磨細節——這次換了個方式，讓代碼一次成型。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs" target="_blank" rel="noopener">X · @HaileyAILabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先定死風格和場景：一句話說清你要的世界（她選的是宮崎駿風童話世界）。</li><li>讓 Codex 直接生成完整 3D 場景代碼，而不是逐個元素拼。</li><li>跑起來看效果，只改最出戲的兩三處細節，別陷入無限微調。</li></ol></div>
+<p class="take"><b>變現角度：</b>這類 3D 互動作品是很好的接單樣品：幫品牌做互動頁面、幫自媒體做開場動畫，一單的報價遠高於普通圖片；也可以錄成製作過程視頻，在短視頻平台引流。</p>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>一句話讓 DeepSeek 生成代碼動畫：oiioii motion 實測</h2>
+<p>卡爾的 AI 沃茨 11 月 24 日實測：在 oiioii motion 裡調用 DeepSeek，一句話就做出代碼動畫，連配樂也是 AI 做的。做技術講解視頻的人可以留意：動畫這道最耗時的工序，現在可以一句話外包給模型。</p>
+<p class="src">來源：<a href="https://x.com/aiwarts" target="_blank" rel="noopener">X · @aiwarts</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>打開 oiioii motion，接上 DeepSeek。</li><li>用一句話描述你要講的代碼邏輯，讓它生成動畫。</li><li>配樂也交給 AI 生成，成片後只檢查關鍵幀有沒有講錯。</li></ol></div>
+<p class="take"><b>變現角度：</b>技術講解視頻的製作成本直接砍半：接「代碼可視化」訂製單，或自己做編程教學頻道，用動畫質量拉開跟同行的差距。</p>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>Kling Image 4.0 實測：超長圖與 8K 分辨率真的能用</h2>
+<p>卡爾的 AI 沃茨 11 月 24 日實測：Kling Image 4.0 的超長圖和 8K 分辨率，效果「有被驚喜到」。做海報、長圖、印刷品的人可以直接看他的實測再決定要不要用。</p>
+<p class="src">來源：<a href="https://x.com/aiwarts" target="_blank" rel="noopener">X · @aiwarts</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先看他的實測帖子，確認超長圖在你要的場景下不崩。</li><li>自己拿一張長圖需求去跑一次，對比原來用的模型。</li><li>效果達標再接入工作流：海報、信息圖、產品長圖都可以先跑一版。</li></ol></div>
+<p class="take"><b>變現角度：</b>8K 長圖是海報、展板、印刷品接單的硬需求：用 Kling 4.0 把出圖質量拉上去，報價可以比只會普通生圖的高；也可以做成「AI 海報實測」內容引流。</p>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>火柴人動畫一鍵生成：免費開源的無臉短視頻工具</h2>
+<p>開源項目：輸入一段腳本，自動生成多風格火柴人動畫短視頻，視覺、配音、字幕、音效一次包辦，完全免費。做無臉 YouTube 頻道的人可以直接拿來跑生產線。</p>
+<p class="src">來源：<a href="https://github.com/kaomei/stickman-video-director" target="_blank" rel="noopener">GitHub · kaomei/stickman-video-director</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>克隆倉庫，照 README 跑通一個示例腳本。</li><li>寫 3 條不同風格的腳本，測哪種風格完播率思路最順。</li><li>固定一套風格加模板，批量生產，別每條都從零調。</li></ol></div>
+<p class="take"><b>變現角度：</b>無臉頻道的成本大頭就是製作：用這套工具把單條成本壓到最低，靠量跑廣告分成；也可以接「火柴人解說視頻」訂製單，一條收一次費。</p>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
