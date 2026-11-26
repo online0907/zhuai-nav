@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-26：13 篇 AI 幹貨教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-11-26 AI 幹貨教程 13 篇：Claude Code 新手指南與記賬本實戰、Claude 副業自動化、n8n 工作流、無臉 Shorts 流水線、《我用AI》奶爸局、3D 童話世界提示詞、Blender AI 插件——每篇附 3 步上手與變現角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回 干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-26</h1>
+<div class="meta">2026-11-26 · 猪猪侠玩AI · 每天更新 13 篇</div>
+<div class="item">
+<h2><span class="n">1.</span>Claude Code 新手教程：安裝、CLAUDE.md、第一個項目</h2>
+<p>從零開始用 Claude Code 的完整上手指南，2026 年 11 月 21 日更新：講安裝、項目文件規範和「先規劃再寫代碼」的正確姿勢。變現角度：學會這套流程就能接「AI 幫我做個小工具／小網站」的 freelance 單，是後續所有 vibe coding 接單的基礎功。</p>
+<p class="src">來源：<a href="https://codeutility.io/claude-code-tutorial/" target="_blank" rel="noopener">CodeUtility</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用官方命令安裝（Mac／Linux：curl -fsSL https://claude.ai/install.sh | bash；Windows 用 PowerShell 腳本），新建文件夾並 git init 後運行 claude 登錄。</li><li>寫一份 10–30 行的 CLAUDE.md，只寫 AI 讀代碼發現不了的規則，或用 /init 讓它自動生成初稿。</li><li>先按 Shift+Tab 進 plan mode 讓它出 5–8 步小計劃，讀完確認後再一步步執行，每步用測試或構建命令驗收。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>用 Claude Code 做你的第一個 App：記賬本實戰</h2>
+<p>手把手帶零基礎用戶用 Claude Code 做出一個能存數據的記賬網頁，核心方法是「先搭骨架、一次只加一個功能、每次親眼檢查」。變現角度：做出來的記賬頁可改造成「小商家記賬／報價小工具」按單交付，是低成本練手加接單的樣板。</p>
+<p class="src">來源：<a href="https://ai-trend-catchup.com/coding/27-first-app-with-claude-code/" target="_blank" rel="noopener">AI Trend Catchup</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>建空文件夾 gaegebu，在裡面啟動 claude，先進 plan mode 拿到最小版計劃。</li><li>先只做骨架（日期、事項、金額輸入框＋Add 按鈕＋下方表格），在瀏覽器打開親手錄一筆驗證。</li><li>再逐個加功能（合計、刪除、刷新後數據保留），每加一個就測試一次，順手檢查文件夾裡沒有誤放密碼或 API 密鑰。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>我如何用 Claude 把副業自動化，睡覺時也在賺錢</h2>
+<p>作者用 Python＋Anthropic API 把一份小眾技術簡報和代碼審計服務改造成 cron 定時自動跑的流水線，2026 年 11 月 2 日發布。變現角度：把「人工整理的簡報／審計報告」變成可訂閱的自動化服務收訂閱費或按單收費，省下的週末時間就是直接利潤。</p>
+<p class="src">來源：<a href="http://dev.to/syncore/how-i-automated-my-side-project-to-earn-while-i-sleep-using-claude-3hg4" target="_blank" rel="noopener">DEV</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>裝最新 Anthropic SDK（pip install anthropic），寫腳本拉取 GitHub 熱門倉庫和技術討論作為原材料。</li><li>用 claude-opus-5 做分析並輸出結構化 JSON（用 output_config 強制格式，替代已廢棄的 temperature 等舊參數），結果存入數據庫。</li><li>用 cron 定時觸發，自動發簡報並觸發 Stripe 賬單，付費審計走同一條流水線。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>開發者 API 被動收入指南：把 AI 能力包成微 API 來賣</h2>
+<p>教開發者把一個 AI 處理能力（如把報錯日誌翻成大白話）包成輕量 API 產品，2026 年 11 月 9 日發布。變現角度：面向其他開發者按調用量收費的微 SaaS；一個小眾但高頻的痛點 API 就能形成持續收入，適合技術型副業。</p>
+<p class="src">來源：<a href="https://dev.to/syncore/the-developers-guide-to-passive-income-with-apis-481d" target="_blank" rel="noopener">DEV</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 Anthropic Python SDK 寫核心處理函數（pip install anthropic），專攻一個極窄場景，如把 PostgreSQL 報錯日誌轉成排查步驟。</li><li>用 FastAPI 包成微服務，用環境變量裡的簡單 API key 做鑑權。</li><li>上 RapidAPI 或用 Stripe Payment Link＋webhook 自動發 key，先給每月 50 次免費額度降低試用門檻。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>n8n AI 教程：3 個實測工作流，從郵件摘要到問答 Agent</h2>
+<p>基於 n8n 2.47.3 實測的三個工作流，帶真實測試結果和踩坑記錄，2026 年 11 月 11 日核對節點清單。變現角度：這三類工作流正是中小企業願意付費的自動化服務（郵件處理、發票分揀、內部問答），學會後可按項目收費交付。</p>
+<p class="src">來源：<a href="https://mia-automation.com/en/guides/n8n-ai-guide" target="_blank" rel="noopener">MIA Automation</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>搭第一個工作流：IMAP 觸發器讀新郵件 → Basic LLM Chain 按固定兩行格式（Gist／Action）摘要 → 發郵件給自己。</li><li>升級做郵件分類：先用規則做分類兜底，再讓模型打分，模型輸出解析失敗時不讓整批 38 封郵件一起失敗。</li><li>做問答 Agent：Agent 節點自己查賬本數據回答「哪張發票最逾期」，答不出的（如未存的電話號碼）要明確承認不知道。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>用 n8n 搭 AI Agent、開一家高收入自動化代理服務</h2>
+<p>不用寫代碼，用 n8n 可視化節點搭一個「自動篩選銷售線索並分發到 CRM」的 AI Agent，並把它包裝成服務賣給本地商家。變現角度：文章稱這類自動化部署可按每個項目 500–3000 美元以上收費（作者口徑，未獨立驗證），核心是幫商家省人工、24 小時不漏單。</p>
+<p class="src">來源：<a href="https://makemoneyblog100.blogspot.com/2026/11/the-2026-ultimate-guide-how-to-build-ai.html" target="_blank" rel="noopener">Make Money Blog</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 n8n 新建工作流，放一個 Webhook 或 Google Forms／Typeform 觸發節點，接客戶網站聯繫表單的新提交。</li><li>拖入 Advanced AI 的 AI Agent 節點（選 Tools Agent），接上 LLM 和網絡檢索等工具，讓它判斷線索預算是否真實、是否值得跟進。</li><li>跑通後把合格線索自動路由進 CRM 並郵件通知商家，整理成可演示的案例去談客戶。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>用 ChatGPT＋n8n 自動生成無臉 Shorts</h2>
+<p>一條 n8n 流水線：輸入主題和圖片，ChatGPT 寫腳本、ElevenLabs 配音、Creatomate 自動合成帶動畫字幕的豎屏短視頻並上傳 YouTube。變現角度：無臉頻道靠量取勝，自動化把單條製作成本壓到最低；做到 1000 訂閱＋90 天內 1000 萬 Shorts 播放即可申請 YouTube 合作夥伴計劃分成。</p>
+<p class="src">來源：<a href="https://creatomate.com/blog/how-to-auto-generate-faceless-shorts-with-chatgpt-and-n8n" target="_blank" rel="noopener">Creatomate</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 ElevenLabs 建 API key 並接到 Creatomate 項目，再導入現成的 Faceless Short 模板。</li><li>在 n8n 裡搭流程：手動觸發 → 輸入主題和 6 張圖 → ChatGPT 寫旁白、標題和簡介。</li><li>Creatomate 節點按模板渲染成片、生成同步字幕，n8n 下載 MP4 後自動上傳到 YouTube。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>2026 年免費做無臉 YouTube Shorts 全流程</h2>
+<p>只用免費或可免費試用的工具做無臉 Shorts 的完整指南，2026 年 11 月 14 日發布，明確提醒了 AI 內容披露要求。變現角度：零成本起號測試賽道，跑通後再考慮付費工具提效；達標後靠廣告分成變現，或接工具類產品的推廣。</p>
+<p class="src">來源：<a href="https://medium.com/@mustafajanjua0786/how-to-make-faceless-youtube-shorts-with-ai-for-free-in-2026-fa0c9ee55629" target="_blank" rel="noopener">Medium</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>選一個可重複的細分方向（如「每個學生都該試的 3 個 AI 工具」），先寫好前 3 秒鉤子再寫 30 秒腳本。</li><li>用 AI 生成或錄製屏幕畫面做視覺素材，配 AI 語音或自己錄音，豎屏剪輯並加上可讀字幕。</li><li>檢查畫面與文案無侵權問題，按 YouTube 要求完成 AI 內容披露後再上傳。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>《我用AI》第 5 期：3 位奶爸的 AI 副業實戰，7 天賺 2.5 萬、18 天跑通 X 收益</h2>
+<p>孫可可 11 月 26 日上線的播客第 5 期「奶爸局」：三位粉絲都在 6000 左右的奶爸，走的路完全不一樣——Chris 上班間隙用 AI 接單做系統、龍海全職帶娃、孩子上學時做產品寫長文。數字為節目嘉賓自述。變現角度：副業不必辭職：上班族用碎片時間接單、全職帶娃用孩子上學的空檔做產品，都是可複製的節奏。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI" target="_blank" rel="noopener">X · @Sunkeke_AI</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先聽三位奶爸的時間分配：把「能用的空檔」先列出來，再決定接單還是做產品。</li><li>上班族路線：從身邊人或社群接第一個小系統單，交付一次就沉澱成可複用的模板。</li><li>帶娃路線：固定每天孩子上學的 2–3 小時，只做一件事——寫長文攢信任，再把長文變成產品。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>Hailey 公開 3D 童話世界《巨樹之國》全套提示詞與參考圖</h2>
+<p>Hailey 11 月 26 日整理公開：用「網易叭哥說」＋GPT-6.2 Codex，純代碼做出一座 3D 童話世界《巨樹之國》，從巨樹建模、特色建築、材質光影到動畫運鏡的完整提示詞和參考圖全部放出。變現角度：這類「提示詞＋參考圖」本身就是可賣的資料包；學會純代碼做 3D 世界，就能接短視頻、廣告與遊戲場景的外包單。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs" target="_blank" rel="noopener">X · @HaileyAILabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先看她公開的提示詞結構：建模、建築、材質、運鏡四段是分開寫的，照這個骨架換主題。</li><li>把提示詞和參考圖一起丟給 GPT-6.2 Codex，先跑一個最小場景驗證，再逐步加細節。</li><li>成片後把「提示詞＋參考圖＋成片」打包成作品集，去短視頻與廣告需求方那裡接單。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>想風實測：ComfyUI 用 DeepSeek 部署，改改提示詞就能用</h2>
+<p>想風 11 月 26 日分享：ComfyUI 值得學，用 DeepSeek 通過提示詞把部署跑完，前期先熟悉面板，再用模板、改改提示詞就能出圖。變現角度：ComfyUI 工作流本身可以打包成模板出售；會搭工作流的人還能幫別人部署收費，屬於一次搭建、多次交付的手藝。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X · @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按官方文檔把 ComfyUI 裝好，先跑通一個官方示例工作流，熟悉節點面板。</li><li>用 DeepSeek 幫你寫部署與調試的提示詞，遇到報錯直接把報錯貼回去讓它修。</li><li>先用現成模板出圖：只改提示詞和關鍵參數，跑順了再自己拼節點。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>Blender 裝上 AI 插件：2700＋星的 blender-ai-mcp-addon，用說話做 3D</h2>
+<p>若宇 11 月 26 日分享：GitHub 上一個叫 blender-ai-mcp-addon 的項目直接爆了，2700＋星、日均暴漲 800 多星（博主自述）。玩法是給 Blender 裝上多模型 MCP 插件，直接用 Claude 這類編程 Agent 說話指揮建模。變現角度：3D 建模的門檻被打下來了——會寫提示詞就能接簡單的 3D 場景、產品渲染單，過去要學幾百個快捷鍵的活，現在可以先接單再邊做邊學。</p>
+<p class="src">來源：<a href="https://x.com/ElowenY20119" target="_blank" rel="noopener">X · @ElowenY20119</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 GitHub 搜 blender-ai-mcp-addon，按 README 把 MCP 插件裝進 Blender。</li><li>接上 Claude 這類編程 Agent，先讓它做一個簡單物件（如一張桌子），驗證指令能正確建模。</li><li>從「改現成模型」起手：先接改尺寸、換材質這類小單，熟了再做整場景。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>GitHub 今日熱榜：Claude-BugHunter，一天暴漲 1644 星的漏洞挖掘 Skill 包</h2>
+<p>若宇 11 月 26 日刷 GitHub Trending：風向非常統一——Agent 正在接管命令行和自動化測試。elementalsouls/Claude-BugHunter 當日暴漲 1644 星（博主自述），直接把 84 個漏洞挖掘和紅隊測試 Skill 打包塞進 Claude Code，以前靠安全團隊手動掃的活，現在變成 Skill 包一鍵跑。變現角度：安全測試是最容易按項目收費的服務之一——裝好 Skill 包、跑一遍報告、人工複核後交付，中小團隊都願意為「有人幫我掃過一遍」付費。</p>
+<p class="src">來源：<a href="https://x.com/ElowenY20119" target="_blank" rel="noopener">X · @ElowenY20119</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>在 GitHub 找到 elementalsouls/Claude-BugHunter，按 README 把 Skill 包裝進 Claude Code。</li><li>先在自己的測試項目上跑一遍，對照掃出來的問題逐條人工複核，別直接信機器的結論。</li><li>把「掃描＋人工複核＋修復建議」打包成一次性的安全體檢服務，去談中小團隊客戶。</li></ol></div>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
