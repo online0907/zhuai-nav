@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>教程速遞｜2026-11-27：16 篇 AI 幹貨教程 · 猪猪侠玩AI</title>
+<meta name="description" content="2026-11-27 AI 幹貨教程：純匯編大模型、本機跑模型的 3 個新引擎、AI 做遊戲發多平台、給 AI 配免費搜索接口、n8n＋Claude Code 不出錯指南，加 X 只讀挖到的 7 條幹貨，共 16 篇，附上手步驟和變現角度。">
+<style>
+:root{--bg:#fff;--bg2:#f7f7f9;--line:#e9e9ef;--txt:#16161d;--mut:#6b7280;--brand:#6d28d9;--brand-dark:#5b21b6;--brand-soft:#f4effe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.8;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;text-decoration:none;color:var(--txt)}
+.brand svg{width:30px;height:30px}
+.nav-links{display:flex;gap:28px;font-size:14.5px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500}
+.nav-links a:hover{color:var(--brand)}
+.article{max-width:760px;margin:0 auto;padding:52px 24px 80px}
+.back{display:inline-block;margin-bottom:28px;color:var(--mut);text-decoration:none;font-size:14px}
+.back:hover{color:var(--brand)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 13px;border-radius:999px;margin-bottom:18px;background:#fdf2f7;color:#be185d}
+.article h1{font-size:clamp(26px,4.5vw,36px);font-weight:800;line-height:1.4;margin-bottom:14px;letter-spacing:.5px}
+.meta{color:var(--mut);font-size:13.5px;margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.item{border:1px solid var(--line);border-radius:14px;padding:26px;margin:0 0 20px;background:#fff}
+.item h2{font-size:18px;font-weight:800;margin:0 0 12px;line-height:1.5}
+.item h2 .n{color:var(--brand);margin-right:8px}
+.item p{margin:0 0 12px;color:#33343f;font-size:15.5px}
+.item .take{margin:14px 0 0;font-size:14.5px;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.item .take b{color:var(--brand)}
+.item .src{font-size:13px;color:var(--mut);margin:10px 0 0}
+.item .src a{color:var(--brand);text-decoration:none}
+.item .steps{background:var(--brand-soft);border-radius:10px;padding:14px 18px;margin:12px 0 0;font-size:14.5px}
+.item .steps b{color:var(--brand)}
+.item .steps ol{margin:8px 0 0 20px}
+.item .steps li{margin-bottom:6px}
+.cta-box{margin-top:56px;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center}
+.cta-box h3{font-size:21px;margin-bottom:10px}
+.cta-box p{color:var(--mut);font-size:14.5px;margin-bottom:24px}
+.btn{display:inline-block;padding:13px 32px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;background:var(--brand);color:#fff;box-shadow:0 4px 14px rgba(109,40,217,.28)}
+.btn:hover{background:var(--brand-dark)}
+footer{padding:40px 0;text-align:center;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+footer a{color:var(--brand);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><path d="M20 8 L30 20 L20 32 L10 20 Z" fill="url(#lg)"/><path d="M44 8 L54 20 L44 32 L34 20 Z" fill="url(#lg)"/><path d="M32 18 L50 30 L45 52 L32 58 L19 52 L14 30 Z" fill="url(#lg)"/><g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity=".85"><circle cx="24" cy="36" r="2.4"/><circle cx="40" cy="36" r="2.4"/><path d="M24 36 h-8 M40 36 h8 M24 33 l-4 -5 M40 33 l4 -5"/></g><ellipse cx="32" cy="47" rx="7" ry="5.5" fill="#0b0b14" opacity=".9"/><circle cx="29.5" cy="47" r="1.6" fill="url(#lg)"/><circle cx="34.5" cy="47" r="1.6" fill="url(#lg)"/></svg>猪猪侠玩AI</a>
+<div class="nav-links"><a href="index.html#hot">AI 热点</a><a href="index.html#tutorials">干货教程</a><a href="index.html#cases">变现案例</a><a href="index.html#freebie">免费样章</a></div>
+</div></nav>
+<main class="article">
+<a class="back" href="tutorials.html">← 返回 干货教程归档</a>
+<span class="tag">每日教程</span>
+<h1>教程速遞｜2026-11-27</h1>
+<div class="meta">2026-11-27 · 猪猪侠玩AI · 每天更新 16 篇</div>
+<div class="item">
+<h2><span class="n">1.</span>llm.asm：用純 x86-64 匯編寫一個大模型，12KB 跑起 Qwen3-0.6B 推理</h2>
+<p>本週 GitHub 新星：alesha-pro/llm.asm 用 100% 純 x86-64 NASM 匯編寫了一個大模型項目，含 Qwen3-0.6B 推理（12KB）、可啟動的裸機操作系統（22KB）與從零寫的 Mini-GPT 訓練器（32KB），零 C、零 libc、零依賴，MIT 協議，本週已漲 1651 星。變現角度：底層推理、手寫高性能代碼是最難被 AI 替代的手藝；看懂這套實現，就能接推理優化、端側部署這類高單價技術單。</p>
+<p class="src">來源：<a href="https://github.com/alesha-pro/llm.asm" target="_blank" rel="noopener">GitHub · alesha-pro/llm.asm</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>克隆倉庫按 README 裝好 NASM，先跑通 Qwen3-0.6B 推理示例，確認能在本機出結果。</li><li>對照 Mini-GPT 訓練器代碼，把前向、反向、採樣三段逐段讀懂，改超參跑一次自己的小訓練。</li><li>把「匯編級推理優化」寫進作品集，接端側模型部署、推理加速的諮詢或外包單。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">2.</span>openset-llm：普通 CPU 就能跑大模型，8GB 內存、不用顯卡</h2>
+<p>openset-llm 是一個跑在普通 CPU 上的大模型推理引擎，8GB 內存就能用，不需要 GPU 加速，本週漲 199 星、總星 1.7K。變現角度：幫小公司、個人把閒置電腦變成離線 AI 工作站，是現成的本地部署服務；不懂買卡的客戶最願意為「不用買顯卡」付費。</p>
+<p class="src">來源：<a href="https://github.com/opensetlabs/openset-llm" target="_blank" rel="noopener">GitHub · opensetlabs/openset-llm</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按 README 下載對應平台的二進制或編譯，先載入一個小模型驗證能出字。</li><li>對照官方示例測長上下文與速度，記下不同模型在自己機器上的 token／秒。</li><li>打包成「舊電腦變 AI 工作站」服務：上門或遠程幫客戶裝好、配好模型，按次收費。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">3.</span>OpenGame：用 AI 智能體做遊戲，一鍵發到微信、抖音、TikTok</h2>
+<p>OpenGame 是開源遊戲開發平台，讓用戶用 AI 智能體創建並發布 3D 與小遊戲，可發到微信、抖音、TikTok 等多平台，本週漲 199 星、總星 822。變現角度：小遊戲最吃量和速度——AI 做遊戲＋多平台分發，適合接小遊戲定製單或自己做爆款小遊戲吃廣告分成。</p>
+<p class="src">來源：<a href="https://github.com/nexu-io/opengame" target="_blank" rel="noopener">GitHub · nexu-io/opengame</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按 README 部署 OpenGame，先用示例模板生成一個最小可玩遊戲並跑通發布流程。</li><li>換主題讓智能體生成第二款遊戲，記錄哪類提示詞出品質量最穩。</li><li>拿兩款成品去談小遊戲定製客戶，或自己上架吃平台廣告分成。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">4.</span>PiBot：本地優先的 AI 智能體團隊，桌面端多智能體群聊</h2>
+<p>PiBot 是開源、本地優先的桌面 AI 智能體團隊：多智能體群聊、電腦操作、瀏覽器、MCP、定時任務與審批，支持 macOS、Windows、Linux 與 Android，基於 pi 構建，本週新上榜已漲 659 星。變現角度：本地 Agent 是眼下最熱的創業方向——會搭這套，就能幫小團隊做「不出內網的 AI 助手」部署，按項目收費。</p>
+<p class="src">來源：<a href="https://github.com/w01fb0ss/PiBot" target="_blank" rel="noopener">GitHub · w01fb0ss/PiBot</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按 README 在桌面端裝好 PiBot，先建一個雙智能體群聊，驗證任務分工與審批流程能跑通。</li><li>接一個 MCP 工具（如文件、日曆），讓智能體真正動手做一件日常任務。</li><li>整理一份「本地 Agent 部署清單」，去談對數據不出內網有要求的中小客戶。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">5.</span>pop-agent：給編程智能體裝一個本地 Web 界面，推理中途可打斷糾正</h2>
+<p>PopAgent 是編程智能體的本地 Web 界面：看推理過程實時流動，中途可打斷糾正、管理模型與工具，支持 pi、Codex、Claude Code、OpenCode 與 DSH，會話全留在本地，本週新上榜 130 星。變現角度：會用這類工具接單的人，交付速度比純手寫快數倍；把「AI 編程＋人工把關」做成服務，就是現在最實在的接單模式。</p>
+<p class="src">來源：<a href="https://github.com/duzhenxun/pop-agent" target="_blank" rel="noopener">GitHub · duzhenxun/pop-agent</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按 README 啟動 pop-agent，接上你常用的編程智能體，先跑一個小改動驗證中途打斷糾正好用。</li><li>用它完整交付一個小需求，記錄從需求到驗收的全流程耗時。</li><li>把流程沉澱成報價模板，去接「小步快跑、按次收費」的開發單。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">6.</span>flyx：50MB 的本地推理引擎，零依賴、原生長上下文</h2>
+<p>flyx 是零依賴的本地大模型推理引擎，整個二進制約 50MB，原生長上下文、按 GPU 調優、內置推測解碼與 Web 儀表盤，本週新上榜 73 星。變現角度：輕量推理引擎是端側 AI 產品的地基——會用它，就能把大模型塞進別人意想不到的硬件裡賣方案。</p>
+<p class="src">來源：<a href="https://github.com/enwove/flyx" target="_blank" rel="noopener">GitHub · enwove/flyx</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>下載對應平台的 flyx 二進制，按 README 載入模型，先在儀表盤上跑通一次對話。</li><li>測一組長上下文任務，對比開啟推測解碼前後的速度差異。</li><li>挑一個場景（如離線客服、本地文檔問答）做成可演示的最小產品，拿去談客戶。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">7.</span>awesome-free-search-apis：給不能聯網的 AI 配免費搜索接口</h2>
+<p>一份手工驗證過的免費搜索／抓取／嵌入 API 清單：給不能聯網搜索的 AI 配搜索、抓取與嵌入接口，每個額度都經過人工認領驗證，可直接接進自己的智能體或項目，本週新上榜。變現角度：做 Agent 的人都卡在「模型不會上網」這一步——整理好免費額度清單，本身就能做成付費資料包或接「給 Agent 接聯網能力」的單。</p>
+<p class="src">來源：<a href="https://github.com/waw666waw666/awesome-free-search-apis" target="_blank" rel="noopener">GitHub · waw666waw666/awesome-free-search-apis</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>按清單挑 2–3 個免費搜索 API，先在自己的智能體裡接通，驗證額度與返回質量。</li><li>把「搜索→抓取→嵌入」串成一條最小管線，跑通一個真實查詢任務。</li><li>整理成部署文檔，接「給現有 Agent 加聯網搜索」的改造單。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">8.</span>Blueprint：一個 Claude Skill，把提示詞畫成維多利亞專利圖</h2>
+<p>r/SideProject 11 月 24 日熱帖：Blueprint 是一個 Skill，把「解釋緩存如何工作」這類提示詞，畫成維多利亞專利圖紙風格的動畫圖解。關鍵洞察是 Claude 擅長決定畫什麼、不擅長二維排版，所以模型只輸出小型 JS 場景對象，再由約 65KB 的無依賴運行時繪製動畫。MIT 協議，自帶 21 個示例。變現角度：技術科普圖解是最容易賣的內容形式——這套 Skill 能把任何技術概念變成可傳播的視覺內容，可接技術博主、課程方的圖解訂單。</p>
+<p class="src">來源：<a href="https://blueprint.intincrab.com" target="_blank" rel="noopener">blueprint.intincrab.com</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>用 npx skills add intincrab/blueprint 安裝，先跑通一個示例，看懂場景對象的結構。</li><li>換一個自己熟悉的技術概念生成圖解，對照 Playwright 自檢，修掉重疊問題。</li><li>做 3 張不同主題的樣張，去技術社群、課程方談圖解外包。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">9.</span>n8n＋Claude Code：做「交付後還能穩定跑」的 AI 智能體，自由職業者才有回頭客</h2>
+<p>Freelancing Network 11 月 22 日指南：交付後還能穩定跑的 AI 智能體，才能帶來回頭客。核心方法是先列出故障模式（缺 API Key、限流、空返回、下游出錯），再在 n8n 裡給主路徑加錯誤分支（try-continue-alert 循環），失敗項寫表＋發提醒；Claude Code 只負責判斷，輸出後用節點驗證。變現角度：把「異常處理、日誌、監控」單獨列成報價項，再推每月監控＋1 小時修復的 retainer，收入比一次性交付穩得多。</p>
+<p class="src">來源：<a href="https://www.freelancingnetwork.org/how-freelancers-build-error-resistant-ai-agents-with-n8n-and-claude-code-in-2026/" target="_blank" rel="noopener">Freelancing Network</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>下一個智能體項目先寫故障清單，再搭主路徑，每個關鍵節點後加錯誤分支。</li><li>用三套數據測試：乾淨數據、缺字段數據、觸發限流的數據，確認失敗時有提醒、不靜默。</li><li>把異常處理與監控寫進報價單，交付時主推月度 retainer。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">10.</span>想風分享：Google AI Pro／Ultra 自帶的 Colab 算力，十個人裡八個沒用過</h2>
+<p>想風 11 月 27 日分享：訂了 Google AI Pro 或 Ultra 的人，十個裡有八個壓根沒動過自帶的 Colab 算力，每月白給 200 到 2000 分，90 天不用就過期。他轉發的教程把 Colab 從零講透：先用免費 CPU 跑通第一條動畫，再切 L4 顯卡跑 MiniMax H3 加 ComfyUI 出有聲寫實短片，最後用官方 Colab CLI 接進 Codex 或 Claude。變現角度：你每月已付費的算力不用就是虧——拿它跑短片、跑 ComfyUI，零邊際成本起一個 AI 短視頻號。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X · @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先確認自己的 Pro／Ultra 套餐還剩多少 Colab 分，用免費 CPU 跑通第一條動畫。</li><li>切 L4 顯卡，照教程跑 MiniMax H3＋ComfyUI，出第一條有聲寫實短片。</li><li>把流程固定成模板，每週批量出片，跑通後再考慮接商單。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">11.</span>想風轉發：別當任何一家 AI 的精神股東，按活分工才是正路</h2>
+<p>想風 11 月 27 日轉發一篇實在的分工指南：Claude 定方案、做前端、啃最難的 bug，貴但把額度花在刀刃上；Codex 扛量大代碼活、Computer Use 操機、出字準的海報；Gemini 寫最沒 AI 味的文案、逐秒拆爆款視頻，再加 Colab 和 Flow。變現角度：接單的人最怕額度燒錯地方——按這張分工表分配任務，同樣預算能多交付 30% 以上的活。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X · @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>把手頭在做的三類任務（方案、量大代碼、文案）分別對號入座，記下各自最適合的工具。</li><li>下一個任務先按分工表選工具，跑完對照額度消耗，驗證是不是真的更省。</li><li>把分工表寫進自己的接單 SOP，報價時按工具成本拆分，利潤更透明。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">12.</span>想風分享：圖片也能生成 3D 文件了，接上 3D 打印就能賣實物</h2>
+<p>想風 11 月 27 日分享：現在通過模型，圖片也可以生成 3D 文件了，再加上 3D 打印，甚至可以直接出實物來賣；做一個這樣的定製產品網站，也是不錯的賺錢路子。變現角度：AI 生圖＋圖轉 3D＋3D 打印是一條完整變現鏈——定製手辦、擺件、文創周邊，按件收費，客單價比純賣圖高得多。</p>
+<p class="src">來源：<a href="https://x.com/xaiwind" target="_blank" rel="noopener">X · @xaiwind</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>找一個圖轉 3D 的工具，先用一張自己的圖片生成第一個 3D 文件，驗證效果。</li><li>對接一家 3D 打印服務商，問清單件成本與交期，算出定價空間。</li><li>先做 3 款樣品拍照上架，跑通「下單→生成→打印→發貨」全流程再推廣。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">13.</span>Hailey：又用 GPT-6.2 純代碼打造 3D 冬日童話世界《雪境終點站》</h2>
+<p>Hailey 11 月 27 日分享：又用 GPT-6.2 純代碼打造了一個 3D 冬日童話世界《雪境終點站》——雪山、蒸汽列車、暖洋洋的麵包坊、湖畔咖啡館，還有在冰面上滑冰、在站台等車的居民；前後打磨好幾個版本，從建築造型、冰雪材質到人物動作，一點點給世界增加生活氣息。她此前已公開《巨樹之國》的全套提示詞與參考圖。變現角度：純代碼 3D 世界是短視頻、廣告與遊戲場景外包的新手藝——提示詞＋參考圖＋成片打包成作品集就能接單。</p>
+<p class="src">來源：<a href="https://x.com/HaileyAILabs" target="_blank" rel="noopener">X · @HaileyAILabs</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先看她公開的《巨樹之國》提示詞結構：建模、建築、材質、運鏡四段分開寫，照骨架換主題。</li><li>把提示詞丟給 GPT-6.2，先跑一個最小場景驗證，再逐步加細節。</li><li>成片後打包成作品集，去短視頻與廣告需求方那裡接單。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">14.</span>孫可可：Google AI Pro 黑五 $99 半價值得衝嗎？先看三個背刺風險</h2>
+<p>孫可可 11 月 27 日分享：Google AI Pro 黑五出現 $99 半價優惠（博主自述，個人賬號尚未看到），他準備衝，但也列出三個可能背刺這個價格的風險：Pro 配額大幅減少、逼用戶升 Ultra；在 Pro 與 Ultra 之間新開一檔；幾個月後 Carbon 降級為 Neon、Neon 降級為 Hydrogen。變現角度：訂閱類 AI 工具的價格戰是套利窗口——低價鎖定高配額，再用它跑收費任務，差價就是利潤；但要先算清降級風險。</p>
+<p class="src">來源：<a href="https://x.com/Sunkeke_AI" target="_blank" rel="noopener">X · @Sunkeke_AI</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先查自己賬號有沒有 $99 優惠，確認優惠覆蓋的配額與有效期再下單。</li><li>鎖定後立刻把高配額模型排進正在接的收費任務，優先消耗。</li><li>留意官方配額與模型分級變動，降級前把關鍵任務遷到備用方案。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">15.</span>良竹：GPT 縮額度 40%，Grok 卻反向擴容最高 50%</h2>
+<p>良竹 11 月 27 日分享：冰火兩重天——一邊是 GPT 縮減約 40% 的使用額度，另一邊 Grok 直接反向擴容：基礎用量 +11%，常規任務最高直接 +50%。據他轉述原推，Grok 是通過優化框架、去掉簡單重複任務的推理開銷省出算力，再把省下的算力還給用戶。變現角度：額度就是接單產能——同樣的訂閱費，Grok 現在能多幹一半常規活；把量大、重複的任務遷過去，省下的 GPT 額度留給最難的活。</p>
+<p class="src">來源：<a href="https://x.com/liangzhu_AI" target="_blank" rel="noopener">X · @liangzhu_AI</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先看自己 GPT 和 Grok 各自的剩餘額度與任務類型，列出哪些是重複性常規任務。</li><li>把常規任務先遷到 Grok 跑一週，對照速度與質量。</li><li>固定下來後重算每月訂閱成本，該降級的降級、該續的續。</li></ol></div>
+</div>
+<div class="item">
+<h2><span class="n">16.</span>若宇：開源圈轉向「完全跑在自己電腦上的本地個人 Agent」</h2>
+<p>若宇 11 月 27 日分享：開源圈有一個非常明顯的轉向——大家不再只盯雲端套殼 SaaS，都在瘋狂捲「完全跑在自己電腦上的本地個人 Agent」。當天連著兩個信號：量子位報道，DeepSeek V1 的核心作者出來創業，一上來直接開源一套本地 Agent 框架；GitHub 上一個叫 linger 的本地 Agent 項目也開始受關注。變現角度：本地 Agent 是下一個創業風口——先學會部署與調教，就能搶「幫企業搭不出內網的 AI 助手」這批單。</p>
+<p class="src">來源：<a href="https://x.com/ElowenY20119" target="_blank" rel="noopener">X · @ElowenY20119</a></p>
+<div class="steps"><b>3 步上手：</b><ol><li>先去看量子位報道與 linger 項目的 README，搞清本地 Agent 的部署方式。</li><li>在自己電腦上跑通一套本地 Agent，先讓它接管一件日常任務。</li><li>整理部署文檔，去談對數據不出內網有要求的客戶。</li></ol></div>
+</div>
+<div class="cta-box">
+<h3>免费领：5 个锁脸模板样章</h3>
+<p>先试后买。入群免费领，样章 PDF 已上传到群文件。</p>
+<a class="btn" href="https://t.me/+suiV8i6Zt0liMDVl" target="_blank" rel="noopener">入群免费领取</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 zhuai.online · 猪猪侠玩AI · 联系 <a href="https://t.me/gpt168168" target="_blank" rel="noopener">@gpt168168</a></div></footer>
+</body>
+</html>
